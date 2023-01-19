@@ -20,7 +20,7 @@ func _ready():
 	AudioHandler.get_node("Songs/Inst").stream = inst
 	AudioHandler.get_node("Songs/Inst").volume_db = clamp(linear_to_db(Globals.volume / 2), -100, 99999)
 	AudioHandler.get_node("Songs/Inst").connect("finished", songfinished)
-	var bg = load("res://assets/songs/" + song + "/" + CoolUtil.getdaimagethingy("res://assets/songs/" + song))
+	var bg = load("res://assets/songs/" + song + "/" + CoolUtil.getdaimagethingy("res://assets/songs/" + song, song))
 	var backgroundnode = get_node("Backgrounds")
 	backgroundnode.texture = bg
 	match song:

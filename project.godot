@@ -8,34 +8,6 @@
 
 config_version=5
 
-_global_script_classes=[{
-"base": "Resource",
-"class": &"BPMChangeEvent",
-"language": &"GDScript",
-"path": "res://resources/BPMChangeEvent.gd"
-}, {
-"base": "Node",
-"class": &"Modchart",
-"language": &"GDScript",
-"path": "res://classes/Modchart.gd"
-}, {
-"base": "Node2D",
-"class": &"Note",
-"language": &"GDScript",
-"path": "res://scnee/Note/Note.gd"
-}, {
-"base": "Node",
-"class": &"Save",
-"language": &"GDScript",
-"path": "res://classes/Save.gd"
-}]
-_global_script_class_icons={
-"BPMChangeEvent": "",
-"Modchart": "",
-"Note": "",
-"Save": ""
-}
-
 [application]
 
 config/name="lerp(): the rythm game"
@@ -60,6 +32,10 @@ PauseMenu="*res://scnee/Pause men.tscn"
 window/vsync/vsync_mode=0
 window/subwindows/embed_subwindows=false
 window/stretch/mode="viewport"
+
+[editor]
+
+export/convert_text_resources_to_binary=true
 
 [importer_defaults]
 

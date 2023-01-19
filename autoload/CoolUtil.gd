@@ -99,7 +99,7 @@ func findsong(path, findvoices):
 	
 	return null
 
-func getdaimagethingy(path):
+func getdaimagethingy(path, path_name):
 	var dir = DirAccess.open(path)
 	if dir:
 		dir.list_dir_begin()
@@ -108,15 +108,16 @@ func getdaimagethingy(path):
 			if dir.current_is_dir():
 				print("Found directory: " + file_name)
 			else:
-				if ".import" in file_name:
-					file_name = file_name.replace('.import', '')
-				
-				if ".png" in file_name:
-					print("png" + file_name)
-					return file_name
-				elif ".jpg" in file_name:
-					print("jpg" + file_name)
-					return file_name
+				if file_name.begins_with(path_name):
+					if ".import" in file_name:
+						file_name = file_name.replace('.import', '')
+					
+					if ".png" in file_name:
+						print(file_name)
+						return file_name
+					elif ".jpg" in file_name:
+						print(file_name)
+						return file_name
 			file_name = dir.get_next()
 	else:
 		print("An fatal error occurred when trying to access the path.")
