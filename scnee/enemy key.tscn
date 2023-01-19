@@ -4,14 +4,20 @@
 [ext_resource type="Texture2D" uid="uid://dwc27ofecoi28" path="res://arrow.png" id="2_rjf0b"]
 [ext_resource type="Texture2D" uid="uid://q5ala0v05d8h" path="res://arrow but hit.png" id="3_0jggy"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_u8siu"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_di6f8"]
 animations = [{
-"frames": [ExtResource("2_rjf0b")],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rjf0b")
+}],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }, {
-"frames": [ExtResource("3_0jggy")],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0jggy")
+}],
 "loop": true,
 "name": &"hit arrow",
 "speed": 5.0
@@ -21,4 +27,4 @@ animations = [{
 script = ExtResource("1_etfke")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-frames = SubResource("SpriteFrames_u8siu")
+frames = SubResource("SpriteFrames_di6f8")

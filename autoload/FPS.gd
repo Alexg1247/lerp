@@ -1,14 +1,14 @@
 extends CanvasLayer
+
 var volume = Globals.volume 
-var pasuemen = load("res://scnee/Pause men.tscn")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 func _process(delta):
 	if Globals.fun:
-		$Label.text = "FPS: FUN IS INFINITE" + "\nVRAM: " + str((CoolUtil.get_vram_usage() / 1048576)).pad_decimals(2)
+		$Label.text = "FUN IS INFINITEfps" + "\n" + str((CoolUtil.get_vram_usage() / 1048576)).pad_decimals(2) + "mb vram"
 		$Volume/Volume.text = str(volume * 10)
 	else:
-		$Label.text = "FPS: " + str(Engine.get_frames_per_second()) + "\nVRAM: " + str((CoolUtil.get_vram_usage() / 1048576)).pad_decimals(2)
+		$Label.text = "%dfps" % Engine.get_frames_per_second() + "\n%smb vram" % str((CoolUtil.get_vram_usage() / 1048576)).pad_decimals(2)
 		$Volume/Volume.text = str(volume * 10)
 
 func _input(event):
@@ -28,18 +28,7 @@ func _input(event):
 
 func pause():
 	get_tree().paused = !get_tree().paused
-
-func _on_button_pressed():
-	pause()
-
-
-func _on_button_2_pressed():
-	if !Globals.fun:
-		AudioHandler.stopmusic()
-		get_tree().change_scene_to_file("res://scnee/Main Menu.tscn")
-		pause()
-	else:
-		$"Pause Men/Button2".visible = false
+	PauseMenu.visible = get_tree().paused
 
 func showthingy():
 	var tween = $Volume.create_tween()

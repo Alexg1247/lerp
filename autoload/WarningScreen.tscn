@@ -15,6 +15,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="ColorRect" type="ColorRect" parent="BG"]
+layout_mode = 0
 offset_left = -162.0
 offset_top = -82.0
 offset_right = 1333.0
@@ -22,6 +23,7 @@ offset_bottom = 726.0
 color = Color(0, 0, 0, 0.392157)
 
 [node name="Panel" type="Panel" parent="BG"]
+layout_mode = 0
 offset_left = 170.0
 offset_top = 127.0
 offset_right = 961.0
@@ -34,6 +36,7 @@ offset_right = 1153.0
 offset_bottom = 657.0
 
 [node name="AlertTitle" type="Label" parent="Text"]
+layout_mode = 0
 offset_left = 178.0
 offset_top = 131.0
 offset_right = 954.0
@@ -43,6 +46,7 @@ text = "Warning!"
 horizontal_alignment = 1
 
 [node name="AlertMessage" type="Label" parent="Text"]
+layout_mode = 0
 offset_left = 175.0
 offset_top = 205.0
 offset_right = 951.0
@@ -59,6 +63,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="ok" type="Button" parent="Buttons"]
+layout_mode = 0
 offset_left = 812.0
 offset_top = 434.0
 offset_right = 936.0
@@ -67,6 +72,7 @@ theme_override_font_sizes/font_size = 29
 text = "Ok"
 
 [node name="calcel" type="Button" parent="Buttons"]
+layout_mode = 0
 offset_left = 669.0
 offset_top = 437.0
 offset_right = 793.0
@@ -75,6 +81,7 @@ theme_override_font_sizes/font_size = 29
 text = "Cancel"
 
 [node name="fuck no go back" type="Button" parent="Buttons"]
+layout_mode = 0
 offset_left = 187.0
 offset_top = 436.0
 offset_right = 311.0

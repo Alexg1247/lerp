@@ -19,10 +19,12 @@ anchors_preset = 0
 script = ExtResource("1_sk408")
 
 [node name="Panel" type="Button" parent="."]
+layout_mode = 0
 offset_right = 385.0
 offset_bottom = 67.0
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 1.0
 offset_top = -3.0
 offset_right = 255.0
@@ -32,6 +34,7 @@ text = "Song Name"
 label_settings = ExtResource("2_ryfnw")
 
 [node name="Label2" type="Label" parent="."]
+layout_mode = 0
 offset_top = 30.0
 offset_right = 154.0
 offset_bottom = 67.0

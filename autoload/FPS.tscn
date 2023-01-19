@@ -12,8 +12,8 @@ script = ExtResource("1_bsulf")
 [node name="Label" type="Label" parent="."]
 offset_right = 45.0
 offset_bottom = 26.0
-text = "FPS: 0
-MEM: (a normal amount of memory) MB (no way pysch coudl never do that!!!!!!!)"
+text = "0fps
+0mb vram"
 label_settings = ExtResource("2_8yjmc")
 
 [node name="Volume" type="Control" parent="."]

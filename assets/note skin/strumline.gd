@@ -64,8 +64,10 @@ func _process(delta):
 				#Globals.emit_signal("note_hit", hit, hit.note_data, hit.name, true)
 				
 				if !hit.is_sustain:
+					Globals.notes_hit += 1
 					hit.queue_free()
 				else:
+					Globals.notes_hit += 1
 					hit.being_pressed = true
 					
 					if 'been_hit' in hit:
@@ -83,6 +85,7 @@ func _process(delta):
 							Globals.notes_hit += 1
 							note.queue_free()
 						else:
+							Globals.notes_hit += 1
 							note.being_pressed = true
 					
 							if 'been_hit' in note:

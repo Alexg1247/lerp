@@ -16,9 +16,9 @@ var template_notes:Dictionary = {}
 func _ready(): 
 	#jsong = "fatality"
 	var inst = load(str("res://assets/songs/" + song + "/" + CoolUtil.findsong("res://assets/songs/"+song, false)))
+	print(str("res://assets/songs/" + song + "/" + CoolUtil.findsong("res://assets/songs/"+song, false)))
 	AudioHandler.get_node("Songs/Inst").stream = inst
 	AudioHandler.get_node("Songs/Inst").volume_db = clamp(linear_to_db(Globals.volume / 2), -100, 99999)
-	AudioHandler.get_node("Songs/Inst").play()
 	AudioHandler.get_node("Songs/Inst").connect("finished", songfinished)
 	var bg = load("res://assets/songs/" + song + "/" + CoolUtil.getdaimagethingy("res://assets/songs/" + song))
 	var backgroundnode = get_node("Backgrounds")
@@ -42,9 +42,9 @@ func _ready():
 	
 
 #
-	if FileAccess.file_exists("res://assets/songs/"+song+ "/modchart.tscn"):
+	if ResourceLoader.exists("res://assets/songs/"+song+ "/modchart.tscn"):
 		var modchart = load("res://assets/songs/"+song+ "/modchart.tscn").instantiate()
-		get_node("..").add_child(modchart)
+		get_node("/root/").add_child(modchart)
 	
 	
 		
@@ -61,10 +61,11 @@ func _ready():
 #			WarningScreen.popup(1, "Hey! this chart is multikey lmao. You sure u wanna do this?", true, true, false)
 	Globals.misses = 0
 	Globals.notes_hit = 0
-	Conductor.position = 0.0
 	Conductor.cur_beat = 0
 	Conductor.cur_step = 0
 	Conductor.change_bpm(float(chartData["bpm"]))
+	Conductor.position = -Conductor.crochet * 4
+	print(Conductor.position)
 	Conductor.connect("beat_hit", beat_hit)
 	template_notes["default"] = preload("res://scnee/Note/Note.tscn").instantiate()
 	
@@ -122,6 +123,9 @@ func note_sort(a, b):
 	return a[0] < b[0]
 
 func beat_hit():
+	if Conductor.cur_beat % 4 == 0:
+		$Camera.zoom += Vector2(0.05, 0.05)
+	
 	pass
 
 func songfinished():
@@ -197,7 +201,17 @@ var counter:int
 
 func _process(delta):
 	Conductor.position += delta * 1000
+	
+	if Conductor.position >= 0 and not AudioHandler.get_node("Songs/Inst").playing:
+		AudioHandler.get_node("Songs/Inst").play()
+		Conductor.position = 0
+	
+	if AudioHandler.get_node("Songs/Inst").playing and abs(Conductor.position - (AudioHandler.get_node("Songs/Inst").get_playback_position() * 1000.0)) >= 75:
+		Conductor.position = AudioHandler.get_node("Songs/Inst").get_playback_position() * 1000.0
+	
 	if Conductor.cur_beat >= 0: counter = 4
 		# increment counter every beat basically (used to be -4.0 + counter but that no work ig so ae)
 	elif Conductor.cur_beat >= -3.0 + counter: counter += 1
+	
+	$Camera.zoom = lerp($Camera.zoom, Vector2(1, 1), delta * 9)
 	

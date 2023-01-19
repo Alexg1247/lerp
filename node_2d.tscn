@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://be26pj35rxgrq"]
+[gd_scene load_steps=3 format=3 uid="uid://be26pj35rxgrq"]
 
 [ext_resource type="Script" path="res://pAYSlate.gd" id="1_y7hu3"]
+[ext_resource type="PackedScene" uid="uid://b43cye3hmkrxa" path="res://scnee/UI.tscn" id="2_vuo4x"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_y7hu3")
@@ -13,3 +14,15 @@ offset_bottom = 138.0
 text = "This is a prototype build, Please contact Alexg1247 on discord and uninstall this now"
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[node name="Backgrounds" type="Sprite2D" parent="."]
+self_modulate = Color(0.388235, 0.388235, 0.388235, 1)
+position = Vector2(576, 324)
+
+[node name="UI" parent="." instance=ExtResource("2_vuo4x")]
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+current = true
+position_smoothing_enabled = true
+position_smoothing_speed = 1.5
