@@ -1,31 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://be26pj35rxgrq"]
+[gd_scene load_steps=2 format=3 uid="uid://be26pj35rxgrq"]
 
 [ext_resource type="Script" path="res://pAYSlate.gd" id="1_y7hu3"]
-[ext_resource type="PackedScene" uid="uid://b43cye3hmkrxa" path="res://scnee/UI.tscn" id="2_1cqt1"]
-[ext_resource type="LabelSettings" uid="uid://darl5r556djxr" path="res://assets/fonts/font_styles/titlescreen idk.tres" id="13_qyv01"]
-
-[sub_resource type="Gradient" id="Gradient_lxrev"]
-offsets = PackedFloat32Array(0, 0.535354, 1)
-colors = PackedColorArray(0, 0, 0, 1, 0.631313, 0.631313, 0.631313, 1, 1, 1, 1, 1)
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_7xxgv"]
-width = 1100
-height = 683
-seamless = true
-seamless_blend_skirt = 0.76
-color_ramp = SubResource("Gradient_lxrev")
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_y7hu3")
-
-[node name="UI" parent="." instance=ExtResource("2_1cqt1")]
-
-[node name="Backgrounds" type="Sprite2D" parent="."]
-modulate = Color(0.243137, 0.243137, 0.243137, 1)
-z_index = -4
-position = Vector2(578, 341)
-scale = Vector2(1.04867, 1.04867)
-texture = SubResource("NoiseTexture2D_7xxgv")
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 2.0
@@ -33,6 +11,5 @@ offset_top = -2.0
 offset_right = 1150.0
 offset_bottom = 138.0
 text = "This is a prototype build, Please contact Alexg1247 on discord and uninstall this now"
-label_settings = ExtResource("13_qyv01")
 horizontal_alignment = 1
 autowrap_mode = 2

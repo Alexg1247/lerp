@@ -91,8 +91,8 @@ func _process(delta):
 					good = true
 					time_held = 0
 				
-				if good:
-					$default.animation = "default"
+				#if good:
+					#$default.animation = "default"
 					
 					
 					#if should_hit:
