@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cso3i2fh1v28v"
+path="res://.godot/imported/Voices(1).ogg-6056aafae84cab0868ebffb5f8ce21c4.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/songs but better/Voices(1).ogg"
+dest_files=["res://.godot/imported/Voices(1).ogg-6056aafae84cab0868ebffb5f8ce21c4.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://3qlroec5vgmu"
+path="res://.godot/imported/endless depths.ogg-b4556bc6f16707ab88473004932af809.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/songs/endless depths/endless depths.ogg"
+dest_files=["res://.godot/imported/endless depths.ogg-b4556bc6f16707ab88473004932af809.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bwgfhkobons5q"
+path="res://.godot/imported/dojo brawl-voices.ogg-7c346b26ce5542e2b95840998038acd4.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/songs/dojo brawl/dojo brawl-voices.ogg"
+dest_files=["res://.godot/imported/dojo brawl-voices.ogg-7c346b26ce5542e2b95840998038acd4.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://tsocucuk4663"]
+
+[ext_resource type="Texture2D" uid="uid://d2aiiw1sfjrln" path="res://assets/images/vignette.png" id="1_cbny7"]
+
+[node name="modchart" type="CanvasLayer"]
+layer = 127
+
+[node name="Vignette" type="Sprite2D" parent="."]
+position = Vector2(547, 330)
+texture = ExtResource("1_cbny7")

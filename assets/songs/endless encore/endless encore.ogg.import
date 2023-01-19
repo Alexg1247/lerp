@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dyok5v128cyqd"
+path="res://.godot/imported/endless encore.ogg-1880ffac3a3a0a9cee16d422faa878d2.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/songs/endless encore/endless encore.ogg"
+dest_files=["res://.godot/imported/endless encore.ogg-1880ffac3a3a0a9cee16d422faa878d2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
