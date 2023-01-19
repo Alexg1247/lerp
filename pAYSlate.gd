@@ -145,10 +145,9 @@ func  _physics_process(delta):
 		var is_player_note = true
 		var should_spawn = true
 			
-		if note[3] and int(note[1]):
+		if note[3] and int(note[1]) % 8 >= 4:
 			is_player_note = false
-			
-		elif !note[3] and int(note[1]):
+		elif !note[3] and int(note[1]) % 8 <= 3:
 			is_player_note = false
 			
 			# cool thing lmao make this an option later :skull:
@@ -181,8 +180,6 @@ func  _physics_process(delta):
 			#print(enemy_notes)
 			new_note.position.x = player_strums.get_child(new_note.note_data % 4).global_position.x
 			player_notes.add_child(new_note)
-			new_note.is_player = is_player_note
-#
 			
 			new_note.is_player = is_player_note
 			if Globals.save.grab("downscroll"):

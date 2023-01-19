@@ -1,5 +1,7 @@
 extends Modchart
 
+var most_recent_is_player: bool = true
+
 func _ready() -> void:
 	Globals.player_note_hit.connect(player_note_hit)
 	Conductor.beat_hit.connect(beat_hit)
@@ -22,22 +24,35 @@ func _process(delta: float) -> void:
 		$captain.position = lerp($captain.position, Vector2(300, 400), delta * 3)
 		$bf.position = lerp($bf.position, Vector2(852, 435), delta * 3)
 		
-		$"plr-icon".scale = lerp($"plr-icon".scale, Vector2(1, 1), delta * 9)
-		$"opp-icon".scale = lerp($"opp-icon".scale, Vector2(-1, 1), delta * 9)
+		$"ui/plr-icon".scale = lerp($"ui/plr-icon".scale, Vector2(1, 1), delta * 9)
+		$"ui/opp-icon".scale = lerp($"ui/opp-icon".scale, Vector2(1, -1), delta * 9)
 	
-	$"score-text".text = "Notes Hit:%d - Misses:%d" % [Globals.notes_hit, Globals.misses]
+	$"ui/score-text".text = "Notes Hit:%d - Misses:%d" % [Globals.notes_hit, Globals.misses]
 
 func player_note_hit(hit, hit_data, hit_name):
 	playerstrums.get_child(abs(hit_data) % 4).position += Vector2(0, 15)
+	most_recent_is_player = hit.is_player
+	
+	if most_recent_is_player:
+		$bf_anim.play(str(hit_data))
+		$bf.frame = 0
+	else:
+		$captain_anim.play(str(hit_data))
+		$captain.frame = 0
 
 func beat_hit():
 	if Conductor.cur_beat % 2 == 0:
-		$captain.play('idle')
-		if $captain.frame == 13:
+		if $captain.frame >= $captain.frames.get_frame_count($captain.animation) - 1:
+			$captain_anim.play('idle')
 			$captain.frame = 0
-		$bf.play('idle')
-		if $bf.frame == 15:
+		if $bf.frame >= $bf.frames.get_frame_count($bf.animation) - 1:
+			$bf_anim.play('idle')
 			$bf.frame = 0
 	
-	$"plr-icon".scale += Vector2(0.2, 0.2)
-	$"opp-icon".scale += Vector2(-0.2, 0.2)
+	if most_recent_is_player:
+		gameplay.get_node("Camera").position = Vector2(576, 324) + Vector2(100, 0)#$bf.position
+	else:
+		gameplay.get_node("Camera").position = Vector2(576, 324) + Vector2(-100, 0)#$captain.position
+	
+	$"ui/plr-icon".scale += Vector2(0.2, 0.2)
+	$"ui/opp-icon".scale += Vector2(0.2, -0.2)
