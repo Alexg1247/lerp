@@ -29,7 +29,8 @@ var songlist = [
 	"insult",
 	"dojo brawl",
 	"endless depths",
-	"redux guns"
+	"redux guns",
+	"too slow"
 ]
 
 var score:Dictionary = {}
