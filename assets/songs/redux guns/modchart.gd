@@ -1,11 +1,14 @@
 extends Modchart
 
 var most_recent_is_player: bool = true
+var gf_left: bool = false
 
 func _ready() -> void:
 	Globals.player_note_hit.connect(player_note_hit)
 	Conductor.beat_hit.connect(beat_hit)
 	fpstext.get_node("Label").get("label_settings").font = load("res://assets/songs/redux guns/vcr.ttf")
+	gameplay.get_node("Backgrounds").visible = false
+	gameplay.get_node("Label2").visible = false
 
 func _process(delta: float) -> void:
 	if playerstrums == null:
@@ -21,11 +24,11 @@ func _process(delta: float) -> void:
 		ui.get_node("Miss").visible = false
 	
 	if Conductor.position > 0:
-		$captain.position = lerp($captain.position, Vector2(300, 400), delta * 3)
-		$bf.position = lerp($bf.position, Vector2(852, 435), delta * 3)
+		$captain.position = lerp($captain.position, Vector2(200, 400), delta * 3)
+		$bf.position = lerp($bf.position, Vector2(900, 435), delta * 3)
 		
 		$"ui/plr-icon".scale = lerp($"ui/plr-icon".scale, Vector2(1, 1), delta * 9)
-		$"ui/opp-icon".scale = lerp($"ui/opp-icon".scale, Vector2(1, -1), delta * 9)
+		$"ui/opp-icon".scale = lerp($"ui/opp-icon".scale, Vector2(-1, 1), delta * 9)
 	
 	$"ui/score-text".text = "Notes Hit:%d - Misses:%d" % [Globals.notes_hit, Globals.misses]
 	
@@ -37,6 +40,10 @@ func _process(delta: float) -> void:
 		$"ui/score-text".position.y = 100
 		$"ui/plr-icon".position.y = 0
 		$"ui/opp-icon".position.y = 0
+	
+	if gf_left and $gf.frame >= 15:
+		$gf.playing = false
+	
 
 func player_note_hit(hit, hit_data, hit_name):
 	playerstrums.get_child(abs(hit_data) % 4).position += Vector2(0, 15)
@@ -77,10 +84,19 @@ func beat_hit():
 			$bf_anim.play('idle')
 			$bf.frame = 0
 	
+	gf_left = not gf_left
+	
+	if gf_left:
+		$gf.play('GF Dancing Beat Bat')
+		$gf.frame = 0
+	else:
+		$gf.play('GF Dancing Beat Bat')
+		$gf.frame = 15
+	
 	if most_recent_is_player:
 		camera.position = Vector2(576, 324) + Vector2(100, 0)
 	else:
 		camera.position = Vector2(576, 324) + Vector2(-100, 0)
 	
 	$"ui/plr-icon".scale += Vector2(0.2, 0.2)
-	$"ui/opp-icon".scale += Vector2(0.2, -0.2)
+	$"ui/opp-icon".scale += Vector2(-0.2, 0.2)

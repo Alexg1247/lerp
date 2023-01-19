@@ -1,10 +1,15 @@
-[gd_scene load_steps=21 format=3 uid="uid://dvgrghdm356ka"]
+[gd_scene load_steps=26 format=3 uid="uid://dvgrghdm356ka"]
 
 [ext_resource type="Script" path="res://assets/songs/redux guns/modchart.gd" id="1_exvq3"]
+[ext_resource type="SpriteFrames" path="res://assets/songs/redux guns/gf-bat.res" id="2_34thx"]
 [ext_resource type="SpriteFrames" uid="uid://4j7cxbsu2uql" path="res://assets/songs/redux guns/captain.res" id="2_cxwoa"]
+[ext_resource type="Texture2D" uid="uid://c1h64jmfbcl0j" path="res://assets/songs/redux guns/sky.png" id="2_stjdj"]
+[ext_resource type="Texture2D" uid="uid://dp66cadtm1wv7" path="res://assets/songs/redux guns/bar.png" id="3_axwfi"]
 [ext_resource type="SpriteFrames" uid="uid://bpjramjfqqv3c" path="res://assets/songs/redux guns/bf-full.res" id="3_qsv8n"]
+[ext_resource type="Texture2D" uid="uid://ctjbg84feeg3h" path="res://assets/songs/redux guns/sidewalk.png" id="4_gfokx"]
 [ext_resource type="Texture2D" uid="uid://ckxorwc4wu5k1" path="res://assets/songs/redux guns/icons.png" id="4_pwl6e"]
 [ext_resource type="FontFile" uid="uid://b8eftdti6b2gv" path="res://assets/songs/redux guns/vcr.ttf" id="5_j14kr"]
+[ext_resource type="Texture2D" uid="uid://c43lv7amc16ld" path="res://assets/songs/redux guns/ground.png" id="5_ood0i"]
 
 [sub_resource type="Animation" id="Animation_ufy6p"]
 resource_name = "0"
@@ -656,6 +661,42 @@ outline_color = Color(0, 0, 0, 1)
 [node name="modchart" type="Node2D"]
 script = ExtResource("1_exvq3")
 
+[node name="pb" type="ParallaxBackground" parent="."]
+
+[node name="sky" type="ParallaxLayer" parent="pb"]
+motion_scale = Vector2(0.2, 0.2)
+
+[node name="sky" type="Sprite2D" parent="pb/sky"]
+position = Vector2(558, 310)
+texture = ExtResource("2_stjdj")
+
+[node name="bar" type="ParallaxLayer" parent="pb"]
+motion_scale = Vector2(0.4, 0.4)
+
+[node name="bar" type="Sprite2D" parent="pb/bar"]
+position = Vector2(654, 283)
+texture = ExtResource("3_axwfi")
+
+[node name="sidewalk" type="ParallaxLayer" parent="pb"]
+motion_scale = Vector2(0.8, 0.8)
+
+[node name="sidewalk" type="Sprite2D" parent="pb/sidewalk"]
+position = Vector2(643, 565.5)
+texture = ExtResource("4_gfokx")
+
+[node name="ground" type="ParallaxLayer" parent="pb"]
+
+[node name="Ground" type="Sprite2D" parent="pb/ground"]
+position = Vector2(656, 903.5)
+texture = ExtResource("5_ood0i")
+
+[node name="gf" type="AnimatedSprite2D" parent="."]
+position = Vector2(587, 299)
+scale = Vector2(0.9, 0.9)
+frames = ExtResource("2_34thx")
+animation = &"GF Dancing Beat Bat"
+playing = true
+
 [node name="captain" type="AnimatedSprite2D" parent="."]
 position = Vector2(-300, 400)
 scale = Vector2(-0.75, 0.75)
@@ -670,7 +711,7 @@ libraries = {
 
 [node name="bf" type="AnimatedSprite2D" parent="."]
 position = Vector2(1452, 435)
-scale = Vector2(0.95, 0.95)
+scale = Vector2(0.9, 0.9)
 frames = ExtResource("3_qsv8n")
 animation = &"idle"
 playing = true
@@ -692,8 +733,7 @@ vframes = 6
 
 [node name="opp-icon" type="Sprite2D" parent="ui"]
 position = Vector2(601, 448)
-rotation = -3.14159
-scale = Vector2(1, -1)
+scale = Vector2(-1, 1)
 texture = ExtResource("4_pwl6e")
 centered = false
 flip_h = true
