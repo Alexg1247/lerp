@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scnee/Note/Note.gd" id="1_fcm3o"]
 [ext_resource type="Texture2D" uid="uid://dk25tydcojb1m" path="res://arrow that u hit.png" id="2_yaiyf"]
 
-[sub_resource type="Gradient" id="Gradient_oyghs"]
+[sub_resource type="Gradient" id="Gradient_q23m8"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 0, 0, 1)
 
 [node name="Note" type="Node2D"]
@@ -16,7 +16,7 @@ scale = Vector2(1, 0.938462)
 points = PackedVector2Array(0, 0, 0, 0)
 width = 15.0
 default_color = Color(1, 0, 0, 1)
-gradient = SubResource("Gradient_oyghs")
+gradient = SubResource("Gradient_q23m8")
 joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2
