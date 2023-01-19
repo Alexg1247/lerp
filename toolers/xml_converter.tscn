@@ -1,0 +1,113 @@
+[gd_scene load_steps=3 format=3 uid="uid://bx3eotg72q31h"]
+
+[ext_resource type="Script" path="res://toolers/xml_main_panel.gd" id="1_5glfl"]
+[ext_resource type="Script" path="res://toolers/xml_choose_sprites.gd" id="2_js6qk"]
+
+[node name="XML Converter" type="Node2D"]
+
+[node name="BG" type="Sprite2D" parent="."]
+modulate = Color(0.364706, 0.360784, 0.411765, 1)
+position = Vector2(-116, -58)
+scale = Vector2(1.095, 1.095)
+centered = false
+
+[node name="Converted Panel" type="Panel" parent="."]
+offset_left = 697.0
+offset_top = 116.0
+offset_right = 1197.0
+offset_bottom = 616.0
+
+[node name="ConvertedSprites" type="Label" parent="Converted Panel"]
+layout_mode = 0
+offset_right = 501.0
+offset_bottom = 26.0
+text = "Converted Sprites:"
+horizontal_alignment = 1
+
+[node name="SpriteData" type="AnimatedSprite2D" parent="."]
+position = Vector2(954, 403)
+
+[node name="Main Panel" type="Panel" parent="."]
+offset_left = 39.0
+offset_top = 273.0
+offset_right = 339.0
+offset_bottom = 473.0
+script = ExtResource("1_5glfl")
+
+[node name="Title" type="Label" parent="Main Panel"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 14.0
+offset_right = 232.0
+offset_bottom = 40.0
+text = "XML -> SpriteFrames"
+
+[node name="Choose Sprites" type="Button" parent="Main Panel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 48.0
+offset_right = 147.0
+offset_bottom = 79.0
+focus_mode = 0
+text = "Choose Sprites"
+script = ExtResource("2_js6qk")
+
+[node name="FPS" type="LineEdit" parent="Main Panel"]
+layout_mode = 0
+offset_left = 179.0
+offset_top = 50.0
+offset_right = 246.062
+offset_bottom = 81.0
+text = "24"
+placeholder_text = "24"
+
+[node name="FPS Text" type="Label" parent="Main Panel"]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 87.0
+offset_right = 253.0
+offset_bottom = 113.0
+text = "Anim FPS"
+
+[node name="Looped Checkbox" type="CheckBox" parent="Main Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 87.0
+offset_right = 113.0
+offset_bottom = 118.0
+focus_mode = 0
+text = "Looped?"
+
+[node name="Optimized Checkbox" type="CheckBox" parent="Main Panel"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 118.0
+offset_right = 133.0
+offset_bottom = 149.0
+button_pressed = true
+text = "Optimized?"
+
+[node name="Convert Button" type="Button" parent="Main Panel"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 127.0
+offset_right = 247.0
+offset_bottom = 158.0
+focus_mode = 0
+text = "Convert"
+
+[node name="FileDialog" type="FileDialog" parent="."]
+title = "Open a File"
+position = Vector2i(150, 150)
+size = Vector2i(640, 480)
+ok_button_text = "Open"
+file_mode = 0
+filters = PackedStringArray("*.png ; Spritesheets", "*.xml ; XML Spritesheet Data")
+show_hidden_files = true
+
+[connection signal="pressed" from="Main Panel/Choose Sprites" to="Main Panel/Choose Sprites" method="popup_shit"]
+[connection signal="text_changed" from="Main Panel/FPS" to="Main Panel" method="set_fps"]
+[connection signal="toggled" from="Main Panel/Looped Checkbox" to="Main Panel" method="set_looped"]
+[connection signal="toggled" from="Main Panel/Optimized Checkbox" to="Main Panel" method="set_optimized"]
+[connection signal="pressed" from="Main Panel/Convert Button" to="Main Panel" method="convert_xml"]
+[connection signal="file_selected" from="FileDialog" to="Main Panel" method="set_path"]

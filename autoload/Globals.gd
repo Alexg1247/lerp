@@ -28,7 +28,8 @@ var songlist = [
 	"endless encore",
 	"insult",
 	"dojo brawl",
-	"endless depths"
+	"endless depths",
+	"redux guns"
 ]
 
 var score:Dictionary = {}

@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://dvgrghdm356ka"]
+
+[ext_resource type="Script" path="res://assets/songs/redux guns/modchart.gd" id="1_exvq3"]
+[ext_resource type="SpriteFrames" uid="uid://4j7cxbsu2uql" path="res://assets/songs/redux guns/captain.res" id="2_cxwoa"]
+[ext_resource type="SpriteFrames" uid="uid://bpjramjfqqv3c" path="res://assets/songs/redux guns/bf-full.res" id="3_qsv8n"]
+[ext_resource type="Texture2D" uid="uid://ckxorwc4wu5k1" path="res://assets/songs/redux guns/icons.png" id="4_pwl6e"]
+[ext_resource type="FontFile" uid="uid://b8eftdti6b2gv" path="res://assets/songs/redux guns/vcr.ttf" id="5_j14kr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bgmub"]
+font = ExtResource("5_j14kr")
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="modchart" type="Node2D"]
+script = ExtResource("1_exvq3")
+
+[node name="captain" type="AnimatedSprite2D" parent="."]
+position = Vector2(-300, 400)
+scale = Vector2(-0.75, 0.75)
+frames = ExtResource("2_cxwoa")
+animation = &"idle"
+playing = true
+
+[node name="bf" type="AnimatedSprite2D" parent="."]
+position = Vector2(1452, 435)
+frames = ExtResource("3_qsv8n")
+animation = &"idle"
+playing = true
+
+[node name="plr-icon" type="Sprite2D" parent="."]
+position = Vector2(551, 0)
+texture = ExtResource("4_pwl6e")
+centered = false
+flip_h = true
+hframes = 9
+vframes = 6
+
+[node name="opp-icon" type="Sprite2D" parent="."]
+position = Vector2(601, 0)
+scale = Vector2(-1, 1)
+texture = ExtResource("4_pwl6e")
+centered = false
+flip_h = true
+hframes = 9
+vframes = 6
+frame = 36
+
+[node name="score-text" type="Label" parent="."]
+offset_top = 100.0
+offset_right = 1152.0
+offset_bottom = 123.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+text = "Notes Hit:0 - Misses:0"
+label_settings = SubResource("LabelSettings_bgmub")
+horizontal_alignment = 1

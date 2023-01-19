@@ -158,7 +158,7 @@ func  _physics_process(delta):
 		#real
 		
 		if float(note[0]) < Conductor.position + (2500) and should_spawn:
-			var new_note = template_notes[note[5]].duplicate()
+			var new_note = template_notes["default"].duplicate()
 			new_note.strum_time = float(note[0])
 			new_note.note_data = int(note[1])
 			new_note.direction = player_strums.get_child(new_note.note_data % 4).keynumber
@@ -179,12 +179,9 @@ func  _physics_process(delta):
 				#new_note.set_held_note_sprites()
 				#new_note.get_node("Line2D").texture = new_note.held_sprites[Globals.dir_to_str(new_note.direction)][0]
 			#print(enemy_notes)
-			if is_player_note:
-				new_note.position.x = player_strums.get_child(new_note.note_data % 4).global_position.x
-				player_notes.add_child(new_note)
-			else:
-				new_note.position.x = player_strums.get_child(new_note.note_data % 4).global_position.x
-				player_notes.add_child(new_note)
+			new_note.position.x = player_strums.get_child(new_note.note_data % 4).global_position.x
+			player_notes.add_child(new_note)
+			new_note.is_player = is_player_note
 #
 			
 			new_note.is_player = is_player_note
