@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgatck5d48i6s"]
+
+[ext_resource type="Script" path="res://scnee/TemplateSong.gd" id="1_sk408"]
+[ext_resource type="LabelSettings" uid="uid://dedj33517fi0m" path="res://new_label_settings.tres" id="2_ryfnw"]
+[ext_resource type="FontFile" uid="uid://w1cgdewepjkh" path="res://assets/fonts/SF-Pro-Display-Semibold.otf" id="3_h2ih8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hjbhk"]
+font = ExtResource("3_h2ih8")
+font_color = Color(0.486275, 0.486275, 0.486275, 1)
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 0.0705882)
+shadow_offset = Vector2(2, 2)
+
+[node name="TemplateSong" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_sk408")
+
+[node name="Panel" type="Button" parent="."]
+offset_right = 385.0
+offset_bottom = 67.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1.0
+offset_top = -3.0
+offset_right = 255.0
+offset_bottom = 68.0
+theme_override_font_sizes/font_size = 42
+text = "Song Name"
+label_settings = ExtResource("2_ryfnw")
+
+[node name="Label2" type="Label" parent="."]
+offset_top = 30.0
+offset_right = 154.0
+offset_bottom = 67.0
+theme_override_font_sizes/font_size = 23
+text = "Score:"
+label_settings = SubResource("LabelSettings_hjbhk")
+
+[connection signal="pressed" from="Panel" to="." method="_on_panel_pressed"]

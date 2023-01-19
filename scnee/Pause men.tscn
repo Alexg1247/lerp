@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu2yjwtmu1ty0"]
+
+[ext_resource type="LabelSettings" uid="uid://bqcimgcq86s3m" path="res://assets/fonts/font_styles/pausemenu.tres" id="1_nlryt"]
+[ext_resource type="FontFile" uid="uid://w1cgdewepjkh" path="res://assets/fonts/SF-Pro-Display-Semibold.otf" id="2_3b3g0"]
+
+[node name="Pause Men" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -135.0
+offset_top = -29.0
+offset_right = 1247.0
+offset_bottom = 714.0
+color = Color(0, 0, 0, 0.313726)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 318.0
+offset_top = 150.0
+offset_right = 835.0
+offset_bottom = 260.0
+theme_override_font_sizes/font_size = 78
+text = "Game Paused"
+label_settings = ExtResource("1_nlryt")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 452.0
+offset_top = 325.0
+offset_right = 674.0
+offset_bottom = 392.0
+theme_override_fonts/font = ExtResource("2_3b3g0")
+theme_override_font_sizes/font_size = 16
+text = "Resume Da Game"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 452.0
+offset_top = 440.0
+offset_right = 674.0
+offset_bottom = 507.0
+theme_override_fonts/font = ExtResource("2_3b3g0")
+theme_override_font_sizes/font_size = 16
+text = "I Give Up"
+
+[node name="Pause men" type="CanvasLayer" parent="."]

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdtdejknp5run"]
+
+[ext_resource type="Script" path="res://autoload/AudioHandler.gd" id="1_wkmk0"]
+
+[node name="AudioHandler" type="Node"]
+script = ExtResource("1_wkmk0")
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+
+[node name="Songs" type="Node2D" parent="."]
+
+[node name="Inst" type="AudioStreamPlayer" parent="Songs"]
+
+[node name="Voices" type="AudioStreamPlayer" parent="Songs"]

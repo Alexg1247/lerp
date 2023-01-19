@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://3nxldydgmpql"]
+
+[ext_resource type="Texture2D" uid="uid://dnhqtaw1een6g" path="res://scnee/Screenshot_2022-12-11_15-15-24.png" id="1_olqjm"]
+
+[node name="song credits" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 31
+text = "Sevcons Songs:"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 41.0
+offset_right = 228.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 18
+text = "He gave me permission and sent them all to me. Proof:
+(not all songs)"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 4.0
+offset_top = 455.0
+offset_right = 415.0
+offset_bottom = 542.0
+theme_override_font_sizes/font_size = 14
+text = "All Songs: (may be outdated)
+Toggle Downfall
+Dojo Brawl"
+
+[node name="Screenshot2022-12-1115-15-24" type="Sprite2D" parent="."]
+position = Vector2(229.248, 271.125)
+scale = Vector2(0.38592, 0.38592)
+texture = ExtResource("1_olqjm")

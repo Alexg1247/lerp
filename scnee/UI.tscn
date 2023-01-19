@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://b43cye3hmkrxa"]
+
+[ext_resource type="PackedScene" uid="uid://bc70njspwyii" path="res://scnee/STRUM2.tscn" id="1_jhsif"]
+[ext_resource type="Script" path="res://scnee/UI.gd" id="1_wrkq1"]
+[ext_resource type="LabelSettings" uid="uid://bvi5yqqjnbopx" path="res://assets/fonts/font_styles/gameplay trex.tres" id="3_dq2gb"]
+[ext_resource type="FontFile" uid="uid://w1cgdewepjkh" path="res://assets/fonts/SF-Pro-Display-Semibold.otf" id="4_ejf1c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ryed4"]
+line_spacing = 2.0
+font = ExtResource("4_ejf1c")
+font_size = 71
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 0.0705882)
+shadow_offset = Vector2(2, 2)
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_wrkq1")
+
+[node name="STRUM2" parent="." instance=ExtResource("1_jhsif")]
+position = Vector2(0, 100)
+
+[node name="Giid" type="Label" parent="."]
+offset_left = 7.0
+offset_top = 602.0
+offset_right = 143.0
+offset_bottom = 628.0
+text = "Good Notes Hit: 0"
+label_settings = ExtResource("3_dq2gb")
+
+[node name="Miss" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 625.0
+offset_right = 144.0
+offset_bottom = 651.0
+text = "Misses: 0"
+label_settings = ExtResource("3_dq2gb")
+
+[node name="Label TO Show if ur good or not" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 410.0
+offset_right = 1155.0
+offset_bottom = 655.0
+theme_override_font_sizes/font_size = 131
+text = "FC"
+label_settings = SubResource("LabelSettings_ryed4")
+horizontal_alignment = 1
+vertical_alignment = 2

@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3v3ylsqgjr6q"]
+
+[ext_resource type="Script" path="res://autoload/FPS.gd" id="1_bsulf"]
+[ext_resource type="LabelSettings" uid="uid://bvi5yqqjnbopx" path="res://assets/fonts/font_styles/gameplay trex.tres" id="2_8yjmc"]
+[ext_resource type="FontFile" uid="uid://w1cgdewepjkh" path="res://assets/fonts/SF-Pro-Display-Semibold.otf" id="2_fllf3"]
+
+[node name="FPS" type="CanvasLayer"]
+process_mode = 3
+layer = 128
+script = ExtResource("1_bsulf")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 45.0
+offset_bottom = 26.0
+text = "FPS: 0
+MEM: (a normal amount of memory) MB (no way pysch coudl never do that!!!!!!!)"
+label_settings = ExtResource("2_8yjmc")
+
+[node name="Volume" type="Control" parent="."]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1165.0
+offset_top = 5.0
+offset_right = 1527.0
+offset_bottom = 117.0
+
+[node name="Panel" type="Panel" parent="Volume"]
+offset_right = 358.0
+offset_bottom = 113.0
+
+[node name="Label" type="Label" parent="Volume"]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 358.0
+offset_bottom = 49.0
+theme_override_fonts/font = ExtResource("2_fllf3")
+theme_override_font_sizes/font_size = 32
+text = "Volume:"
+horizontal_alignment = 1
+
+[node name="Volume" type="Label" parent="Volume"]
+offset_left = 1.0
+offset_top = 38.0
+offset_right = 356.0
+offset_bottom = 113.0
+theme_override_fonts/font = ExtResource("2_fllf3")
+theme_override_font_sizes/font_size = 59
+text = "0"
+horizontal_alignment = 1

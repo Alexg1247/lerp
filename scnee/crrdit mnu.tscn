@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjppg0h8xp6bo"]
+
+[ext_resource type="Texture2D" uid="uid://cptpj3trsrk8u" path="res://assets/images/79-796576_wooden-podium-delux-podium.jpg" id="1_ee2vb"]
+[ext_resource type="Script" path="res://scnee/crrdit mnu.gd" id="1_vnhlc"]
+[ext_resource type="Texture2D" uid="uid://dog82bln5ahac" path="res://assets/images/credits/sevcon.png" id="3_5wrui"]
+[ext_resource type="FontFile" uid="uid://w1cgdewepjkh" path="res://assets/fonts/SF-Pro-Display-Semibold.otf" id="4_kbov6"]
+
+[node name="crrdit mnu" type="Node2D"]
+script = ExtResource("1_vnhlc")
+
+[node name="79-796576Wooden-podium-delux-podium" type="Sprite2D" parent="."]
+position = Vector2(564, 545)
+scale = Vector2(0.618333, 0.618333)
+texture = ExtResource("1_ee2vb")
+
+[node name="Character" type="Sprite2D" parent="."]
+position = Vector2(565, 338)
+texture = ExtResource("3_5wrui")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 368.0
+offset_top = 90.0
+offset_right = 759.0
+offset_bottom = 241.0
+theme_override_fonts/font = ExtResource("4_kbov6")
+theme_override_font_sizes/font_size = 123
+text = "sevcon"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 5.0
+offset_top = 545.0
+offset_right = 1158.0
+offset_bottom = 617.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Template Text"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 22.0
+offset_top = 609.0
+offset_right = 109.0
+offset_bottom = 640.0
+text = "Song Stuff so i dont get sued by people like ninjamuffin"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
