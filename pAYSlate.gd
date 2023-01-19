@@ -45,8 +45,6 @@ func _ready():
 	if ResourceLoader.exists("res://assets/songs/"+song+ "/modchart.tscn"):
 		var modchart = load("res://assets/songs/"+song+ "/modchart.tscn").instantiate()
 		get_node("/root/").add_child(modchart)
-	
-	
 		
 	if f:
 		content = f.get_as_text()
