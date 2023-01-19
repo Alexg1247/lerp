@@ -1,0 +1,205 @@
+0b7126e0c6e86d3ec295a72f5aa6e0bd
+::res://::1674096113
+2023-01-01_18.51.21.png::CompressedTexture2D::5092662935147656056::1674094692::1674094694::1::::<><>::
+arrow but hit.png::CompressedTexture2D::1184972514172111701::1674089629::1674089864::1::::<><>::
+arrow that u hit.png::CompressedTexture2D::7918745391991179948::1674089629::1674089864::1::::<><>::
+arrow.png::CompressedTexture2D::8709242614069685287::1674089629::1674089864::1::::<><>::
+default_bus_layout.tres::AudioBusLayout::130489854542280783::1674089630::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1674091716::0::1::::<><>::
+Icon.gd::GDScript::-1::1674089629::0::1::::<>Sprite2D<>::
+icon.svg::CompressedTexture2D::9015543230312819963::1674089630::1674089864::1::::<><>::
+icon.tscn::PackedScene::7648418524282499382::1674092995::0::1::::<><>::uid://d1pgxd4qpy3xn<>res://Icon.gd
+image.png::CompressedTexture2D::5386271088484253768::1674089630::1674089864::1::::<><>::
+new_label_settings.tres::LabelSettings::7446808532280074214::1674089630::0::1::::<><>::uid://w1cgdewepjkh
+node_2d.tscn::PackedScene::2724823788640545266::1674096028::0::1::::<><>::res://pAYSlate.gd<>uid://b43cye3hmkrxa
+pAYSlate.gd::GDScript::-1::1674095175::0::1::::<>Node2D<>::
+README.md::TextFile::-1::1674089629::0::1::::<><>::
+Screenshot_2022-11-27_13-19-48.png::CompressedTexture2D::5909108623316176800::1674089629::1674089864::1::::<><>::
+Screenshot_2022-11-29_18-22-53.png::CompressedTexture2D::4624002191515557134::1674089629::1674089864::1::::<><>::
+Screenshot_2022-12-13_21-50-22.png::CompressedTexture2D::8177061610206771705::1674089629::1674089864::1::::<><>::
+::res://assets/::1674089864
+pack.png::CompressedTexture2D::6736368843562428186::1674089629::1674089864::1::::<><>::
+::res://assets/cool bg/::1674089864
+icon16.png::CompressedTexture2D::6049842810007327863::1674089629::1674089864::1::::<><>::
+image.png::CompressedTexture2D::7381086032148754491::1674089629::1674089864::1::::<><>::
+miencraft gard.png::CompressedTexture2D::409903742632763494::1674089629::1674089864::1::::<><>::
+::res://assets/fonts/::1674089864
+951748.png::CompressedTexture2D::6152372031681297072::1674089629::1674089864::1::::<><>::
+ggsans-Semibold.ttf::FontFile::6341968848796782173::1674089629::1674089863::1::::<><>::
+SF-Pro-Display-Medium.otf::FontFile::6959423322882791901::1674089629::1674089863::1::::<><>::
+SF-Pro-Display-Regular.otf::FontFile::4062419952814965301::1674089629::1674089863::1::::<><>::
+SF-Pro-Display-Semibold.otf::FontFile::1597960695146022007::1674089629::1674089863::1::::<><>::
+SFUIText-Regular.otf::FontFile::6763973955788260803::1674089629::1674089863::1::::<><>::
+W95FA.otf::FontFile::7672378287327981700::1674089629::1674089863::1::::<><>::
+::res://assets/fonts/font_styles/::1674094613
+gameplay trex.tres::LabelSettings::3878766656477790917::1674094613::0::1::::<><>::uid://w1cgdewepjkh
+pausemenu.tres::LabelSettings::3514078421880744980::1674089629::0::1::::<><>::uid://c6fgxki0cjxhl
+titlescreen idk.tres::LabelSettings::7195078874281600523::1674089629::0::1::::<><>::uid://c6fgxki0cjxhl
+::res://assets/images/::1674089865
+79-796576_wooden-podium-delux-podium.jpg::CompressedTexture2D::5865825527122689702::1674089629::1674089864::1::::<><>::
+default.res::SpriteFrames::4455675203664456037::1674089629::0::1::::<><>::
+NOTE_assets.png::CompressedTexture2D::8627434700189274947::1674089629::1674089865::1::::<><>::
+vignette.png::CompressedTexture2D::9054862048103059487::1674089629::1674089864::1::::<><>::
+::res://assets/images/credits/::1674089864
+alexg1247.jpg::CompressedTexture2D::1951801901883950389::1674089629::1674089864::1::::<><>::
+leather128.png::CompressedTexture2D::6515312357722571524::1674089629::1674089864::1::::<><>::
+raf.png::CompressedTexture2D::5203974889035576743::1674089629::1674089864::1::::<><>::
+sevcon.png::CompressedTexture2D::8156344075879798110::1674089629::1674089864::1::::<><>::
+swordcube.png::CompressedTexture2D::8604669795415571223::1674089629::1674089864::1::::<><>::
+v01d.png::CompressedTexture2D::2147293081449907755::1674089629::1674089864::1::::<><>::
+::res://assets/note skin/::1674092995
+enmey_strumline.gd::GDScript::-1::1674089629::0::1::::<>Node2D<>::
+enmey_strumline.tscn::PackedScene::4630581567823639884::1674089629::0::1::::<><>::res://assets/note skin/enmey_strumline.gd
+strumline.gd::GDScript::-1::1674091095::0::1::::<>Node2D<>::
+strumline.tscn::PackedScene::4935925857302112234::1674092995::0::1::::<><>::res://assets/note skin/strumline.gd
+::res://assets/songs/::1674094896
+toggogl downwall old bg.png::CompressedTexture2D::7536592472432698185::1674089630::1674089864::1::::<><>::
+triple-trouble-hard.json::JSON::-1::1674089630::0::1::::<><>::
+::res://assets/songs/big shot/::1674089864
+big shot.jpg::CompressedTexture2D::134649451420726686::1674089629::1674089864::1::::<><>::
+big shot.json::JSON::-1::1674089629::0::1::::<><>::
+big shot.mp3::AudioStreamMP3::8485480072030396435::1674089629::1674089863::1::::<><>::
+::res://assets/songs/cys good/::1674089864
+cys good.json::JSON::-1::1674089629::0::1::::<><>::
+cys good.mp3::AudioStreamMP3::504737890743391425::1674089629::1674089863::1::::<><>::
+cys good.png::CompressedTexture2D::7757682530351125609::1674089629::1674089864::1::::<><>::
+::res://assets/songs/dojo brawl/::1674089864
+dojo brawl.json::JSON::-1::1674089629::0::1::::<><>::
+dojo brawl.ogg::AudioStreamOggVorbis::2419041569070491536::1674089629::1674089863::1::::<><>::
+dojo brawl.png::CompressedTexture2D::8422131578132856003::1674089629::1674089864::1::::<><>::
+::res://assets/songs/doomsday/::1674089864
+doomsday.json::JSON::-1::1674089629::0::1::::<><>::
+doomsday.mp3::AudioStreamMP3::4065843046858678204::1674089629::1674089863::1::::<><>::
+doomsday.png::CompressedTexture2D::3446527659682360765::1674089629::1674089864::1::::<><>::
+::res://assets/songs/endless depths/::1674089864
+endless depths.json::JSON::-1::1674089629::0::1::::<><>::
+endless depths.ogg::AudioStreamOggVorbis::1999016652984590860::1674089629::1674089863::1::::<><>::
+endless depths.png::CompressedTexture2D::410110867243497498::1674089629::1674089864::1::::<><>::
+modchart.tscn::PackedScene::1371601492662091838::1674089629::0::1::::<><>::uid://d2aiiw1sfjrln
+::res://assets/songs/endless encore/::1674094960
+endless encore.jpg::CompressedTexture2D::4769060980002970253::1674089629::1674089864::1::::<><>::
+endless encore.json::JSON::-1::1674089629::0::1::::<><>::
+endless encore.ogg::AudioStreamOggVorbis::8873357475119959043::1674089629::1674089863::1::::<><>::
+modchart.gd::GDScript::-1::1674094960::0::1::::<>Modchart<>::
+modchart.tscn::PackedScene::6825181605375605352::1674092995::0::1::::<><>::res://assets/songs/endless encore/modchart.gd
+::res://assets/songs/fatality/::1674089966
+fatality.jpg::CompressedTexture2D::4795554893400193021::1674089629::1674089864::1::::<><>::
+fatality.json::JSON::-1::1674089629::0::1::::<><>::
+fatality.mp3::AudioStreamMP3::3643942147180026844::1674089629::1674089863::1::::<><>::
+::res://assets/songs/i am god/::1674089864
+i am god.jpg::CompressedTexture2D::4480785150464416760::1674089629::1674089864::1::::<><>::
+i am god.json::JSON::-1::1674089629::0::1::::<><>::
+i am god.ogg::AudioStreamOggVorbis::412331328738369466::1674089629::1674089863::1::::<><>::
+::res://assets/songs/insult/::1674089864
+insult.json::JSON::-1::1674089629::0::1::::<><>::
+insult.ogg::AudioStreamOggVorbis::5403936686177194801::1674089629::1674089863::1::::<><>::
+insult.png::CompressedTexture2D::7938663160917198305::1674089629::1674089864::1::::<><>::
+::res://assets/songs/lost my mind/::1674089864
+lost my mind - cover.mp3::AudioStreamMP3::8110386956092664971::1674089629::1674089863::1::::<><>::
+lost my mind.json::JSON::-1::1674089629::0::1::::<><>::
+lost my mind.png::CompressedTexture2D::7199792470839634668::1674089629::1674089864::1::::<><>::
+::res://assets/songs/phantasm/::1674089865
+modchart.gd::GDScript::-1::1674089629::0::1::::<>Modchart<>::
+modchart.tscn::PackedScene::9058249480148619253::1674089629::0::1::::<><>::res://assets/songs/phantasm/modchart.gd
+phantasm.json::JSON::-1::1674089629::0::1::::<><>::
+phantasm.png::CompressedTexture2D::1873929579470762867::1674089629::1674089864::1::::<><>::
+phantasm.wav::AudioStreamWAV::848779366170924684::1674089629::1674089865::1::::<><>::
+::res://assets/songs/redux guns/::1674096071
+bf-full.png::CompressedTexture2D::6730794874628151746::1674093209::1674093218::1::::<><>::
+bf-full.res::SpriteFrames::3458865571359808750::1674093708::0::1::::<><>::uid://c25phcxic22mg
+bf-full.xml::TextFile::-1::1674093209::0::1::::<><>::
+captain.png::CompressedTexture2D::7018629199060216274::1674093041::1674093043::1::::<><>::
+captain.res::SpriteFrames::2056003591073320723::1674093778::0::1::::<><>::uid://c6842d46fu4ck
+captain.xml::TextFile::-1::1674093041::0::1::::<><>::
+icons.png::CompressedTexture2D::5523092048456174342::1674093816::1674093817::1::::<><>::
+modchart.gd::GDScript::-1::1674096071::0::1::::<>Modchart<>::
+modchart.tscn::PackedScene::8646657310524523200::1674096071::0::1::::<><>::res://assets/songs/redux guns/modchart.gd<>uid://4j7cxbsu2uql<>uid://bpjramjfqqv3c<>uid://ckxorwc4wu5k1<>uid://b8eftdti6b2gv
+redux guns.json::JSON::-1::1674091974::0::1::::<><>::
+redux guns.mp3::AudioStreamMP3::9112366803069343403::1674091952::1674091962::1::::<><>::
+redux guns.png::CompressedTexture2D::45034517146598106::1674092048::1674092050::1::::<><>::
+vcr.ttf::FontFile::4711247737138749061::1674094201::1674094201::1::::<><>::
+::res://assets/songs/rush b/::1674089864
+rush b.json::JSON::-1::1674089629::0::1::::<><>::
+rush b.mp3::AudioStreamMP3::1054832682424884680::1674089630::1674089863::1::::<><>::
+rush b.png::CompressedTexture2D::1478287938300927430::1674089630::1674089864::1::::<><>::
+::res://assets/songs/toggogl downwall/::1674089864
+toggogl downwall.json::JSON::-1::1674089630::0::1::::<><>::
+toggogl downwall.ogg::AudioStreamOggVorbis::6670761559170233197::1674089630::1674089863::1::::<><>::
+toggogl downwall.png::CompressedTexture2D::8694356196148442501::1674089630::1674089864::1::::<><>::
+::res://assets/songs/too slow/::1674094959
+Inst.mp3::AudioStreamMP3::7077142361781112803::1674094896::1674094958::1::::<><>::
+too slow.jpg::CompressedTexture2D::8430562087083530822::1674094896::1674094959::1::::<><>::
+too slow.json::JSON::-1::1674094896::0::1::::<><>::
+::res://assets/songs/too slow encore/::1674089864
+too slow encore.jpg::CompressedTexture2D::6008142068022016279::1674089630::1674089864::1::::<><>::
+too slow encore.json::JSON::-1::1674089630::0::1::::<><>::
+too slow encore.ogg::AudioStreamOggVorbis::6960541708682207714::1674089630::1674089863::1::::<><>::
+::res://assets/songs/triple-trouble-brodo/::1674089864
+triple-trouble-brodo.json::JSON::-1::1674089630::0::1::::<><>::
+triple-trouble-brodo.mp3::AudioStreamMP3::5981804939743686992::1674089630::1674089863::1::::<><>::
+triple-trouble-brodo.png::CompressedTexture2D::1783728282873581014::1674089630::1674089864::1::::<><>::
+::res://assets/songs/triple-trouble-lyrics/::1674089864
+triple-trouble-lyrics.json::JSON::-1::1674089630::0::1::::<><>::
+triple-trouble-lyrics.mp3::AudioStreamMP3::2618266441208883322::1674089630::1674089863::1::::<><>::
+triple-trouble-lyrics.png::CompressedTexture2D::2783115764262622053::1674089630::1674089864::1::::<><>::
+::res://assets/songs but better/::1674089865
+L.wav::AudioStreamWAV::6585268990554484779::1674089629::1674089865::1::::<><>::
+Voices(1).ogg::AudioStreamOggVorbis::6066857629784448459::1674089629::1674089863::1::::<><>::
+::res://autoload/::1674096028
+AudioHandler.gd::GDScript::-1::1674089630::0::1::::<>Node<>::
+AudioHandler.tscn::PackedScene::2636400174858353401::1674092995::0::1::::<><>::res://autoload/AudioHandler.gd
+Conductor.gd::GDScript::-1::1674089630::0::1::::<>Node<>::
+CoolUtil.gd::GDScript::-1::1674089905::0::1::::<>Node<>::
+FPS.gd::GDScript::-1::1674090911::0::1::::<>CanvasLayer<>::
+FPS.tscn::PackedScene::4396803779543131930::1674096028::0::1::::<><>::res://autoload/FPS.gd<>uid://bvi5yqqjnbopx<>uid://w1cgdewepjkh
+Globals.gd::GDScript::-1::1674094920::0::1::::<>Node<>::
+Options.gd::GDScript::-1::1674089630::0::1::::<>Node<>::
+SavingShit.gd::GDScript::-1::1674089630::0::1::::<>Node<>::
+WarningScreen.gd::GDScript::-1::1674089630::0::1::::<>CanvasLayer<>::
+WarningScreen.tscn::PackedScene::84887233169786761::1674092995::0::1::::<><>::res://autoload/WarningScreen.gd
+::res://bin/::1674091715
+::res://classes/::1674089630
+Modchart.gd::GDScript::-1::1674089630::0::1::::Modchart<>Node<>::
+Save.gd::GDScript::-1::1674089630::0::1::::Save<>Node<>::
+::res://resources/::1674089630
+BPMChangeEvent.gd::GDScript::-1::1674089630::0::1::::BPMChangeEvent<>Resource<>::
+::res://scnee/::1674094170
+crrdit mnu.gd::GDScript::-1::1674089630::0::1::::<>Node2D<>::
+crrdit mnu.tscn::PackedScene::3050008737829330164::1674092995::0::1::::<><>::uid://cptpj3trsrk8u<>res://scnee/crrdit mnu.gd<>uid://dog82bln5ahac<>uid://w1cgdewepjkh
+enemy key.gd::GDScript::-1::1674089630::0::1::::<>Node2D<>::
+enemy key.tscn::PackedScene::4737188942721045859::1674092995::0::1::::<><>::res://scnee/enemy key.gd<>uid://dwc27ofecoi28<>uid://q5ala0v05d8h
+key.gd::GDScript::-1::1674089630::0::1::::<>Node2D<>::
+key.tscn::PackedScene::7799610230570454123::1674092995::0::1::::<><>::res://scnee/key.gd<>uid://dk25tydcojb1m
+Main Menu.gd::GDScript::-1::1674089630::0::1::::<>Control<>::
+Main Menu.tscn::PackedScene::6393433861721754736::1674092995::0::1::::<><>::res://scnee/Main Menu.gd<>uid://darl5r556djxr
+Note Skin Changer.tscn::PackedScene::9216400545652180537::1674092995::0::1::::<><>::uid://bc70njspwyii
+Options.gd::GDScript::-1::1674089630::0::1::::<>Node2D<>::
+Pause men.gd::GDScript::-1::1674092845::0::1::::<>CanvasLayer<>::
+Pause men.tscn::PackedScene::6233830904915986533::1674092995::0::1::::<><>::uid://bqcimgcq86s3m<>res://scnee/Pause men.gd<>uid://w1cgdewepjkh
+Screenshot_2022-12-11_15-15-24.png::CompressedTexture2D::8087173099793135864::1674089630::1674089864::1::::<><>::
+song credits.tscn::PackedScene::1993540862024436615::1674092995::0::1::::<><>::uid://dnhqtaw1een6g
+STRUM2.gd::GDScript::-1::1674089630::0::1::::<>Node2D<>::
+STRUM2.tscn::PackedScene::76305885307868184::1674092995::0::1::::<><>::res://scnee/STRUM2.gd<>uid://cck88iincnkp3<>uid://dwc27ofecoi28<>uid://d1vjwd1ahhqdj<>uid://dbstfyhlp4rrg
+TemplateSong.gd::GDScript::-1::1674089630::0::1::::<>Control<>::
+TemplateSong.tscn::PackedScene::7581552879111871368::1674092995::0::1::::<><>::res://scnee/TemplateSong.gd<>uid://dedj33517fi0m<>uid://w1cgdewepjkh
+UI.gd::GDScript::-1::1674089630::0::1::::<>CanvasLayer<>::
+UI.tscn::PackedScene::4479864273031386050::1674094170::0::1::::<><>::uid://bc70njspwyii<>res://scnee/UI.gd<>uid://bvi5yqqjnbopx<>uid://w1cgdewepjkh
+Vocals.ogg::AudioStreamOggVorbis::3742348441541518404::1674089630::1674089863::1::::<><>::
+::res://scnee/Note/::1674094896
+Note.gd::GDScript::-1::1674089630::0::1::::Note<>Node2D<>::
+Note.tscn::PackedScene::1333114435569112555::1674094896::0::1::::<><>::res://scnee/Note/Note.gd<>uid://dk25tydcojb1m
+::res://testing/::1674089864
+dd9pew1-0ed4c047-7fa6-428f-a85d-bc2c286acb3d.png::CompressedTexture2D::4950775336578798651::1674089630::1674089864::1::::<><>::
+index.png::CompressedTexture2D::8300749069672626023::1674089630::1674089864::1::::<><>::
+Inst.ogg::AudioStreamOggVorbis::8745678404434295861::1674089630::1674089863::1::::<><>::
+tumblr_4298712ab2ec48995a76c121a757c70d_b2f10911_540.png::CompressedTexture2D::479753657832654327::1674089630::1674089864::1::::<><>::
+Voices.ogg::AudioStreamOggVorbis::5065261358136723801::1674089630::1674089863::1::::<><>::
+[paushe vubton pushed.png::CompressedTexture2D::7267773518017527940::1674089630::1674089864::1::::<><>::
+[paushe vubton.png::CompressedTexture2D::9028109856648819671::1674089630::1674089864::1::::<><>::
+::res://testing/song/::1674089865
+a.wav::AudioStreamWAV::5907869243969987220::1674089630::1674089865::1::::<><>::
+cool.mp3::AudioStreamMP3::5906215928451863376::1674089630::1674089863::1::::<><>::
+::res://toolers/::1674093226
+xml_choose_sprites.gd::GDScript::-1::1674092899::0::1::::<>Button<>::
+xml_converter.tscn::PackedScene::4058835542270410011::1674093226::0::1::::<><>::res://toolers/xml_main_panel.gd<>res://toolers/xml_choose_sprites.gd
+xml_main_panel.gd::GDScript::-1::1674093195::0::1::::<>Panel<>::

@@ -1,0 +1,26 @@
+res://assets/fonts/font_styles/gameplay trex.tres::6afbdeba4c01f35550b44418a1ce2c34::1674089629::res://.godot/exported/133200997/export-08c878d809a6d81bd9b162a9b35ce746-gameplay trex.res
+res://assets/fonts/font_styles/pausemenu.tres::2eb89fc1c1a3b1c233c5d58c624e552b::1674089629::res://.godot/exported/133200997/export-b7cdec5f038219e19c88c1b68bedf74e-pausemenu.res
+res://assets/fonts/font_styles/titlescreen idk.tres::b1034fc2757b5a9d28efb8d58c80802d::1674089629::res://.godot/exported/133200997/export-9e66aa177353dd43a06e89904f29cb39-titlescreen idk.res
+res://assets/note skin/enmey_strumline.tscn::139d66c42abeffd64b9096d92bc6b9e3::1674089629::res://.godot/exported/133200997/export-5ea6eb4e33251f23c1eaf88cca761d24-enmey_strumline.scn
+res://assets/note skin/strumline.tscn::544139b7c98761bae47e5aa79d2abd48::1674091184::res://.godot/exported/133200997/export-233a682573accacab70a8249708854e9-strumline.scn
+res://assets/songs/endless depths/modchart.tscn::d9374c2704551b546e9080ac7d478967::1674089629::res://.godot/exported/133200997/export-e811c63377c10f43ee1f41c75a0a2b16-modchart.scn
+res://assets/songs/endless encore/modchart.tscn::f66d965b8e7e443e3f062ac51205a248::1674091555::res://.godot/exported/133200997/export-c7d96a95a9fb34b913fbf4c512c17aa3-modchart.scn
+res://assets/songs/phantasm/modchart.tscn::d636ecd33b03b9fd12c79c0a3d89a196::1674089629::res://.godot/exported/133200997/export-6e4b78d79fc199a833cad62b0ef76367-modchart.scn
+res://autoload/AudioHandler.tscn::9c8f620b0ca47792f209b3b17326a9fe::1674091184::res://.godot/exported/133200997/export-f2acbfbfa0f5d3afde8da442f26518b4-AudioHandler.scn
+res://autoload/FPS.tscn::4ac461ac1f76517628be316f9a464f98::1674091184::res://.godot/exported/133200997/export-b664472bd3c83c788e8236760cbe092f-FPS.scn
+res://autoload/WarningScreen.tscn::2fe2769db0b5db085e77745b9613845d::1674091184::res://.godot/exported/133200997/export-9a6c42ab03b9e356db355d43a8823a5d-WarningScreen.scn
+res://scnee/Note/Note.tscn::ef2d3ced59ffc2f7c15ada6c19a864a4::1674091184::res://.godot/exported/133200997/export-9f968f7138b8d37555a597e4df561c19-Note.scn
+res://scnee/crrdit mnu.tscn::19b9d069fd30825b8f55b35a64a21298::1674091184::res://.godot/exported/133200997/export-cfd16294171b57f852ace5ac50f80084-crrdit mnu.scn
+res://scnee/enemy key.tscn::50bc433b260bff303bc3708030f8a750::1674091184::res://.godot/exported/133200997/export-d1b1da2d298f79d2b1ed2a8d2e936cfd-enemy key.scn
+res://scnee/key.tscn::f095dbbdd8368c647173395bdf599533::1674091184::res://.godot/exported/133200997/export-fb7292e3d25489702643904a4a3b29cc-key.scn
+res://scnee/Main Menu.tscn::13edb72e221af73c6cae5e8ca71dd1b5::1674091184::res://.godot/exported/133200997/export-eaac9997163183d74c2fcfa70f3212c9-Main Menu.scn
+res://scnee/Note Skin Changer.tscn::e01d6114700f81ec6a3f530d1feb15c0::1674091184::res://.godot/exported/133200997/export-409aedb58d3c97a4852abe7409d35471-Note Skin Changer.scn
+res://scnee/Pause men.tscn::646e20e518c5fda4dab8a3713351cf06::1674091184::res://.godot/exported/133200997/export-45e405ee1f11b7e9a37a23366ac05123-Pause men.scn
+res://scnee/song credits.tscn::760a1383c688a7f2860c3039cea02561::1674091184::res://.godot/exported/133200997/export-15a6019017b539e142ce97d72dd4b75f-song credits.scn
+res://scnee/STRUM2.tscn::c84148cc10613f1e71a7fc355019f753::1674091184::res://.godot/exported/133200997/export-5913a20ea6d03fe32cb396a3f38facd8-STRUM2.scn
+res://scnee/TemplateSong.tscn::3565a4482f3105cc7e205a0cbd9c6f74::1674091184::res://.godot/exported/133200997/export-c505e3710b68c0ca24116186f7e3bc1a-TemplateSong.scn
+res://scnee/UI.tscn::ef006890bf9465cc1b253bcb4746b15c::1674091184::res://.godot/exported/133200997/export-4f937602a67aaf261a915f596ca795d0-UI.scn
+res://default_bus_layout.tres::a53ea0cd254cf1dbd0d9159d2334c645::1674089630::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
+res://icon.tscn::af8701d2a323ada395d40bf177ffe2ae::1674091184::res://.godot/exported/133200997/export-523cfd0014c18c3c941ab60c4947535f-icon.scn
+res://new_label_settings.tres::dbe6045fdd4547123b2d899f7cf8c18a::1674089630::res://.godot/exported/133200997/export-d6bca0773c4f51636d39bc29b0265694-new_label_settings.res
+res://node_2d.tscn::d3f15dbb68733cd09f886a25a0ebc0d5::1674091332::res://.godot/exported/133200997/export-362256a061aa8890e9a1e558b11e5ec3-node_2d.scn
