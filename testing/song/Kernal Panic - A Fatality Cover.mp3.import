@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ciflrt8kssd5v"
+path="res://.godot/imported/Kernal Panic - A Fatality Cover.mp3-146f84992b50f0223689f80d855be0cf.mp3str"
+
+[deps]
+
+source_file="res://testing/song/Kernal Panic - A Fatality Cover.mp3"
+dest_files=["res://.godot/imported/Kernal Panic - A Fatality Cover.mp3-146f84992b50f0223689f80d855be0cf.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

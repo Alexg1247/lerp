@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dgs8l3j8ljrn2"
+path="res://.godot/imported/cys good.mp3-9806e68a78f13b4d812992860e94af17.mp3str"
+
+[deps]
+
+source_file="res://testing/song/cys good.mp3"
+dest_files=["res://.godot/imported/cys good.mp3-9806e68a78f13b4d812992860e94af17.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

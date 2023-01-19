@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ckucwd0x6s6mt"
+path="res://.godot/imported/i am god.ogg-686c5e48d4689e7778aae8fea7f68a9d.oggvorbisstr"
+
+[deps]
+
+source_file="res://testing/song/i am god.ogg"
+dest_files=["res://.godot/imported/i am god.ogg-686c5e48d4689e7778aae8fea7f68a9d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
