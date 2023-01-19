@@ -28,6 +28,15 @@ func _process(delta: float) -> void:
 		$"ui/opp-icon".scale = lerp($"ui/opp-icon".scale, Vector2(1, -1), delta * 9)
 	
 	$"ui/score-text".text = "Notes Hit:%d - Misses:%d" % [Globals.notes_hit, Globals.misses]
+	
+	if not Globals.save.grab("downscroll"):
+		$"ui/score-text".position.y = 598
+		$"ui/plr-icon".position.y = 498
+		$"ui/opp-icon".position.y = 498
+	else:
+		$"ui/score-text".position.y = 100
+		$"ui/plr-icon".position.y = 0
+		$"ui/opp-icon".position.y = 0
 
 func player_note_hit(hit, hit_data, hit_name):
 	playerstrums.get_child(abs(hit_data) % 4).position += Vector2(0, 15)
@@ -39,6 +48,25 @@ func player_note_hit(hit, hit_data, hit_name):
 	else:
 		$captain_anim.play(str(hit_data))
 		$captain.frame = 0
+	
+	if most_recent_is_player:
+		camera.position = Vector2(576, 324) + Vector2(100, 0)
+	else:
+		camera.position = Vector2(576, 324) + Vector2(-100, 0)
+	
+	match(hit_data):
+		0:
+			camera.position.x += -100
+			camera.position.y += 0
+		1:
+			camera.position.x += 0
+			camera.position.y += 100
+		2:
+			camera.position.x += 0
+			camera.position.y += -100
+		3:
+			camera.position.x += 100
+			camera.position.y += 0
 
 func beat_hit():
 	if Conductor.cur_beat % 2 == 0:
@@ -50,9 +78,9 @@ func beat_hit():
 			$bf.frame = 0
 	
 	if most_recent_is_player:
-		gameplay.get_node("Camera").position = Vector2(576, 324) + Vector2(100, 0)#$bf.position
+		camera.position = Vector2(576, 324) + Vector2(100, 0)
 	else:
-		gameplay.get_node("Camera").position = Vector2(576, 324) + Vector2(-100, 0)#$captain.position
+		camera.position = Vector2(576, 324) + Vector2(-100, 0)
 	
 	$"ui/plr-icon".scale += Vector2(0.2, 0.2)
 	$"ui/opp-icon".scale += Vector2(0.2, -0.2)

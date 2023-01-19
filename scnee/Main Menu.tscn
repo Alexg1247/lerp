@@ -99,3 +99,7 @@ scale = Vector2(0.74125, 0.629112)
 texture = ExtResource("3_n3ogb")
 
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Options/CheckButton" to="." method="mobile_controls"]
+[connection signal="pressed" from="Options/CheckButton2" to="." method="downscroll"]
+[connection signal="pressed" from="Options/CheckButton3" to="." method="vsync"]
+[connection signal="pressed" from="Options/CheckButton4" to="." method="quants"]

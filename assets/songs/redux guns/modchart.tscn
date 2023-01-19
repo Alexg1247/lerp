@@ -683,7 +683,7 @@ libraries = {
 [node name="ui" type="CanvasLayer" parent="."]
 
 [node name="plr-icon" type="Sprite2D" parent="ui"]
-position = Vector2(551, 0)
+position = Vector2(551, 448)
 texture = ExtResource("4_pwl6e")
 centered = false
 flip_h = true
@@ -691,7 +691,7 @@ hframes = 9
 vframes = 6
 
 [node name="opp-icon" type="Sprite2D" parent="ui"]
-position = Vector2(601, 0)
+position = Vector2(601, 448)
 rotation = -3.14159
 scale = Vector2(1, -1)
 texture = ExtResource("4_pwl6e")
@@ -702,9 +702,9 @@ vframes = 6
 frame = 36
 
 [node name="score-text" type="Label" parent="ui"]
-offset_top = 100.0
+offset_top = 548.0
 offset_right = 1152.0
-offset_bottom = 123.0
+offset_bottom = 571.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
 text = "Notes Hit:0 - Misses:0"

@@ -71,18 +71,18 @@ func _on_button_pressed():
 		menu.position = lerp(newpos, ogpos, 1000)
 	lerped = !lerped
 
-func _on_check_button_pressed():
+func mobile_controls():
 	Globals.save.assign("mobile_controls", !Globals.save.grab("mobile_controls")) 
 	Globals.save.flush()
 	#Options.saveshit(Options.options)
 
 
-func _on_check_button_2_pressed():
+func downscroll():
 	Globals.save.assign("downscroll", !Globals.save.grab("downscroll")) 
 	Globals.save.flush()
 
 
-func _on_check_button_3_pressed():
+func vsync():
 	Globals.save.assign("vsync", !Globals.save.grab("vsync")) 
 	Globals.save.flush()
 	
@@ -93,7 +93,7 @@ func _on_check_button_3_pressed():
 		DisplayServer.window_set_vsync_mode(0)
 
 
-func _on_check_button_4_pressed():
+func quants():
 	Globals.save.assign("quants", !Globals.save.grab("quants")) 
 	Globals.save.flush()
 
