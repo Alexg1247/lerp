@@ -30,7 +30,8 @@ var songlist = [
 	"dojo brawl",
 	"endless depths",
 	"redux guns",
-	"too slow"
+	"too slow",
+	"you cant run"
 ]
 
 var score:Dictionary = {}

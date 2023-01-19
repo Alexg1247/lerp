@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://be26pj35rxgrq"]
+[gd_scene load_steps=4 format=3 uid="uid://be26pj35rxgrq"]
 
 [ext_resource type="Script" path="res://pAYSlate.gd" id="1_y7hu3"]
 [ext_resource type="PackedScene" uid="uid://b43cye3hmkrxa" path="res://scnee/UI.tscn" id="2_vuo4x"]
+[ext_resource type="Texture2D" uid="uid://d1pgxd4qpy3xn" path="res://icon.svg" id="3_nl2lt"]
 
 [node name="Node2D" type="Node2D"]
+z_index = 4
 script = ExtResource("1_y7hu3")
 
 [node name="Label2" type="Label" parent="."]
@@ -18,6 +20,10 @@ autowrap_mode = 2
 [node name="Backgrounds" type="Sprite2D" parent="."]
 self_modulate = Color(0.388235, 0.388235, 0.388235, 1)
 position = Vector2(576, 324)
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(573, 330)
+texture = ExtResource("3_nl2lt")
 
 [node name="UI" parent="." instance=ExtResource("2_vuo4x")]
 

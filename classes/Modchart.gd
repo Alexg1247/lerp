@@ -4,6 +4,7 @@ class_name Modchart
 @onready var gameplay = get_tree().get_root().get_node("Node2D")
 @onready var fpstext = get_tree().get_root().get_node("FPS")
 @onready var ui = gameplay.get_node("UI")
+@onready var camera = gameplay.get_node("Camera")
 
 @onready var playerstrums = ui.get_node("STRUM2/strumline")
 @onready var playernotes = ui.get_node("STRUM2/Player Note")
