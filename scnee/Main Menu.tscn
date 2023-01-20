@@ -88,7 +88,7 @@ text = "\"quants\""
 offset_top = 85.0
 offset_right = 169.0
 offset_bottom = 116.0
-text = "custom_note_color_per_song"
+text = "use sdkl instead of dfjk"
 
 [node name="Image" type="Sprite2D" parent="."]
 position = Vector2(56, 629.5)
@@ -103,3 +103,4 @@ texture = ExtResource("3_n3ogb")
 [connection signal="pressed" from="Options/CheckButton2" to="." method="downscroll"]
 [connection signal="pressed" from="Options/CheckButton3" to="." method="vsync"]
 [connection signal="pressed" from="Options/CheckButton4" to="." method="quants"]
+[connection signal="pressed" from="Options/CheckButton5" to="." method="_on_check_button_5_pressed"]

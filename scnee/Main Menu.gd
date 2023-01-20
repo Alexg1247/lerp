@@ -46,6 +46,10 @@ func _ready():
 		$Options/CheckButton3.button_pressed = true
 	else:
 		$Options/CheckButton3.button_pressed = false
+	if Globals.save.grab("sdkl"):
+		$Options/CheckButton5.button_pressed = true
+	else:
+		$Options/CheckButton5.button_pressed = false
 	var template = load("res://scnee/TemplateSong.tscn").instantiate()
 	$"ScrollContainer/VBoxContainer".add_child(template)
 	Globals.fun = false
@@ -100,3 +104,8 @@ func quants():
 
 func _on_button_2_pressed():
 	get_tree().change_scene_to_packed(load("res://scnee/crrdit mnu.tscn"))
+
+
+func _on_check_button_5_pressed():
+	Globals.save.assign("sdkl", !Globals.save.grab("sdkl")) 
+	Globals.save.flush()
