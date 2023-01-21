@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/insult.ogg-720af9b275fb07d62b4af3fdd6f46e93.o
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

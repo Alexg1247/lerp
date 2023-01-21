@@ -131,8 +131,8 @@ func songfinished():
 	var score = $"UI/Label TO Show if ur good or not".text
 	Globals.scoredata.assign(song, score) 
 	Globals.scoredata.flush()
-	AudioHandler.stopmusic()
 	get_tree().change_scene_to_file("res://scnee/Main Menu.tscn")
+	AudioHandler.stopmusic()
 
 func  _physics_process(delta):
 	var index = 0

@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/lost my mind - cover.mp3-22ae54ef4af43c0aaee1
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

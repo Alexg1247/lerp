@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/redux guns.mp3-ef3841c302e8f1b85e1d754cb08731
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/big shot.mp3-5b94f68ecf8f4f9451c3e34766dedec4
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

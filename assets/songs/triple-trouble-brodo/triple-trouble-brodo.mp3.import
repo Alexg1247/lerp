@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/triple-trouble-brodo.mp3-a9473c1f238a174c5c61
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

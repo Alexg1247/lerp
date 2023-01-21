@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/dojo brawl.ogg-d8a77724a64a779fd23d4c6a1a70bd
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

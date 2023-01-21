@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/rush b.mp3-e1f7393c08a96c00a0971d188370552d.m
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

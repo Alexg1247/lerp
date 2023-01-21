@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/too slow encore.ogg-71d7b16ae86901c51a496dc4c
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

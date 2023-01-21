@@ -9,6 +9,7 @@ var currentsong = 0
 var lerped = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	AudioHandler.stopmusic()
 	if get_parent().get_node("modchart"):
 		get_parent().get_node("modchart").queue_free()
 	#print(OS.get_name())

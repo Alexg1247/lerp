@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/endless depths.ogg-b4556bc6f16707ab8847300493
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

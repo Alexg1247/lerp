@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://0ab2x5hcw6ui"]
+
+[ext_resource type="PackedScene" uid="uid://bc70njspwyii" path="res://scnee/STRUM2.tscn" id="1_blpg1"]
+[ext_resource type="Script" path="res://scnee/Optchin Menu.gd" id="1_syd0u"]
+[ext_resource type="FontFile" uid="uid://b8eftdti6b2gv" path="res://assets/songs/redux guns/vcr.ttf" id="3_4jit1"]
+
+[sub_resource type="Theme" id="Theme_o1oyu"]
+default_font = ExtResource("3_4jit1")
+default_font_size = 22
+HSlider/styles/slider = null
+
+[node name="Optchin Menu" type="Node2D"]
+script = ExtResource("1_syd0u")
+
+[node name="Normal Notes" parent="." instance=ExtResource("1_blpg1")]
+position = Vector2(337, 107)
+
+[node name="TabContainer" type="TabContainer" parent="."]
+offset_top = 43.0
+offset_right = 431.0
+offset_bottom = 647.0
+
+[node name="Gameplay" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Gameplay"]
+layout_mode = 0
+offset_right = 430.0
+offset_bottom = 621.0
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/Gameplay/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_o1oyu")
+text = "mobile controls"
+
+[node name="CheckButton2" type="CheckButton" parent="TabContainer/Gameplay/VBoxContainer"]
+layout_mode = 2
+text = "downscroll"
+
+[node name="CheckButton3" type="CheckButton" parent="TabContainer/Gameplay/VBoxContainer"]
+layout_mode = 2
+text = "vsync"
+
+[node name="CheckButton4" type="CheckButton" parent="TabContainer/Gameplay/VBoxContainer"]
+layout_mode = 2
+text = "\"quants\""
+
+[node name="CheckButton5" type="CheckButton" parent="TabContainer/Gameplay/VBoxContainer"]
+layout_mode = 2
+text = "use sdkl instead of dfjk"
+
+[connection signal="pressed" from="TabContainer/Gameplay/VBoxContainer/CheckButton" to="." method="_on_check_button_pressed"]
+[connection signal="pressed" from="TabContainer/Gameplay/VBoxContainer/CheckButton2" to="." method="_on_check_button_2_pressed"]
+[connection signal="pressed" from="TabContainer/Gameplay/VBoxContainer/CheckButton3" to="." method="vsync"]
+[connection signal="pressed" from="TabContainer/Gameplay/VBoxContainer/CheckButton4" to="." method="quants"]
+[connection signal="pressed" from="TabContainer/Gameplay/VBoxContainer/CheckButton5" to="." method="_on_check_button_5_pressed"]
