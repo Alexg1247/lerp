@@ -38,9 +38,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if !Globals.save.grab("downscroll"):
-		$"Normal Notes".global_position = lerp($"Normal Notes".global_position, Vector2(337, 100), delta)
+		$"Normal Notes".global_position = lerp($"Normal Notes".global_position, Vector2(337, 100), delta * 3)
 	else:
-		$"Normal Notes".global_position = lerp($"Normal Notes".global_position, Vector2(337, 500), delta)
+		$"Normal Notes".global_position = lerp($"Normal Notes".global_position, Vector2(337, 500), delta * 3)
 
 func vsync():
 	Globals.save.assign("vsync", !Globals.save.grab("vsync")) 
@@ -69,3 +69,5 @@ func _on_check_button_2_pressed():
 func move_da_note():
 	print("downscroll on UwU")
 
+func _on_back_pressed() -> void:
+	get_tree().change_scene_to_packed(load("res://scnee/Main Menu.tscn"))

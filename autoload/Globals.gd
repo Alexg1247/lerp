@@ -1,5 +1,7 @@
 extends Node
 
+var KEY_COUNT: int = 4
+
 var scroll_speed = 3
 var song_multiplier: float = 1.0
 
@@ -35,7 +37,6 @@ var songlist = [
 ]
 
 var score:Dictionary = {}
-
 
 var save = Save.new().bind("Settings", "save")
 

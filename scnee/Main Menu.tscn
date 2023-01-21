@@ -58,38 +58,6 @@ offset_bottom = 572.0
 theme_override_font_sizes/font_size = 69
 text = "Credits"
 
-[node name="Options" type="Node2D" parent="."]
-position = Vector2(18, 124)
-
-[node name="CheckButton" type="CheckButton" parent="Options"]
-offset_right = 44.0
-offset_bottom = 24.0
-text = "mobile controls"
-
-[node name="CheckButton2" type="CheckButton" parent="Options"]
-offset_top = 24.0
-offset_right = 169.0
-offset_bottom = 55.0
-text = "downscroll"
-
-[node name="CheckButton3" type="CheckButton" parent="Options"]
-offset_top = 45.0
-offset_right = 169.0
-offset_bottom = 76.0
-text = "vsync"
-
-[node name="CheckButton4" type="CheckButton" parent="Options"]
-offset_top = 66.0
-offset_right = 169.0
-offset_bottom = 97.0
-text = "\"quants\""
-
-[node name="CheckButton5" type="CheckButton" parent="Options"]
-offset_top = 85.0
-offset_right = 169.0
-offset_bottom = 116.0
-text = "use sdkl instead of dfjk"
-
 [node name="Image" type="Sprite2D" parent="."]
 position = Vector2(56, 629.5)
 
@@ -98,9 +66,5 @@ position = Vector2(1046, 614)
 scale = Vector2(0.74125, 0.629112)
 texture = ExtResource("3_n3ogb")
 
+[connection signal="pressed" from="Button" to="." method="_open_options"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Options/CheckButton" to="." method="mobile_controls"]
-[connection signal="pressed" from="Options/CheckButton2" to="." method="downscroll"]
-[connection signal="pressed" from="Options/CheckButton3" to="." method="vsync"]
-[connection signal="pressed" from="Options/CheckButton4" to="." method="quants"]
-[connection signal="pressed" from="Options/CheckButton5" to="." method="_on_check_button_5_pressed"]

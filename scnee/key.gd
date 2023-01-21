@@ -3,7 +3,6 @@ extends Node2D
 @export_range(0,3) var keynumber:int = 0
 var direction
 
-
 func _ready():
 	match(keynumber):
 		0:
@@ -25,4 +24,3 @@ func _process(delta):
 		$key.frame = 0
 	if !Input.is_action_pressed("gameplay_" + str(keynumber)):
 		$key.frame = 1
-	
