@@ -14,6 +14,8 @@ var fun = false
 
 var mobile = false
 
+var totalwindows = 0
+
 var songlist = [
 	"fatality",
 	"phantasm",
@@ -28,7 +30,6 @@ var songlist = [
 	"triple-trouble-brodo",
 	"cys good",
 	"endless encore",
-	"insult",
 	"dojo brawl",
 	"endless depths",
 	"redux guns",

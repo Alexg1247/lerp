@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://0ab2x5hcw6ui"]
 
-[ext_resource type="PackedScene" uid="uid://bc70njspwyii" path="res://scnee/STRUM2.tscn" id="1_blpg1"]
+[ext_resource type="PackedScene" uid="uid://04mnm5xtfgbm" path="res://scnee/STRUM2.tscn" id="1_blpg1"]
 [ext_resource type="Script" path="res://scnee/Optchin Menu.gd" id="1_syd0u"]
 [ext_resource type="FontFile" uid="uid://b8eftdti6b2gv" path="res://assets/songs/redux guns/vcr.ttf" id="3_4jit1"]
 [ext_resource type="Theme" uid="uid://bbdao6cqoh5bq" path="res://scnee/Optchin Menu.tres" id="3_83xul"]

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cqf20jitps8ya"
+path="res://.godot/imported/a.wav-998f1ba94410ab2a5acf83f777e3eedb.sample"
+
+[deps]
+
+source_file="res://assets/songs but better/a.wav"
+dest_files=["res://.godot/imported/a.wav-998f1ba94410ab2a5acf83f777e3eedb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

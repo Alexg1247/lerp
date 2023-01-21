@@ -1,10 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8qy2sdnashn4"]
+[gd_scene load_steps=5 format=3 uid="uid://el2int8errce"]
 
 [ext_resource type="Script" path="res://scnee/enemy key.gd" id="1_etfke"]
-[ext_resource type="Texture2D" uid="uid://dwc27ofecoi28" path="res://arrow.png" id="2_rjf0b"]
-[ext_resource type="Texture2D" uid="uid://q5ala0v05d8h" path="res://arrow but hit.png" id="3_0jggy"]
+[ext_resource type="Texture2D" uid="uid://dwc27ofecoi28" path="res://assets/images/arrow.png" id="2_rjf0b"]
+[ext_resource type="Texture2D" uid="uid://q5ala0v05d8h" path="res://assets/images/arrow but hit.png" id="3_0jggy"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_di6f8"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_1kywh"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -27,4 +27,4 @@ animations = [{
 script = ExtResource("1_etfke")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-frames = SubResource("SpriteFrames_di6f8")
+frames = SubResource("SpriteFrames_1kywh")

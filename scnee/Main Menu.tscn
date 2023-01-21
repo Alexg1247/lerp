@@ -35,7 +35,7 @@ offset_left = 10.0
 offset_top = 558.0
 offset_right = 320.0
 offset_bottom = 640.0
-text = "lerp(): v1.0beta 1.1
+text = "lerp(): v1.0beta 2
 Made By: Alexg1247
 And \"Jack-ass Games\""
 label_settings = ExtResource("2_apkys")
@@ -63,7 +63,7 @@ text = "Credits"
 position = Vector2(56, 629.5)
 
 [node name="UwU" type="Sprite2D" parent="."]
-position = Vector2(304, 616)
+position = Vector2(84, 531)
 scale = Vector2(0.74125, 0.629112)
 texture = ExtResource("3_n3ogb")
 

@@ -6,15 +6,6 @@
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_y7hu3")
 
-[node name="Label2" type="Label" parent="."]
-offset_left = 2.0
-offset_top = -2.0
-offset_right = 1150.0
-offset_bottom = 138.0
-text = "This is a prototype build, Please contact Alexg1247 on discord and uninstall this now"
-horizontal_alignment = 1
-autowrap_mode = 2
-
 [node name="Backgrounds" type="Sprite2D" parent="."]
 self_modulate = Color(0.388235, 0.388235, 0.388235, 1)
 position = Vector2(576, 324)

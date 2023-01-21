@@ -27,7 +27,7 @@ func _ready():
 		"fatality":
 			backgroundnode.scale = Vector2(2,2)
 		"cys good":
-			backgroundnode.scale = Vector2(0.75, 0.75)
+			backgroundnode.scale = Vector2(1, 1)
 		"toggogl downwall":
 			backgroundnode.scale = Vector2(1.24,1.24)
 			#backgroundnode.position.y -= 30
@@ -114,10 +114,6 @@ func _ready():
 					#events_to_do.append([note[2], float(note[0]), note[3], note[4]])
 
 	noteDataArray.sort_custom(note_sort)
-	if Globals.fun:
-		$Label2.text = "Fun is Infinite With SEGA Enterprises! Fun is Infinite With SEGA Enterprises!"
-	else:
-		$Label2.text = "This is a prototype build, Please contact Alexg1247 on discord and uninstall this now"
 
 func note_sort(a, b):
 	return a[0] < b[0]

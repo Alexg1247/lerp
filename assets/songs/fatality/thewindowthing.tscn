@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cflxmutb4fc88"]
+[gd_scene load_steps=8 format=3 uid="uid://cwihokreoqlf6"]
 
-[ext_resource type="Texture2D" uid="uid://ccsgstyxynky2" path="res://testing/dd9pew1-0ed4c047-7fa6-428f-a85d-bc2c286acb3d.png" id="1_qwi3t"]
 [ext_resource type="Script" path="res://assets/songs/fatality/thewindowthing.gd" id="1_s77u2"]
 [ext_resource type="FontFile" uid="uid://dhks7js66n5cq" path="res://assets/fonts/W95FA.otf" id="2_minte"]
+[ext_resource type="Texture2D" uid="uid://ccsgstyxynky2" path="res://assets/images/dd9pew1-0ed4c047-7fa6-428f-a85d-bc2c286acb3d.png" id="2_pvkxa"]
 [ext_resource type="Texture2D" uid="uid://cdspg65cfqf2q" path="res://assets/uwu.png" id="3_5jimx"]
 [ext_resource type="StyleBox" uid="uid://bixj6alvbifoe" path="res://assets/songs/fatality/thewindowthing.tres" id="4_g7lu4"]
 
@@ -19,12 +19,14 @@ Button/styles/hover = ExtResource("4_g7lu4")
 Button/styles/normal = ExtResource("4_g7lu4")
 
 [node name="Window" type="Window"]
+process_priority = -114
 canvas_item_default_texture_filter = 0
 canvas_item_default_texture_repeat = 1
 initial_position = 1
 title = "UwU i love thicc thighs"
 size = Vector2i(356, 236)
 current_screen = -2
+transient = true
 unresizable = true
 borderless = true
 script = ExtResource("1_s77u2")
@@ -32,7 +34,7 @@ script = ExtResource("1_s77u2")
 [node name="Dd9Pew1-0Ed4c047-7Fa6-428f-a85d-bc2c286Acb3d" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(179, 113)
-texture = ExtResource("1_qwi3t")
+texture = ExtResource("2_pvkxa")
 
 [node name="Label" type="Label" parent="."]
 texture_filter = 1
@@ -44,31 +46,32 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("2_minte")
 theme_override_font_sizes/font_size = 16
-text = "UwU idfk what to put here"
+text = "There was a fatal error"
 
 [node name="Label2" type="Label" parent="."]
 texture_filter = 3
-offset_left = 34.0
-offset_top = 56.0
-offset_right = 325.0
-offset_bottom = 83.0
+offset_left = 130.0
+offset_top = 87.848
+offset_right = 421.906
+offset_bottom = 143.143
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("2_minte")
 theme_override_font_sizes/font_size = 24
-text = "There was a fatal error i guess"
+text = "There was a fatal error 
+i guess"
 
 [node name="Uwu" type="Sprite2D" parent="."]
-position = Vector2(177, 114)
-scale = Vector2(0.539474, 0.539474)
+position = Vector2(72.767, 114)
+scale = Vector2(0.456, 0.456)
 texture = ExtResource("3_5jimx")
 
 [node name="Button" type="Button" parent="."]
 texture_filter = 3
-offset_left = 256.0
-offset_top = 175.0
-offset_right = 342.0
-offset_bottom = 210.0
+offset_left = 245.136
+offset_top = 168.801
+offset_right = 331.17
+offset_bottom = 203.801
 theme = SubResource("Theme_bihct")
 theme_type_variation = &"uwu"
 theme_override_colors/font_color = Color(0, 0, 0, 1)

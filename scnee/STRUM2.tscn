@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bc70njspwyii"]
+[gd_scene load_steps=6 format=3 uid="uid://04mnm5xtfgbm"]
 
 [ext_resource type="Script" path="res://scnee/STRUM2.gd" id="1_s31l0"]
 [ext_resource type="PackedScene" uid="uid://cck88iincnkp3" path="res://assets/note skin/strumline.tscn" id="2_qrf2k"]
-[ext_resource type="Texture2D" uid="uid://dwc27ofecoi28" path="res://arrow.png" id="3_ojpay"]
-[ext_resource type="Texture2D" uid="uid://d1vjwd1ahhqdj" path="res://testing/[paushe vubton.png" id="4_liel8"]
-[ext_resource type="Texture2D" uid="uid://dbstfyhlp4rrg" path="res://testing/[paushe vubton pushed.png" id="5_5i45p"]
+[ext_resource type="Texture2D" uid="uid://dwc27ofecoi28" path="res://assets/images/arrow.png" id="3_qkrhj"]
+[ext_resource type="Texture2D" uid="uid://d1vjwd1ahhqdj" path="res://assets/images/[paushe vubton.png" id="4_dmlh6"]
+[ext_resource type="Texture2D" uid="uid://dbstfyhlp4rrg" path="res://assets/images/[paushe vubton pushed.png" id="5_y4ww8"]
 
 [node name="Normal Notes" type="Node2D"]
 script = ExtResource("1_s31l0")
@@ -22,7 +22,7 @@ modulate = Color(0.686275, 0, 0.686275, 1)
 [node name="Left" type="TouchScreenButton" parent="Mobile Shit"]
 modulate = Color(1, 0.0392157, 0.0392157, 0.419608)
 position = Vector2(18, 178)
-texture_normal = ExtResource("3_ojpay")
+texture_normal = ExtResource("3_qkrhj")
 passby_press = true
 action = "gameplay_0"
 
@@ -30,7 +30,7 @@ action = "gameplay_0"
 modulate = Color(1, 0.0392157, 0.0392157, 0.419608)
 position = Vector2(299, 442)
 rotation = -1.5708
-texture_normal = ExtResource("3_ojpay")
+texture_normal = ExtResource("3_qkrhj")
 passby_press = true
 action = "gameplay_1"
 
@@ -38,7 +38,7 @@ action = "gameplay_1"
 modulate = Color(1, 0.0392157, 0.0392157, 0.419608)
 position = Vector2(864, 188)
 rotation = 1.5708
-texture_normal = ExtResource("3_ojpay")
+texture_normal = ExtResource("3_qkrhj")
 passby_press = true
 action = "gameplay_2"
 
@@ -46,15 +46,15 @@ action = "gameplay_2"
 modulate = Color(1, 0.0392157, 0.0392157, 0.419608)
 position = Vector2(1162, 445)
 rotation = 3.14159
-texture_normal = ExtResource("3_ojpay")
+texture_normal = ExtResource("3_qkrhj")
 passby_press = true
 action = "gameplay_3"
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="Mobile Shit"]
 position = Vector2(1047, -2)
 scale = Vector2(0.13, 0.13)
-texture_normal = ExtResource("4_liel8")
-texture_pressed = ExtResource("5_5i45p")
+texture_normal = ExtResource("4_dmlh6")
+texture_pressed = ExtResource("5_y4ww8")
 
 [connection signal="pressed" from="Mobile Shit/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="Mobile Shit/Left2" to="." method="_on_left_2_pressed"]

@@ -1,8 +1,12 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bbdao6cqoh5bq"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bbdao6cqoh5bq"]
 
+[ext_resource type="StyleBox" uid="uid://dssw3bqndap4i" path="res://check box.tres" id="1_ht2io"]
 [ext_resource type="FontFile" uid="uid://b8eftdti6b2gv" path="res://assets/songs/redux guns/vcr.ttf" id="1_pby83"]
 
 [resource]
 default_font = ExtResource("1_pby83")
 default_font_size = 22
+CheckBox/styles/focus = ExtResource("1_ht2io")
+CheckBox/styles/hover = ExtResource("1_ht2io")
+CheckBox/styles/normal = ExtResource("1_ht2io")
 HSlider/styles/slider = null

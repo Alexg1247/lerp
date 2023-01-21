@@ -8,6 +8,7 @@ var currentsong = 0
 var lerped = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	DisplayServer.window_set_title("lerp(): the rythm game", 0)
 	AudioHandler.stopmusic()
 	if get_parent().get_node("modchart"):
 		get_parent().get_node("modchart").queue_free()
