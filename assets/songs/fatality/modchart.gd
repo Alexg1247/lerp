@@ -5,7 +5,6 @@ var counterbutcooler = 0
 
 var randomasstext = [
 	"s͡d͠oh̀f͝u̴iu͠f",
-	"Uw͞U i l̛o̕v͠e͟ ͜thi̛g̛hs :)͘",
 	"F͞a̢TA̕L͞ ̛E͠r̷OR͟R",
 	"A҉ ̷F́ATA͏L҉ ̧E̕ŖROR̨ HAS̡ O̵C̶CU͢RRED ͠",
 	"null",

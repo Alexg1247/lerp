@@ -1,14 +1,14 @@
 [gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://darl5r556djxr"]
 
-[ext_resource type="FontFile" uid="uid://c6fgxki0cjxhl" path="res://assets/fonts/SF-Pro-Display-Medium.otf" id="1_yas3m"]
+[ext_resource type="FontFile" uid="uid://b8eftdti6b2gv" path="res://assets/songs/redux guns/vcr.ttf" id="1_nveat"]
 
 [resource]
 line_spacing = 2.0
-font = ExtResource("1_yas3m")
-font_size = 21
+font = ExtResource("1_nveat")
+font_size = 25
 font_color = Color(0.807843, 0.807843, 0.807843, 1)
 outline_size = 3
 outline_color = Color(0, 0, 0, 1)
 shadow_size = 5
-shadow_color = Color(0, 0, 0, 0.0823529)
+shadow_color = Color(0, 0, 0, 0.643137)
 shadow_offset = Vector2(2, 2)

@@ -50,22 +50,12 @@ offset_bottom = 121.0
 theme_override_font_sizes/font_size = 69
 text = "Options"
 
-[node name="Button2" type="Button" parent="."]
-layout_mode = 0
-offset_left = 24.0
-offset_top = 138.0
-offset_right = 313.0
-offset_bottom = 241.0
-theme_override_font_sizes/font_size = 69
-text = "Credits"
-
 [node name="Image" type="Sprite2D" parent="."]
 position = Vector2(56, 629.5)
 
 [node name="UwU" type="Sprite2D" parent="."]
-position = Vector2(84, 531)
+position = Vector2(87, 544)
 scale = Vector2(0.74125, 0.629112)
 texture = ExtResource("3_n3ogb")
 
 [connection signal="pressed" from="Button" to="." method="_open_options"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

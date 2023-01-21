@@ -72,6 +72,15 @@ theme = ExtResource("3_83xul")
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 text = "(doesnt work)"
 
+[node name="Label2" type="Label" parent="."]
+offset_left = 209.0
+offset_top = 80.0
+offset_right = 378.0
+offset_bottom = 103.0
+theme = ExtResource("3_83xul")
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "(doesnt work)"
+
 [connection signal="pressed" from="TabContainer/Gameplay/VBoxContainer/CheckButton" to="." method="_on_check_button_pressed"]
 [connection signal="pressed" from="TabContainer/Gameplay/VBoxContainer/CheckButton2" to="." method="_on_check_button_2_pressed"]
 [connection signal="pressed" from="TabContainer/Gameplay/VBoxContainer/CheckButton3" to="." method="vsync"]

@@ -19,7 +19,8 @@ Button/styles/hover = ExtResource("4_g7lu4")
 Button/styles/normal = ExtResource("4_g7lu4")
 
 [node name="Window" type="Window"]
-process_priority = -114
+process_mode = 3
+process_priority = -108
 canvas_item_default_texture_filter = 0
 canvas_item_default_texture_repeat = 1
 initial_position = 1
