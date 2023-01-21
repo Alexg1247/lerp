@@ -2,6 +2,7 @@ extends Modchart
 
 var most_recent_is_player: bool = true
 var gf_left: bool = false
+var cam_zoom: float = 0.9
 
 func _ready() -> void:
 	Globals.player_note_hit.connect(player_note_hit)
@@ -44,6 +45,10 @@ func _process(delta: float) -> void:
 	if gf_left and $gf.frame >= 15:
 		$gf.playing = false
 	
+	if camera != null:
+		camera.zoom = Vector2(cam_zoom, cam_zoom)
+	
+	cam_zoom = lerp(cam_zoom, 0.9, delta * 9)
 
 func player_note_hit(hit, hit_data, hit_name):
 	playerstrums.get_child(abs(hit_data) % 4).position += Vector2(0, 15)
@@ -100,3 +105,6 @@ func beat_hit():
 	
 	$"ui/plr-icon".scale += Vector2(0.2, 0.2)
 	$"ui/opp-icon".scale += Vector2(-0.2, 0.2)
+	
+	if Conductor.cur_beat % 4 == 0:
+		cam_zoom += 0.05

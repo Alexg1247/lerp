@@ -671,10 +671,12 @@ position = Vector2(558, 310)
 texture = ExtResource("2_stjdj")
 
 [node name="bar" type="ParallaxLayer" parent="pb"]
-motion_scale = Vector2(0.4, 0.4)
+motion_scale = Vector2(0.5, 0.5)
+motion_offset = Vector2(0, 25)
 
 [node name="bar" type="Sprite2D" parent="pb/bar"]
-position = Vector2(654, 283)
+position = Vector2(530, 302)
+scale = Vector2(0.85, 0.85)
 texture = ExtResource("3_axwfi")
 
 [node name="sidewalk" type="ParallaxLayer" parent="pb"]
