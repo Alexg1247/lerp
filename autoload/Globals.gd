@@ -33,7 +33,8 @@ var songlist = [
 	"endless depths",
 	"redux guns",
 	"too slow",
-	"you cant run"
+	"you cant run",
+	"sussus moogus"
 ]
 
 var score:Dictionary = {}

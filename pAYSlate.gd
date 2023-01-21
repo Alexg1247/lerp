@@ -39,8 +39,10 @@ func _ready():
 	var f = FileAccess.open("res://assets/songs/"+song+ "/" + song + ".json", FileAccess.READ)
 	var content:String = "{}"
 	var chartData:Dictionary = {}
-	
-
+	if Globals.save.grab("sdkl"):
+		Globals.save.load_binds(["S", "D", "K", "L"])
+	else:
+		Globals.save.load_binds(["D", "F", "J", "K"])
 #
 	if ResourceLoader.exists("res://assets/songs/"+song+ "/modchart.tscn"):
 		var modchart = load("res://assets/songs/"+song+ "/modchart.tscn").instantiate()

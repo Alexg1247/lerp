@@ -54,7 +54,7 @@ func flush():
 	if file:
 		file.store_string(JSON.stringify(data))
 
-func load_binds(binds: Array[String]) -> void:
+func load_binds(binds) -> void:
 	for i in binds.size():
 		InputMap.action_erase_events("gameplay_%d" % i)
 		

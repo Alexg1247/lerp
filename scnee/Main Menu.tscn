@@ -31,11 +31,12 @@ theme_override_constants/separation = 76
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 555.0
-offset_right = 328.0
-offset_bottom = 637.0
-text = "Made By: Alexg1247
+offset_left = 10.0
+offset_top = 558.0
+offset_right = 320.0
+offset_bottom = 640.0
+text = "lerp(): v1.0beta 1.1
+Made By: Alexg1247
 And \"Jack-ass Games\""
 label_settings = ExtResource("2_apkys")
 vertical_alignment = 2
@@ -51,10 +52,10 @@ text = "Options"
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 20.0
-offset_top = 469.0
-offset_right = 309.0
-offset_bottom = 572.0
+offset_left = 24.0
+offset_top = 138.0
+offset_right = 313.0
+offset_bottom = 241.0
 theme_override_font_sizes/font_size = 69
 text = "Credits"
 
@@ -62,7 +63,7 @@ text = "Credits"
 position = Vector2(56, 629.5)
 
 [node name="UwU" type="Sprite2D" parent="."]
-position = Vector2(1046, 614)
+position = Vector2(304, 616)
 scale = Vector2(0.74125, 0.629112)
 texture = ExtResource("3_n3ogb")
 
