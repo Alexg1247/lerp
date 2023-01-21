@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1wqpeodk0wm0"]
+
+[ext_resource type="Script" path="res://assets/songs/lost my mind/modchart.gd" id="1_fpb61"]
+[ext_resource type="Texture2D" uid="uid://dpqsemws6spw2" path="res://assets/songs/dojo brawl/Pendelum_Phase2.png" id="2_8txia"]
+
+[node name="modchart" type="CanvasLayer"]
+script = ExtResource("1_fpb61")
+
+[node name="copies" type="Node2D" parent="."]
+
+[node name="PendelumPhase2" type="Sprite2D" parent="."]
+position = Vector2(551, 7)
+texture = ExtResource("2_8txia")
+centered = false
+offset = Vector2(-64.133, 0)
+hframes = 4
