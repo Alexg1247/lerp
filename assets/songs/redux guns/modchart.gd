@@ -9,7 +9,6 @@ func _ready() -> void:
 	Conductor.beat_hit.connect(beat_hit)
 	fpstext.get_node("Label").get("label_settings").font = load("res://assets/songs/redux guns/vcr.ttf")
 	gameplay.get_node("Backgrounds").visible = false
-	gameplay.get_node("Label2").visible = false
 
 func _process(delta: float) -> void:
 	if playerstrums == null:

@@ -11,6 +11,8 @@ self_modulate = Color(0.388235, 0.388235, 0.388235, 1)
 position = Vector2(576, 324)
 
 [node name="UI" parent="." instance=ExtResource("2_vuo4x")]
+offset = Vector2(18, 0)
+transform = Transform2D(1, 0, 0, 1, 18, 0)
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(576, 324)

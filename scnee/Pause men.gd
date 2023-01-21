@@ -1,6 +1,10 @@
 extends CanvasLayer
 
 func _ready() -> void:
+	if Globals.save.grab("botplay"):
+		$HE.visible = true
+	else:
+		$HE.visible = false
 	print("hi pause menu here")
 
 func leave():

@@ -9,11 +9,6 @@ func _ready():
 	else:
 		$TabContainer/Gameplay/VBoxContainer/CheckButton.button_pressed = false
 	
-	if Globals.save.grab("custom_note_color_per_song"):
-		$TabContainer/Gameplay/VBoxContainer/CheckButton5.button_pressed = true
-	else:
-		$TabContainer/Gameplay/VBoxContainer/CheckButton5.button_pressed = false
-	
 	if Globals.save.grab("downscroll"):
 		$TabContainer/Gameplay/VBoxContainer/CheckButton2.button_pressed = true
 	else:
@@ -31,6 +26,10 @@ func _ready():
 		$TabContainer/Gameplay/VBoxContainer/CheckButton5.button_pressed = true
 	else:
 		$TabContainer/Gameplay/VBoxContainer/CheckButton5.button_pressed = false
+	if Globals.save.grab("botplay"):
+		$TabContainer/Gameplay/VBoxContainer/CheckButton6.button_pressed = true
+	else:
+		$TabContainer/Gameplay/VBoxContainer/CheckButton6.button_pressed = false
 
 	
 
@@ -71,3 +70,8 @@ func move_da_note():
 
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_packed(load("res://scnee/Main Menu.tscn"))
+
+
+func _on_check_button_6_pressed():
+	Globals.save.assign("botplay", !Globals.save.grab("botplay")) 
+	Globals.save.flush()

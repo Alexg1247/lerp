@@ -3,10 +3,16 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if Globals.save.grab("botplay"):
+		$Botplay.visible = true
+	else:
+		$Botplay.visible = false
 	if Globals.save.grab("downscroll"):
 		$"Label TO Show if ur good or not".position.y = 0
 		$"Label TO Show if ur good or not".vertical_alignment = 0
+		$Botplay.position.y = 80
 	else:
+		$Botplay.position.y = 512
 		$"Label TO Show if ur good or not".vertical_alignment = 2
 
 

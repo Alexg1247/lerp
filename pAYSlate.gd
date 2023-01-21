@@ -35,6 +35,8 @@ func _ready():
 			backgroundnode.scale = Vector2(0.75, 0.75)
 		"phantasm":
 			backgroundnode.scale = Vector2(0.75, 0.75)
+		"triple-trouble-brodo":
+			backgroundnode.scale = Vector2(1.1, 1.1)
 		
 	var f = FileAccess.open("res://assets/songs/"+song+ "/" + song + ".json", FileAccess.READ)
 	var content:String = "{}"
@@ -127,8 +129,9 @@ func beat_hit():
 func songfinished():
 	print("song finished :)")
 	var score = $"UI/Label TO Show if ur good or not".text
-	Globals.scoredata.assign(song, score) 
-	Globals.scoredata.flush()
+	if !Globals.save.grab("botplay"):
+		Globals.scoredata.assign(song, score) 
+		Globals.scoredata.flush()
 	get_tree().change_scene_to_file("res://scnee/Main Menu.tscn")
 	AudioHandler.stopmusic()
 
@@ -174,7 +177,7 @@ func  _physics_process(delta):
 				#new_note.set_held_note_sprites()
 				#new_note.get_node("Line2D").texture = new_note.held_sprites[Globals.dir_to_str(new_note.direction)][0]
 			#print(enemy_notes)
-			new_note.position.x = player_strums.get_child(new_note.note_data % 4).global_position.x
+			new_note.position.x = player_strums.get_child(new_note.note_data % 4).global_position.x 
 			player_notes.add_child(new_note)
 			
 			new_note.is_player = is_player_note

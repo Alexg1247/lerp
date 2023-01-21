@@ -20,7 +20,9 @@ func _ready():
 	#position.y = -128
 	
 func _process(delta):
-	if Input.is_action_pressed("gameplay_" + str(keynumber)):
-		$key.frame = 0
-	if !Input.is_action_pressed("gameplay_" + str(keynumber)):
-		$key.frame = 1
+	if !Globals.save.grab("botplay"):
+		if Input.is_action_pressed("gameplay_" + str(keynumber)):
+			$key.frame = 0
+		if !Input.is_action_pressed("gameplay_" + str(keynumber)):
+			$key.frame = 1
+

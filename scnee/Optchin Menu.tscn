@@ -51,6 +51,11 @@ layout_mode = 2
 theme = ExtResource("3_83xul")
 text = "use sdkl instead of dfjk"
 
+[node name="CheckButton6" type="CheckButton" parent="TabContainer/Gameplay/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_83xul")
+text = "botplay"
+
 [node name="Back" type="Button" parent="."]
 offset_left = 1018.0
 offset_top = 6.0
@@ -72,4 +77,6 @@ text = "(doesnt work)"
 [connection signal="pressed" from="TabContainer/Gameplay/VBoxContainer/CheckButton3" to="." method="vsync"]
 [connection signal="pressed" from="TabContainer/Gameplay/VBoxContainer/CheckButton4" to="." method="quants"]
 [connection signal="pressed" from="TabContainer/Gameplay/VBoxContainer/CheckButton5" to="." method="_on_check_button_5_pressed"]
+[connection signal="pressed" from="TabContainer/Gameplay/VBoxContainer/CheckButton6" to="." method="_on_check_button_6_pressed"]
+[connection signal="pressed" from="TabContainer/Gameplay/VBoxContainer/CheckButton6" to="." method="_on_check_button_5_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

@@ -5,5 +5,7 @@ var options = {
 	"mobile_controls": false,
 	"vsync": false,
 	"quants": false,
-	"sdkl": false
+	"sdkl": false,
+	"botplay": false,
+	"volume": 0
 }

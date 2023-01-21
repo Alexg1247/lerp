@@ -1,15 +1,16 @@
 extends CanvasLayer
 
-var volume = Globals.volume 
+var volume = Globals.save.grab("volume")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-
+func _ready():
+	AudioHandler.get_node("Songs/Inst").volume_db = volume
 func _process(delta):
 	if Globals.fun:
 		$Label.text = "FUN IS INFINITEfps" + "\n" + str((CoolUtil.get_vram_usage() / 1048576)).pad_decimals(2) + "mb vram"
-		$Volume/Volume.text = str(volume * 10)
+		$Volume/Volume.text = str(volume)
 	else:
 		$Label.text = "%dfps" % Engine.get_frames_per_second() + "\n%smb vram" % str((CoolUtil.get_vram_usage() / 1048576)).pad_decimals(2)
-		$Volume/Volume.text = str(volume * 10)
+		$Volume/Volume.text = str(volume)
 
 func _input(event):
 	if Input.is_action_just_pressed("ui_cancel"):
@@ -20,11 +21,15 @@ func _input(event):
 		volume = volume - 0.5
 		AudioHandler.get_node("Songs/Inst").volume_db = volume
 		showthingy()
+		Globals.save.assign("volume", volume)
+		Globals.save.flush() 
 	
 	if Input.is_action_just_pressed("volume_up"):
 		volume = volume + 0.5
 		AudioHandler.get_node("Songs/Inst").volume_db = volume
 		showthingy()
+		Globals.save.assign("volume", volume)
+		Globals.save.flush() 
 
 func pause():
 	get_tree().paused = !get_tree().paused
