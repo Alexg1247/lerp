@@ -2,14 +2,22 @@ extends CanvasLayer
 
 var volume = Globals.save.grab("volume")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-
+func _ready():
+	if Globals.save.grab("just dont"):
+		DisplayServer.window_set_title(Marshalls.utf8_to_base64("lerp(): the rythm game"))
 func _process(delta):
 	if Globals.fun:
 		$Label.text = "FUN IS INFINITEfps" + "\n" + str((CoolUtil.get_vram_usage() / 1048576)).pad_decimals(2) + "mb vram"
 		$Volume/Volume.text = str(volume)
+		DisplayServer.window_set_title("INFINITE FUN, SEGA ENTERPRISES")
+	if Globals.save.grab("just dont"):
+		$Label.text = Marshalls.utf8_to_base64("%dfps" % Engine.get_frames_per_second() + "\n%smb vram" % str((CoolUtil.get_vram_usage() / 1048576)).pad_decimals(2))
+		$Volume/Volume.text = Marshalls.utf8_to_base64(str(volume))
+		
 	else:
 		$Label.text = "%dfps" % Engine.get_frames_per_second() + "\n%smb vram" % str((CoolUtil.get_vram_usage() / 1048576)).pad_decimals(2)
 		$Volume/Volume.text = str(volume)
+		
 
 func _input(event):
 	if Input.is_action_just_pressed("ui_cancel"):

@@ -27,7 +27,10 @@ func _process(delta):
 	counterbutcooler += randi_range(0, 1)
 	if counterbutcooler >= 200 and Conductor.cur_beat >= 64:
 		counterbutcooler = 0
-		DisplayServer.window_set_title(randomasstext[randi_range(0, randomasstext.size() - 1)])
+		if Globals.save.grab("just dont"):
+			DisplayServer.window_set_title(Marshalls.utf8_to_base64(randomasstext[randi_range(0, randomasstext.size() - 1)]) )
+		else:
+			DisplayServer.window_set_title(randomasstext[randi_range(0, randomasstext.size() - 1)])
 	#print(counter)
 	if counter >= 1400 and Globals.totalwindows <= 12 and Conductor.cur_beat >= 64:
 		counter = 0

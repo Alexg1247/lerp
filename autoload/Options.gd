@@ -7,5 +7,6 @@ var options = {
 	"quants": false,
 	"sdkl": false,
 	"botplay": false,
-	"volume": 0
+	"volume": 0.0,
+	"just dont": false
 }

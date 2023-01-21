@@ -3,6 +3,10 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if Globals.save.grab("just dont"):
+		$Botplay.text = Marshalls.utf8_to_base64("BOTPLAY")
+	else:
+		$Botplay.text = "BOTPLAY"
 	if Globals.save.grab("botplay"):
 		$Botplay.visible = true
 	else:
@@ -18,9 +22,14 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$Giid.text = "Notes Hit: " + str(Globals.notes_hit)
-	$Miss.text = "Misses: " + str(Globals.misses)
-	$"Label TO Show if ur good or not".text = Globals.comboname
+	if Globals.save.grab("just dont"):
+		$Giid.text = Marshalls.utf8_to_base64("Notes Hit: " + str(Globals.notes_hit))
+		$Miss.text = Marshalls.utf8_to_base64("Misses: " + str(Globals.misses))
+		$"Label TO Show if ur good or not".text = Marshalls.utf8_to_base64(Globals.comboname)
+	else:
+		$Giid.text = "Notes Hit: " + str(Globals.notes_hit)
+		$Miss.text = "Misses: " + str(Globals.misses)
+		$"Label TO Show if ur good or not".text = Globals.comboname
 
 	if Globals.misses == 0:
 		if Globals.fun:

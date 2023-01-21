@@ -20,6 +20,16 @@ offset_bottom = 647.0
 [node name="Gameplay" type="TabBar" parent="TabContainer"]
 layout_mode = 2
 
+[node name="Label2" type="Label" parent="TabContainer/Gameplay"]
+layout_mode = 0
+offset_left = 209.0
+offset_top = 6.0
+offset_right = 378.0
+offset_bottom = 29.0
+theme = ExtResource("3_83xul")
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "(doesnt work)"
+
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Gameplay"]
 layout_mode = 0
 offset_right = 430.0
@@ -41,11 +51,6 @@ layout_mode = 2
 theme = ExtResource("3_83xul")
 text = "vsync"
 
-[node name="CheckButton4" type="CheckButton" parent="TabContainer/Gameplay/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("3_83xul")
-text = "\"quants\""
-
 [node name="CheckButton5" type="CheckButton" parent="TabContainer/Gameplay/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_83xul")
@@ -56,6 +61,54 @@ layout_mode = 2
 theme = ExtResource("3_83xul")
 text = "botplay"
 
+[node name="Visuals" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Visuals"]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 5.0
+offset_right = 310.0
+offset_bottom = 28.0
+theme = ExtResource("3_83xul")
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "(doesnt work)"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Visuals"]
+layout_mode = 0
+offset_right = 430.0
+offset_bottom = 621.0
+
+[node name="CheckButton4" type="CheckButton" parent="TabContainer/Visuals/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_83xul")
+text = "\"quants\""
+
+[node name="Misc" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Misc"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 23.0
+offset_right = 203.183
+offset_bottom = 46.0
+theme = ExtResource("3_83xul")
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "(Just, Dont...)"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Misc"]
+layout_mode = 0
+offset_right = 430.0
+offset_bottom = 621.0
+
+[node name="just dont" type="CheckButton" parent="TabContainer/Misc/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_83xul")
+text = "all number in base64"
+
 [node name="Back" type="Button" parent="."]
 offset_left = 1018.0
 offset_top = 6.0
@@ -63,29 +116,13 @@ offset_right = 1146.0
 offset_bottom = 38.0
 text = "Back"
 
-[node name="Label" type="Label" parent="."]
-offset_left = 118.0
-offset_top = 176.0
-offset_right = 287.0
-offset_bottom = 199.0
-theme = ExtResource("3_83xul")
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-text = "(doesnt work)"
-
-[node name="Label2" type="Label" parent="."]
-offset_left = 209.0
-offset_top = 80.0
-offset_right = 378.0
-offset_bottom = 103.0
-theme = ExtResource("3_83xul")
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-text = "(doesnt work)"
-
 [connection signal="pressed" from="TabContainer/Gameplay/VBoxContainer/CheckButton" to="." method="_on_check_button_pressed"]
 [connection signal="pressed" from="TabContainer/Gameplay/VBoxContainer/CheckButton2" to="." method="_on_check_button_2_pressed"]
 [connection signal="pressed" from="TabContainer/Gameplay/VBoxContainer/CheckButton3" to="." method="vsync"]
-[connection signal="pressed" from="TabContainer/Gameplay/VBoxContainer/CheckButton4" to="." method="quants"]
 [connection signal="pressed" from="TabContainer/Gameplay/VBoxContainer/CheckButton5" to="." method="_on_check_button_5_pressed"]
-[connection signal="pressed" from="TabContainer/Gameplay/VBoxContainer/CheckButton6" to="." method="_on_check_button_6_pressed"]
 [connection signal="pressed" from="TabContainer/Gameplay/VBoxContainer/CheckButton6" to="." method="_on_check_button_5_pressed"]
+[connection signal="pressed" from="TabContainer/Gameplay/VBoxContainer/CheckButton6" to="." method="_on_check_button_6_pressed"]
+[connection signal="pressed" from="TabContainer/Visuals/VBoxContainer/CheckButton4" to="." method="quants"]
+[connection signal="pressed" from="TabContainer/Misc/VBoxContainer/just dont" to="." method="quants"]
+[connection signal="pressed" from="TabContainer/Misc/VBoxContainer/just dont" to="." method="_on_just_dont_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

@@ -15,9 +15,9 @@ func _ready():
 		$TabContainer/Gameplay/VBoxContainer/CheckButton2.button_pressed = false
 	
 	if Globals.save.grab("quants"):
-		$TabContainer/Gameplay/VBoxContainer/CheckButton4.button_pressed = true
+		$TabContainer/Visuals/VBoxContainer/CheckButton4.button_pressed = true
 	else:
-		$TabContainer/Gameplay/VBoxContainer/CheckButton4.button_pressed = false
+		$TabContainer/Visuals/VBoxContainer/CheckButton4.button_pressed = false
 	if Globals.save.grab("vsync"):
 		$TabContainer/Gameplay/VBoxContainer/CheckButton3.button_pressed = true
 	else:
@@ -30,6 +30,10 @@ func _ready():
 		$TabContainer/Gameplay/VBoxContainer/CheckButton6.button_pressed = true
 	else:
 		$TabContainer/Gameplay/VBoxContainer/CheckButton6.button_pressed = false
+	if Globals.save.grab("just dont"):
+		$"TabContainer/Misc/VBoxContainer/just dont".button_pressed = true
+	else:
+		$"TabContainer/Misc/VBoxContainer/just dont".button_pressed = false
 
 	
 
@@ -74,4 +78,9 @@ func _on_back_pressed() -> void:
 
 func _on_check_button_6_pressed():
 	Globals.save.assign("botplay", !Globals.save.grab("botplay")) 
+	Globals.save.flush()
+
+
+func _on_just_dont_pressed():
+	Globals.save.assign("just dont", !Globals.save.grab("just dont")) 
 	Globals.save.flush()

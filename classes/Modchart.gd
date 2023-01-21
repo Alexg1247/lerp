@@ -18,3 +18,11 @@ func beat_hit():
 
 func step_hit():
 	pass
+
+func thefuckingpsychenginecameraflashtrademark():
+	var flash = ColorRect.new()
+	var SLERP = get_tree().create_tween()
+	flash.size = Vector2(2000, 2000)
+	flash.position = Vector2(-200, -200)
+	SLERP.tween_property(flash, "modulate:a", 0.0, 0.5)
+	add_child(flash)

@@ -1,17 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dgatck5d48i6s"]
+[gd_scene load_steps=4 format=3 uid="uid://dgatck5d48i6s"]
 
 [ext_resource type="Script" path="res://scnee/TemplateSong.gd" id="1_sk408"]
 [ext_resource type="LabelSettings" uid="uid://dedj33517fi0m" path="res://new_label_settings.tres" id="2_ryfnw"]
-[ext_resource type="FontFile" uid="uid://w1cgdewepjkh" path="res://assets/fonts/SF-Pro-Display-Semibold.otf" id="3_h2ih8"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_hjbhk"]
-font = ExtResource("3_h2ih8")
-font_color = Color(0.486275, 0.486275, 0.486275, 1)
-outline_size = 4
-outline_color = Color(0, 0, 0, 1)
-shadow_size = 5
-shadow_color = Color(0, 0, 0, 0.0705882)
-shadow_offset = Vector2(2, 2)
+[ext_resource type="FontFile" uid="uid://buop8cbcsqqnq" path="res://assets/songs/fatality/MS Sans Serif 8pt bold.ttf" id="3_2qe5h"]
 
 [node name="TemplateSong" type="Control"]
 layout_mode = 3
@@ -26,20 +17,25 @@ offset_bottom = 67.0
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 1.0
-offset_top = -3.0
+offset_top = 3.0
 offset_right = 255.0
-offset_bottom = 68.0
+offset_bottom = 74.0
 theme_override_font_sizes/font_size = 42
 text = "Song Name"
 label_settings = ExtResource("2_ryfnw")
 
 [node name="Label2" type="Label" parent="."]
+modulate = Color(0.337255, 0.337255, 0.337255, 1)
 layout_mode = 0
+offset_left = 14.0
 offset_top = 30.0
-offset_right = 154.0
+offset_right = 168.0
 offset_bottom = 67.0
-theme_override_font_sizes/font_size = 23
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3_2qe5h")
 text = "Score:"
-label_settings = SubResource("LabelSettings_hjbhk")
+uppercase = true
+visible_characters_behavior = 1
 
 [connection signal="pressed" from="Panel" to="." method="_on_panel_pressed"]

@@ -1,9 +1,9 @@
 [gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dedj33517fi0m"]
 
-[ext_resource type="FontFile" uid="uid://w1cgdewepjkh" path="res://assets/fonts/SF-Pro-Display-Semibold.otf" id="1_6e48y"]
+[ext_resource type="FontFile" uid="uid://b8eftdti6b2gv" path="res://assets/songs/redux guns/vcr.ttf" id="1_3idi7"]
 
 [resource]
-font = ExtResource("1_6e48y")
+font = ExtResource("1_3idi7")
 font_size = 28
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)

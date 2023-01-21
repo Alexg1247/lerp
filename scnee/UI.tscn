@@ -1,19 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://b43cye3hmkrxa"]
+[gd_scene load_steps=6 format=3 uid="uid://b43cye3hmkrxa"]
 
 [ext_resource type="PackedScene" uid="uid://04mnm5xtfgbm" path="res://scnee/STRUM2.tscn" id="1_jhsif"]
 [ext_resource type="Script" path="res://scnee/UI.gd" id="1_wrkq1"]
 [ext_resource type="LabelSettings" uid="uid://bvi5yqqjnbopx" path="res://assets/fonts/font_styles/gameplay trex.tres" id="3_dq2gb"]
-[ext_resource type="FontFile" uid="uid://w1cgdewepjkh" path="res://assets/fonts/SF-Pro-Display-Semibold.otf" id="4_ejf1c"]
 [ext_resource type="FontFile" uid="uid://b8eftdti6b2gv" path="res://assets/songs/redux guns/vcr.ttf" id="5_cuv1c"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ryed4"]
 line_spacing = 2.0
-font = ExtResource("4_ejf1c")
+font = ExtResource("5_cuv1c")
 font_size = 71
-outline_size = 4
+outline_size = 16
 outline_color = Color(0, 0, 0, 1)
 shadow_size = 5
-shadow_color = Color(0, 0, 0, 0.0705882)
+shadow_color = Color(0, 0, 0, 0.607843)
 shadow_offset = Vector2(2, 2)
 
 [node name="UI" type="CanvasLayer"]
@@ -27,6 +26,8 @@ offset_left = -18.0
 offset_top = 602.0
 offset_right = 146.0
 offset_bottom = 630.0
+theme_override_fonts/font = ExtResource("5_cuv1c")
+theme_override_font_sizes/font_size = 4
 text = "Good Notes Hit: 0"
 label_settings = ExtResource("3_dq2gb")
 
@@ -35,6 +36,8 @@ offset_left = -17.0
 offset_top = 625.0
 offset_right = 119.0
 offset_bottom = 653.0
+theme_override_fonts/font = ExtResource("5_cuv1c")
+theme_override_font_sizes/font_size = 4
 text = "Misses: 0"
 label_settings = ExtResource("3_dq2gb")
 

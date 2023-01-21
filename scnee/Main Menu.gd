@@ -8,6 +8,8 @@ var currentsong = 0
 var lerped = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if Globals.save.grab("just dont"):
+		$Label.text = Marshalls.utf8_to_base64($Label.text)
 	DisplayServer.window_set_title("lerp(): the rythm game", 0)
 	AudioHandler.stopmusic()
 	if get_parent().get_node("modchart"):
@@ -18,7 +20,10 @@ func _ready():
 		"Windows":
 			print("L\nL\nL\nL\nL\nL\nL\nL\nL\nL\nL\nL\nL\nL\nL\nL\n")
 	for String in songlist:
-		addsong(String, "Default Songs")
+		if Globals.save.grab("just dont"):
+			addsong(Marshalls.utf8_to_base64(String), "Default Songs")
+		else:
+			addsong(String, "Default Songs")
 	var template = load("res://scnee/TemplateSong.tscn").instantiate()
 	$"ScrollContainer/VBoxContainer".add_child(template)
 	Globals.fun = false
@@ -29,8 +34,11 @@ func addsong(songname, category):
 			
 	template.songname = songlist[currentsong]
 	var score = Globals.scoredata.grab(template.songname)
-	template.get_node("Label").text = songlist[currentsong]
-	template.get_node("Label2").text ="Score: " + str(score)
+	template.get_node("Label").text = songname
+	if Globals.save.grab("just dont"):
+		template.get_node("Label2").text =Marshalls.utf8_to_base64("Score: " + str(score))
+	else:
+		template.get_node("Label2").text ="Score: " + str(score)
 	currentsong += 1
 
 func _on_button_pressed():
@@ -48,3 +56,7 @@ func _on_button_2_pressed():
 
 func _open_options() -> void:
 	get_tree().change_scene_to_packed(load("res://scnee/Optchin Menu.tscn"))
+
+
+func _on_info_pressed():
+	pass # Replace with function body.
