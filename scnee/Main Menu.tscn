@@ -11,24 +11,6 @@ offset_right = 1164.0
 offset_bottom = 651.0
 script = ExtResource("1_vp2ck")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
-clip_contents = false
-layout_direction = 2
-layout_mode = 0
-offset_left = 727.0
-offset_top = 4.0
-offset_right = 1146.0
-offset_bottom = 653.0
-follow_focus = true
-horizontal_scroll_mode = 0
-vertical_scroll_mode = 2
-scroll_deadzone = -1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
-layout_direction = 1
-layout_mode = 2
-theme_override_constants/separation = 76
-
 [node name="Label" type="Label" parent="."]
 texture_filter = 3
 layout_mode = 0
@@ -66,6 +48,35 @@ offset_right = 436.0
 offset_bottom = 640.0
 theme_override_font_sizes/font_size = 27
 text = "Info"
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 0
+offset_left = 695.0
+offset_right = 1149.0
+offset_bottom = 651.0
+
+[node name="Default Songs" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Default Songs"]
+layout_direction = 2
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 8.0
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+scroll_deadzone = -1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Default Songs/ScrollContainer"]
+layout_direction = 1
+layout_mode = 2
+theme_override_constants/separation = 76
+
+[node name="Modded Songs" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
 
 [connection signal="pressed" from="Button" to="." method="_open_options"]
 [connection signal="pressed" from="Info" to="." method="_on_info_pressed"]

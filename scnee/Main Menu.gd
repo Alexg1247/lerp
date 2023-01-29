@@ -28,12 +28,12 @@ func _ready():
 		else:
 			addsong(String, "Default Songs")
 	var template = load("res://scnee/TemplateSong.tscn").instantiate()
-	$"ScrollContainer/VBoxContainer".add_child(template)
+	$"TabContainer/Default Songs/ScrollContainer/VBoxContainer".add_child(template)
 	Globals.fun = false
 	
 func addsong(songname, category):
 	var template = load("res://scnee/TemplateSong.tscn").instantiate()
-	$"ScrollContainer/VBoxContainer".add_child(template)
+	$"TabContainer/Default Songs/ScrollContainer/VBoxContainer".add_child(template)
 			
 	template.songname = songlist[currentsong]
 	var score = Globals.scoredata.grab(template.songname)
