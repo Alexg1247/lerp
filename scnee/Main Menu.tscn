@@ -30,6 +30,7 @@ layout_mode = 2
 theme_override_constants/separation = 76
 
 [node name="Label" type="Label" parent="."]
+texture_filter = 3
 layout_mode = 0
 offset_left = 10.0
 offset_top = 558.0

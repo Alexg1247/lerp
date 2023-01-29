@@ -9,7 +9,7 @@ var randomasstext = [
 	"A҉ ̷F́ATA͏L҉ ̧E̕ŖROR̨ HAS̡ O̵C̶CU͢RRED ͠",
 	"null",
 	"Godo͟t͠ E̸ngíne̡ ͞4͘.̕0",
-	"le҉r̷p(̢):͠ ͏the̴ ryth̀m̵ ͡g̵a",
+	"le҉r̷p(̢):͠ ͏the̴ ryth̀m̵ ͡g̵ame",
 	"Friday Night Funkin' Psych Engine",
 	"S̵Y̵NT͝AX ̴ER̵R̡OR ̸",
 	"IL͟L̴E̷G̢̕҉A͜L̵̸̨ ͢IǸS̴̸T̛R̀͟U҉CT̨͢I̶͞Ò̡N̴͏͢",
@@ -41,4 +41,4 @@ func makewindow():
 	#print("thicc thighs")
 	self.add_child(window2)
 	Globals.totalwindows += 1
-	window2.position = Vector2(DisplayServer.window_get_position(0).x + randi_range(-400, 1000), DisplayServer.window_get_position(0).y - 300 + randi_range(-200, 600))
+	window2.position = Vector2(DisplayServer.window_get_position(0).x + randi_range(-400, 1000), DisplayServer.window_get_position(0).y - 300 + randi_range(-200, 500))

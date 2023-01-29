@@ -8,6 +8,9 @@ var currentsong = 0
 var lerped = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Globals.save.assign("volume", Globals.volume)
+	Globals.save.flush()
+	print(Globals.save.grab("volume"))
 	if Globals.save.grab("just dont"):
 		$Label.text = Marshalls.utf8_to_base64($Label.text)
 	DisplayServer.window_set_title("lerp(): the rythm game", 0)
