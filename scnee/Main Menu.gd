@@ -66,9 +66,10 @@ func _process(delta):
 		var tween = get_tree().create_tween()
 		var thiccthighs = randf_range(0,0.6)
 		tween.tween_property($Control/ColorRect, "color", Color(thiccthighs, thiccthighs,randf_range(0,0.6),1), delta * 10000).set_trans(Tween.TRANS_SINE)
+		#print("thicc thighs")
 		tween.play()
 		Conductor.position = 0
-		print("thicc thighs")
+		
 	
 
 func _on_button_pressed():

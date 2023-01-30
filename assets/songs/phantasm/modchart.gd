@@ -3,8 +3,8 @@ extends Modchart
 func _ready() -> void:
 	Globals.player_note_hit.connect(player_note_hit)
 	Conductor.connect("beat_hit", beat_hit)
-	Conductor.connect("step_hit", step_hit)
 
+#the camera script lmao it buggy af
 func player_note_hit(hit, hit_data, hit_name):
 	$bf_anim.play(str(hit_data))
 	$bf.frame = 0
@@ -22,7 +22,7 @@ func player_note_hit(hit, hit_data, hit_name):
 		3:
 			camera.position.x += 100
 			camera.position.y += 0
-
+#epic modchart
 func beat_hit():
 	if Conductor.cur_beat % 8 == 0:
 		thefuckingpsychenginecameraflashtrademark()

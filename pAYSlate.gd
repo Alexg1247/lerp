@@ -1,26 +1,33 @@
 extends Node2D
 
+#the song that you are playing
 var song = Globals.currentsong
 
+#the notes
 var noteDataArray = []
 
+#template note
 var template_note:Node2D 
 
+#idk
 var template_notes:Dictionary = {}
 
+#the strumlines fr
 @onready var player_strums = $"UI/STRUM2/strumline"
 
+#omg notes!!!?!?!?!
 @onready var player_notes = $"UI/STRUM2/Player Note"
 
 
 func _ready(): 
-	#jsong = "fatality"
+	#variables iguess
 	var inst
 	var bg
 	var backgroundnode
 	var f
-	
+	#checks if your song is modded
 	if Globals.ismodded:
+		#this loads all the shit to play: the chart, bg, inst and also them modchart
 		f = FileAccess.open("res://mods/songs/"+song+ "/" + song + ".json", FileAccess.READ)
 		inst = load(str("res://mods/songs/" + song + "/" + CoolUtil.findsong("res://mods/songs/"+song, false)))
 		bg = load("res://mods/songs/" + song + "/" + CoolUtil.getdaimagethingy("res://mods/songs/" + song, song))
@@ -29,6 +36,7 @@ func _ready():
 			var modchart = load("res://assets/songs/"+song+ "/modchart.tscn").instantiate()
 			get_node("/root/").add_child(modchart)
 		backgroundnode.texture = bg
+		#bg scaling that ima add later hopefully
 		match song:
 			"fatality":
 				backgroundnode.scale = Vector2(2,2)
@@ -44,6 +52,7 @@ func _ready():
 			"triple-trouble-brodo":
 				backgroundnode.scale = Vector2(1.1, 1.1)
 	else:
+		#this does all the shit from above but like for not modded songs
 		f = FileAccess.open("res://assets/songs/"+song+ "/" + song + ".json", FileAccess.READ)
 		inst = load(str("res://assets/songs/" + song + "/" + CoolUtil.findsong("res://assets/songs/"+song, false)))
 		bg = load("res://assets/songs/" + song + "/" + CoolUtil.getdaimagethingy("res://assets/songs/" + song, song))
@@ -66,19 +75,20 @@ func _ready():
 				backgroundnode.scale = Vector2(0.75, 0.75)
 			"triple-trouble-brodo":
 				backgroundnode.scale = Vector2(1.1, 1.1)
+	#configure audio
 	AudioHandler.get_node("Songs/Inst").stream = inst
 	AudioHandler.get_node("Songs/Inst").volume_db = clamp(linear_to_db(Globals.volume / 2), -100, 99999)
 	AudioHandler.get_node("Songs/Inst").connect("finished", songfinished)
 	
+	#keybinds UwU
 	var content:String = "{}"
 	var chartData:Dictionary = {}
 	if Globals.save.grab("sdkl"):
 		Globals.save.load_binds(["S", "D", "K", "L"])
 	else:
 		Globals.save.load_binds(["D", "F", "J", "K"])
-#
 	
-		
+	#i dont know
 	if f:
 		content = f.get_as_text()
 		var json = JSON.new()
@@ -87,19 +97,17 @@ func _ready():
 		
 	else:
 		print("die")
-#	if(chartData.has("keyCount")):
-#		if chartData["keyCount"] > 4:
-#			WarningScreen.popup(1, "Hey! this chart is multikey lmao. You sure u wanna do this?", true, true, false)
+	#sets the shit to 0 for the song
 	Globals.misses = 0
 	Globals.notes_hit = 0
 	Conductor.cur_beat = 0
 	Conductor.cur_step = 0
 	Conductor.change_bpm(float(chartData["bpm"]))
 	Conductor.position = -Conductor.crochet * 4
-	print(Conductor.position)
+	#print(Conductor.position)
 	Conductor.connect("beat_hit", beat_hit)
 	template_notes["default"] = preload("res://scnee/Note/Note.tscn").instantiate()
-	
+	#note shit i guess
 	for section in chartData["notes"]:
 		for note in section["sectionNotes"]:
 			if note[1] != -1:
@@ -152,7 +160,7 @@ func beat_hit():
 		$Camera.zoom += Vector2(0.05, 0.05)
 	
 	pass
-
+#song finished :)
 func songfinished():
 	print("song finished :)")
 	var score = $"UI/Label TO Show if ur good or not".text
@@ -181,19 +189,14 @@ func  _physics_process(delta):
 			should_spawn = false
 		#we need themovie
 		#real
-		
+		#the movie ever
 		if float(note[0]) < Conductor.position + (2500) and should_spawn:
 			var new_note = template_notes["default"].duplicate()
 			new_note.strum_time = float(note[0])
 			new_note.note_data = int(note[1])
 			new_note.direction = player_strums.get_child(new_note.note_data % 4).keynumber
 			new_note.visible = true
-			#new_note.play_animation("")
-			#new_note.strum_y = player_strums.get_child(new_note.note_data).global_position.y
-			
-			#if "is_alt" in new_note:
-				#new_note.is_alt = note[6]
-			
+
 			if int(note[4]) != null:
 				if "character" in new_note:
 					new_note.character = note[4]
@@ -201,9 +204,6 @@ func  _physics_process(delta):
 			if float(note[2]) >= Conductor.step_crochet:
 				new_note.is_sustain = true
 				new_note.sustain_length = float(note[2])
-				#new_note.set_held_note_sprites()
-				#new_note.get_node("Line2D").texture = new_note.held_sprites[Globals.dir_to_str(new_note.direction)][0]
-			#print(enemy_notes)
 			new_note.position.x = player_strums.get_child(new_note.note_data % 4).global_position.x 
 			player_notes.add_child(new_note)
 			
@@ -216,7 +216,7 @@ func  _physics_process(delta):
 			noteDataArray.remove_at(index)
 			
 			index += 1
-
+#counter
 var counter:int
 
 func _process(delta):
