@@ -41,9 +41,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if !Globals.save.grab("downscroll"):
-		$"Normal Notes".global_position = lerp($"Normal Notes".global_position, Vector2(337, 100), delta * 3)
+		$"Normal Notes".position = lerp($"Normal Notes".position, Vector2(337, 100), delta * 3)
 	else:
-		$"Normal Notes".global_position = lerp($"Normal Notes".global_position, Vector2(337, 500), delta * 3)
+		$"Normal Notes".position = lerp($"Normal Notes".position, Vector2(337, 500), delta * 3)
 
 func vsync():
 	Globals.save.assign("vsync", !Globals.save.grab("vsync")) 

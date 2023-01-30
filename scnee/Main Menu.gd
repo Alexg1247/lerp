@@ -7,9 +7,15 @@ var moddedsonglist = Globals.moddedsonglist
 var currentsong = 0
 var currentmoddedsong = 0
 
+var randcolor = Color(randi(), randi(),randi(),1)
+
 var lerped = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Globals.misses = 0
+	Globals.notes_hit = 0
+	Conductor.cur_beat = 0
+	Conductor.cur_step = 0
 	Globals.save.assign("volume", Globals.volume)
 	Globals.save.flush()
 	print(Globals.save.grab("volume"))
@@ -54,15 +60,24 @@ func addsong(songname, category, ismodded = false):
 	else:
 		template.get_node("Label2").text ="Score: " + str(Globals.scoredata.grab(songname))
 	currentsong += 1
+func _process(delta):
+	Conductor.position += delta * 1000
+	if Conductor.cur_beat >= 4:
+		var tween = get_tree().create_tween()
+		var thiccthighs = randf_range(0,0.6)
+		tween.tween_property($Control/ColorRect, "color", Color(thiccthighs, thiccthighs,randf_range(0,0.6),1), delta * 10000).set_trans(Tween.TRANS_SINE)
+		tween.play()
+		Conductor.position = 0
+		print("thicc thighs")
+	
 
 func _on_button_pressed():
-	var menu:Node2D = $Options
-	var ogpos = Vector2(-291, 128)
-	var newpos = Vector2(305, 128)
+	var tween = get_tree().create_tween()
 	if lerped:
-		menu.position = lerp(ogpos, newpos, 1000)
+		tween.tween_property($"Optchin Menu", "position", Vector2(0,0), 1.5).set_trans(Tween.TRANS_ELASTIC)
 	else:
-		menu.position = lerp(newpos, ogpos, 1000)
+		tween.tween_property($"Optchin Menu", "position", Vector2(0,-875), 1.5).set_trans(Tween.TRANS_ELASTIC)
+	tween.play()
 	lerped = !lerped
 
 func _on_button_2_pressed():

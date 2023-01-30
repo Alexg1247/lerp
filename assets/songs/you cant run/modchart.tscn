@@ -1,9 +1,216 @@
-[gd_scene load_steps=17 format=3 uid="uid://e5cqxs28rwhx"]
+[gd_scene load_steps=33 format=3 uid="uid://e5cqxs28rwhx"]
 
 [ext_resource type="Script" path="res://assets/songs/you cant run/modchart.gd" id="1_fwo6y"]
 [ext_resource type="Texture2D" uid="uid://b32l5cke4nr5o" path="res://assets/songs/you cant run/GreenHill.png" id="2_vnrho"]
 [ext_resource type="SpriteFrames" uid="uid://dm7qejpf18gk5" path="res://assets/songs/you cant run/BF.res" id="3_j8cf6"]
 [ext_resource type="SpriteFrames" uid="uid://ki8prc4gcq7c" path="res://assets/songs/you cant run/Sonic_EXE_Pixel.res" id="4_e1b1u"]
+[ext_resource type="SpriteFrames" uid="uid://dverbodvjdcct" path="res://assets/songs/you cant run/BOYFRIEND.res" id="5_h7u8s"]
+[ext_resource type="SpriteFrames" uid="uid://dw7rst4wa0d3a" path="res://assets/songs/you cant run/YCR.res" id="5_t070f"]
+[ext_resource type="FontFile" uid="uid://7fwkw0yk0w2u" path="res://assets/songs/you cant run/sonic-hud-monospaced-2-0.ttf" id="7_gegg7"]
+
+[sub_resource type="Animation" id="Animation_2b06g"]
+resource_name = "0"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../bf:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"BF NOTE LEFT"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../bf:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../bf:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_6ymtb"]
+resource_name = "1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../bf:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"BF NOTE DOWN"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../bf:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../bf:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_c1sp6"]
+resource_name = "2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../bf:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"BF NOTE UP"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../bf:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../bf:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_55krc"]
+resource_name = "3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../bf:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"BF NOTE RIGHT"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../bf:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../bf:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_1ojni"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../bf:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"BF idle dance"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../bf:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../bf:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rx3wj"]
+_data = {
+"0": SubResource("Animation_2b06g"),
+"1": SubResource("Animation_6ymtb"),
+"2": SubResource("Animation_c1sp6"),
+"3": SubResource("Animation_55krc"),
+"idle": SubResource("Animation_1ojni")
+}
 
 [sub_resource type="Animation" id="Animation_ta4ew"]
 resource_name = "0"
@@ -413,6 +620,217 @@ _data = {
 "idle": SubResource("Animation_syoog")
 }
 
+[sub_resource type="Animation" id="Animation_n1rgl"]
+resource_name = "0"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"normal_left"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_fqw2k"]
+resource_name = "1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"normal_down"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_mwgn3"]
+resource_name = "2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"normal_up"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_gy716"]
+resource_name = "3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"normal_right"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_7a1ul"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"normal_idle"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g6f3i"]
+_data = {
+"0": SubResource("Animation_n1rgl"),
+"1": SubResource("Animation_fqw2k"),
+"2": SubResource("Animation_mwgn3"),
+"3": SubResource("Animation_gy716"),
+"idle": SubResource("Animation_7a1ul")
+}
+
+[sub_resource type="Theme" id="Theme_eruug"]
+Label/colors/font_shadow_color = Color(0, 0, 0, 1)
+Label/constants/shadow_offset_x = 3
+Label/constants/shadow_offset_y = 3
+Label/constants/shadow_outline_size = 3
+Label/fonts/font = ExtResource("7_gegg7")
+
 [node name="modchart" type="Node"]
 script = ExtResource("1_fwo6y")
 
@@ -423,25 +841,29 @@ position = Vector2(597, 261)
 scale = Vector2(5.76902, 5.76902)
 texture = ExtResource("2_vnrho")
 
-[node name="pixel characters" type="Node2D" parent="."]
-
 [node name="pixelbf" type="AnimatedSprite2D" parent="."]
 visible = false
 texture_filter = 3
-position = Vector2(856, 366)
+position = Vector2(811, 360)
 scale = Vector2(6.64286, 6.64286)
 frames = ExtResource("3_j8cf6")
-animation = &"idle"
+animation = &"0"
 playing = true
 
 [node name="pixelexe" type="AnimatedSprite2D" parent="."]
 visible = false
 texture_filter = 3
-position = Vector2(382, 319)
-scale = Vector2(6.64286, 6.64286)
+position = Vector2(351, 303)
+scale = Vector2(6.83719, 6.83719)
 frames = ExtResource("4_e1b1u")
-animation = &"Sonic_EXE_Pixel idle"
+animation = &"Sonic_EXE_Pixel Sonic_EXE_Pixel NOTE LEFT"
 playing = true
+
+[node name="bf_anim" type="AnimationPlayer" parent="."]
+root_node = NodePath("../pixelbf_anim")
+libraries = {
+"": SubResource("AnimationLibrary_rx3wj")
+}
 
 [node name="pixelbf_anim" type="AnimationPlayer" parent="."]
 root_node = NodePath("../pixelbf")
@@ -454,3 +876,34 @@ root_node = NodePath("../pixelexe")
 libraries = {
 "": SubResource("AnimationLibrary_0dlwn")
 }
+
+[node name="sock_anim" type="AnimationPlayer" parent="."]
+root_node = NodePath("../sock")
+libraries = {
+"": SubResource("AnimationLibrary_g6f3i")
+}
+
+[node name="bf" type="AnimatedSprite2D" parent="."]
+position = Vector2(903, 576)
+scale = Vector2(1.14962, 1.14962)
+frames = ExtResource("5_h7u8s")
+animation = &"BF idle dance"
+playing = true
+
+[node name="sock" type="AnimatedSprite2D" parent="."]
+position = Vector2(238, 564)
+scale = Vector2(0.95983, 0.95983)
+frames = ExtResource("5_t070f")
+animation = &"normal_idle"
+playing = true
+
+[node name="Label" type="Label" parent="."]
+visible = false
+texture_filter = 3
+offset_left = 20.0
+offset_top = 24.0
+offset_right = 548.0
+offset_bottom = 99.0
+theme = SubResource("Theme_eruug")
+theme_override_font_sizes/font_size = 40
+text = "SCORE: 6969"

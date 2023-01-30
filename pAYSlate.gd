@@ -100,8 +100,6 @@ func _ready():
 	Conductor.connect("beat_hit", beat_hit)
 	template_notes["default"] = preload("res://scnee/Note/Note.tscn").instantiate()
 	
-	
-	
 	for section in chartData["notes"]:
 		for note in section["sectionNotes"]:
 			if note[1] != -1:

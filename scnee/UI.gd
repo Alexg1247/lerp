@@ -3,6 +3,7 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	if Globals.save.grab("just dont"):
 		$Botplay.text = Marshalls.utf8_to_base64("BOTPLAY")
 	else:
@@ -15,13 +16,17 @@ func _ready():
 		$"Label TO Show if ur good or not".position.y = 0
 		$"Label TO Show if ur good or not".vertical_alignment = 0
 		$Botplay.position.y = 80
+		$Timebar.position.y = 555
 	else:
 		$Botplay.position.y = 512
+		$Timebar.position.y = 70
 		$"Label TO Show if ur good or not".vertical_alignment = 2
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	$Timebar.value = Conductor.position / 1000
+	$Timebar.max_value = AudioHandler.get_node("Songs/Inst").stream.get_length()
 	if Globals.save.grab("just dont"):
 		$Giid.text = Marshalls.utf8_to_base64("Notes Hit: " + str(Globals.notes_hit))
 		$Miss.text = Marshalls.utf8_to_base64("Misses: " + str(Globals.misses))
