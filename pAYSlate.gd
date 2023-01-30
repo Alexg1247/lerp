@@ -15,30 +15,61 @@ var template_notes:Dictionary = {}
 
 func _ready(): 
 	#jsong = "fatality"
-	var inst = load(str("res://assets/songs/" + song + "/" + CoolUtil.findsong("res://assets/songs/"+song, false)))
-	print(str("res://assets/songs/" + song + "/" + CoolUtil.findsong("res://assets/songs/"+song, false)))
+	var inst
+	var bg
+	var backgroundnode
+	var f
+	
+	if Globals.ismodded:
+		f = FileAccess.open("res://mods/songs/"+song+ "/" + song + ".json", FileAccess.READ)
+		inst = load(str("res://mods/songs/" + song + "/" + CoolUtil.findsong("res://mods/songs/"+song, false)))
+		bg = load("res://mods/songs/" + song + "/" + CoolUtil.getdaimagethingy("res://mods/songs/" + song, song))
+		backgroundnode = get_node("Backgrounds")
+		if ResourceLoader.exists("res://assets/songs/"+song+ "/modchart.tscn"):
+			var modchart = load("res://assets/songs/"+song+ "/modchart.tscn").instantiate()
+			get_node("/root/").add_child(modchart)
+		backgroundnode.texture = bg
+		match song:
+			"fatality":
+				backgroundnode.scale = Vector2(2,2)
+			"cys good":
+				backgroundnode.scale = Vector2(1, 1)
+			"toggogl downwall":
+				backgroundnode.scale = Vector2(1.24,1.24)
+				#backgroundnode.position.y -= 30
+			"lost my mind":
+				backgroundnode.scale = Vector2(0.75, 0.75)
+			"phantasm":
+				backgroundnode.scale = Vector2(0.75, 0.75)
+			"triple-trouble-brodo":
+				backgroundnode.scale = Vector2(1.1, 1.1)
+	else:
+		f = FileAccess.open("res://assets/songs/"+song+ "/" + song + ".json", FileAccess.READ)
+		inst = load(str("res://assets/songs/" + song + "/" + CoolUtil.findsong("res://assets/songs/"+song, false)))
+		bg = load("res://assets/songs/" + song + "/" + CoolUtil.getdaimagethingy("res://assets/songs/" + song, song))
+		backgroundnode = get_node("Backgrounds")
+		backgroundnode.texture = bg
+		if ResourceLoader.exists("res://assets/songs/"+song+ "/modchart.tscn"):
+			var modchart = load("res://assets/songs/"+song+ "/modchart.tscn").instantiate()
+			get_node("/root/").add_child(modchart)
+		match song:
+			"fatality":
+				backgroundnode.scale = Vector2(2,2)
+			"cys good":
+				backgroundnode.scale = Vector2(1, 1)
+			"toggogl downwall":
+				backgroundnode.scale = Vector2(1.24,1.24)
+				#backgroundnode.position.y -= 30
+			"lost my mind":
+				backgroundnode.scale = Vector2(0.75, 0.75)
+			"phantasm":
+				backgroundnode.scale = Vector2(0.75, 0.75)
+			"triple-trouble-brodo":
+				backgroundnode.scale = Vector2(1.1, 1.1)
 	AudioHandler.get_node("Songs/Inst").stream = inst
 	AudioHandler.get_node("Songs/Inst").volume_db = clamp(linear_to_db(Globals.volume / 2), -100, 99999)
 	AudioHandler.get_node("Songs/Inst").connect("finished", songfinished)
-	var bg = load("res://assets/songs/" + song + "/" + CoolUtil.getdaimagethingy("res://assets/songs/" + song, song))
-	var backgroundnode = get_node("Backgrounds")
-	backgroundnode.texture = bg
-	match song:
-		"fatality":
-			backgroundnode.scale = Vector2(2,2)
-		"cys good":
-			backgroundnode.scale = Vector2(1, 1)
-		"toggogl downwall":
-			backgroundnode.scale = Vector2(1.24,1.24)
-			#backgroundnode.position.y -= 30
-		"lost my mind":
-			backgroundnode.scale = Vector2(0.75, 0.75)
-		"phantasm":
-			backgroundnode.scale = Vector2(0.75, 0.75)
-		"triple-trouble-brodo":
-			backgroundnode.scale = Vector2(1.1, 1.1)
-		
-	var f = FileAccess.open("res://assets/songs/"+song+ "/" + song + ".json", FileAccess.READ)
+	
 	var content:String = "{}"
 	var chartData:Dictionary = {}
 	if Globals.save.grab("sdkl"):
@@ -46,9 +77,7 @@ func _ready():
 	else:
 		Globals.save.load_binds(["D", "F", "J", "K"])
 #
-	if ResourceLoader.exists("res://assets/songs/"+song+ "/modchart.tscn"):
-		var modchart = load("res://assets/songs/"+song+ "/modchart.tscn").instantiate()
-		get_node("/root/").add_child(modchart)
+	
 		
 	if f:
 		content = f.get_as_text()

@@ -13,6 +13,7 @@ var volume = 0.5
 var fun = false
 
 var mobile = false
+var ismodded = false
 
 var totalwindows = 0
 
@@ -37,6 +38,8 @@ var songlist = [
 	"you cant run",
 	"sussus moogus"
 ]
+
+var moddedsonglist = DirAccess.get_directories_at("res://mods/songs/")
 
 var score:Dictionary = {}
 

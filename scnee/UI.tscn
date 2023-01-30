@@ -43,9 +43,9 @@ label_settings = ExtResource("3_dq2gb")
 
 [node name="Label TO Show if ur good or not" type="Label" parent="."]
 offset_left = -35.0
-offset_top = 405.0
+offset_top = 396.0
 offset_right = 1118.0
-offset_bottom = 650.0
+offset_bottom = 641.0
 theme_override_font_sizes/font_size = 131
 text = "FC"
 label_settings = SubResource("LabelSettings_ryed4")

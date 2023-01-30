@@ -27,10 +27,10 @@ label_settings = ExtResource("2_ryfnw")
 [node name="Label2" type="Label" parent="."]
 modulate = Color(0.337255, 0.337255, 0.337255, 1)
 layout_mode = 0
-offset_left = 14.0
-offset_top = 30.0
-offset_right = 168.0
-offset_bottom = 67.0
+offset_left = 24.0
+offset_top = 31.0
+offset_right = 178.0
+offset_bottom = 68.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("3_2qe5h")

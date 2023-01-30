@@ -3,7 +3,9 @@ extends Control
 var mobile = Globals.mobile
 # Called when the node enters the scene tree for the first time
 var songlist = Globals.songlist
+var moddedsonglist = Globals.moddedsonglist
 var currentsong = 0
+var currentmoddedsong = 0
 
 var lerped = true
 # Called when the node enters the scene tree for the first time.
@@ -27,21 +29,30 @@ func _ready():
 			addsong(Marshalls.utf8_to_base64(String), "Default Songs")
 		else:
 			addsong(String, "Default Songs")
+	for String in moddedsonglist:
+		if Globals.save.grab("just dont"):
+			addsong(Marshalls.utf8_to_base64(String), "Modded Songs", true)
+		else:
+			addsong(String, "Modded Songs", true)
 	var template = load("res://scnee/TemplateSong.tscn").instantiate()
 	$"TabContainer/Default Songs/ScrollContainer/VBoxContainer".add_child(template)
+	$"TabContainer/Modded Songs/ScrollContainer/VBoxContainer".add_child(template)
 	Globals.fun = false
 	
-func addsong(songname, category):
+func addsong(songname, category, ismodded = false):
 	var template = load("res://scnee/TemplateSong.tscn").instantiate()
-	$"TabContainer/Default Songs/ScrollContainer/VBoxContainer".add_child(template)
-			
-	template.songname = songlist[currentsong]
-	var score = Globals.scoredata.grab(template.songname)
+	if !ismodded:
+		$"TabContainer/Default Songs/ScrollContainer/VBoxContainer".add_child(template)
+		template.songname = songlist[currentsong]
+	else:
+		$"TabContainer/Modded Songs/ScrollContainer/VBoxContainer".add_child(template)
+		template.songname = moddedsonglist[currentmoddedsong]
+		template.ismodded = true
 	template.get_node("Label").text = songname
 	if Globals.save.grab("just dont"):
-		template.get_node("Label2").text =Marshalls.utf8_to_base64("Score: " + str(score))
+		template.get_node("Label2").text =Marshalls.utf8_to_base64("Score: " + str(Globals.scoredata.grab(template.songname)))
 	else:
-		template.get_node("Label2").text ="Score: " + str(score)
+		template.get_node("Label2").text ="Score: " + str(Globals.scoredata.grab(songname))
 	currentsong += 1
 
 func _on_button_pressed():
