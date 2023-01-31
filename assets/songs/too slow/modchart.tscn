@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cetx268ltnshi"]
+
+[ext_resource type="Script" path="res://assets/songs/too slow/modchart.gd" id="1_i7hqy"]
+
+[node name="modchart" type="Node"]
+script = ExtResource("1_i7hqy")

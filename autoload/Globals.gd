@@ -36,7 +36,8 @@ var songlist = [
 	"redux guns",
 	"too slow",
 	"you cant run",
-	"sussus moogus"
+	"sussus moogus",
+	"hello"
 ]
 
 var moddedsonglist = DirAccess.get_directories_at("res://mods/songs/")
