@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckveg2f5shbmq"
-path="res://.godot/imported/template_song.png-7050bea2ad48dbf109a227cf27f5040f.ctex"
+path="res://.godot/imported/template_song.png-7eca6e047a585e9f0a3bbefac1b99337.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods/songs/template_song/template_song.png"
-dest_files=["res://.godot/imported/template_song.png-7050bea2ad48dbf109a227cf27f5040f.ctex"]
+source_file="res://mods/songs/template/template_song.png"
+dest_files=["res://.godot/imported/template_song.png-7eca6e047a585e9f0a3bbefac1b99337.ctex"]
 
 [params]
 

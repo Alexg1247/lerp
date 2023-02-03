@@ -123,5 +123,5 @@ text = "all number in base64"
 [connection signal="pressed" from="TabContainer/Gameplay/VBoxContainer/CheckButton6" to="." method="_on_check_button_5_pressed"]
 [connection signal="pressed" from="TabContainer/Gameplay/VBoxContainer/CheckButton6" to="." method="_on_check_button_6_pressed"]
 [connection signal="pressed" from="TabContainer/Visuals/VBoxContainer/CheckButton4" to="." method="quants"]
-[connection signal="pressed" from="TabContainer/Misc/VBoxContainer/just dont" to="." method="quants"]
 [connection signal="pressed" from="TabContainer/Misc/VBoxContainer/just dont" to="." method="_on_just_dont_pressed"]
+[connection signal="pressed" from="TabContainer/Misc/VBoxContainer/just dont" to="." method="quants"]
