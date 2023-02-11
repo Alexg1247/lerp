@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dda17k5jmq20p"
+path="res://.godot/imported/life jacket.wav-c7bb9d2df8dadf3c8dff46b5fdb79577.sample"
+
+[deps]
+
+source_file="res://mods/songs/life jacket/life jacket.wav"
+dest_files=["res://.godot/imported/life jacket.wav-c7bb9d2df8dadf3c8dff46b5fdb79577.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

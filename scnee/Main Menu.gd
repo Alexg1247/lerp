@@ -50,16 +50,18 @@ func addsong(songname, category, ismodded = false):
 	if !ismodded:
 		$"TabContainer/Default Songs/ScrollContainer/VBoxContainer".add_child(template)
 		template.songname = songlist[currentsong]
+		currentsong += 1
 	else:
 		$"TabContainer/Modded Songs/ScrollContainer/VBoxContainer".add_child(template)
 		template.songname = moddedsonglist[currentmoddedsong]
+		currentmoddedsong += 1
 		template.ismodded = true
 	template.get_node("Label").text = songname
 	if Globals.save.grab("just dont"):
 		template.get_node("Label2").text =Marshalls.utf8_to_base64("Score: " + str(Globals.scoredata.grab(template.songname)))
 	else:
 		template.get_node("Label2").text ="Score: " + str(Globals.scoredata.grab(songname))
-	currentsong += 1
+	
 func _process(delta):
 	Conductor.position += delta * 1000
 	if Conductor.cur_beat >= 4:

@@ -51,6 +51,8 @@ func _ready():
 				backgroundnode.scale = Vector2(0.75, 0.75)
 			"triple-trouble-brodo":
 				backgroundnode.scale = Vector2(1.1, 1.1)
+			"life jacket":
+				backgroundnode.scale = Vector2(1.7,1.7)
 	else:
 		#this does all the shit from above but like for not modded songs
 		f = FileAccess.open("res://assets/songs/"+song+ "/" + song + ".json", FileAccess.READ)

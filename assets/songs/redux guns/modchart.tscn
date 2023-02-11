@@ -407,16 +407,14 @@ texture = ExtResource("5_ood0i")
 [node name="gf" type="AnimatedSprite2D" parent="."]
 position = Vector2(587, 299)
 scale = Vector2(0.9, 0.9)
-frames = ExtResource("2_34thx")
+sprite_frames = ExtResource("2_34thx")
 animation = &"GF Dancing Beat Bat"
-playing = true
 
 [node name="captain" type="AnimatedSprite2D" parent="."]
 position = Vector2(-300, 400)
 scale = Vector2(-0.75, 0.75)
-frames = ExtResource("2_cxwoa")
+sprite_frames = ExtResource("2_cxwoa")
 animation = &"idle"
-playing = true
 
 [node name="captain_anim" type="AnimationPlayer" parent="."]
 libraries = {
@@ -426,9 +424,8 @@ libraries = {
 [node name="bf" type="AnimatedSprite2D" parent="."]
 position = Vector2(1452, 435)
 scale = Vector2(0.9, 0.9)
-frames = ExtResource("3_qsv8n")
+sprite_frames = ExtResource("3_qsv8n")
 animation = &"idle"
-playing = true
 
 [node name="bf_anim" type="AnimationPlayer" parent="."]
 libraries = {

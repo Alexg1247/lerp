@@ -213,9 +213,8 @@ script = ExtResource("1_n8oqq")
 [node name="bf" type="AnimatedSprite2D" parent="."]
 position = Vector2(563, 459)
 scale = Vector2(0.9, 0.9)
-frames = ExtResource("2_n5ea7")
+sprite_frames = ExtResource("2_n5ea7")
 animation = &"Sonic idle"
-playing = true
 
 [node name="bf_anim" type="AnimationPlayer" parent="."]
 libraries = {

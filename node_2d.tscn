@@ -16,6 +16,5 @@ transform = Transform2D(1, 0, 0, 1, 18, 0)
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(576, 324)
-current = true
 position_smoothing_enabled = true
 position_smoothing_speed = 1.5
