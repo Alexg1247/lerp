@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dirty0721sd8j"]
+
+[ext_resource type="Script" path="res://mods/songs/fatality-invasion-mix/modchart.gd" id="1_8txwg"]
+[ext_resource type="FontFile" uid="uid://dhks7js66n5cq" path="res://assets/fonts/W95FA.otf" id="2_cqjui"]
+
+[node name="modchart" type="CanvasLayer"]
+script = ExtResource("1_8txwg")
+
+[node name="speech" type="Label" parent="."]
+texture_filter = 3
+offset_left = -22.0
+offset_top = -6.0
+offset_right = 1131.0
+offset_bottom = 644.0
+theme_override_colors/font_color = Color(0.905882, 0, 0.00392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("2_cqjui")
+theme_override_font_sizes/font_size = 58
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -67,30 +67,30 @@ func _process(delta):
 						Globals.emit_signal("player_note_hit", hit, hit.note_data, hit.name)
 						match hit.note_data +1:
 							1:
-								key.get_node("key").frame = 0
+								key.get_node("Receptor").self_modulate = Color(1,1,1,1)
 							2:
-								key2.get_node("key").frame = 0
+								key2.get_node("Receptor").self_modulate = Color(1,1,1,1)
 							3:
-								key3.get_node("key").frame = 0
+								key3.get_node("Receptor").self_modulate = Color(1,1,1,1)
 							4:
-								key4.get_node("key").frame = 0
+								key4.get_node("Receptor").self_modulate = Color(1,1,1,1)
 						match hit.note_data +1:
 							1:
-								key2.get_node("key").frame = 1
-								key3.get_node("key").frame = 1
-								key4.get_node("key").frame = 1
+								key2.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
+								key3.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
+								key4.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
 							2:
-								key.get_node("key").frame = 1
-								key3.get_node("key").frame = 1
-								key4.get_node("key").frame = 1
+								key.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
+								key3.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
+								key4.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
 							3:
-								key2.get_node("key").frame = 1
-								key.get_node("key").frame = 1
-								key4.get_node("key").frame = 1
+								key2.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
+								key.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
+								key4.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
 							4:
-								key2.get_node("key").frame = 1
-								key3.get_node("key").frame = 1
-								key.get_node("key").frame = 1
+								key2.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
+								key3.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
+								key.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
 		
 					else:
 						Globals.notes_hit += 1
@@ -102,30 +102,30 @@ func _process(delta):
 						Globals.emit_signal("player_note_hit", hit, hit.note_data, hit.name)
 						match hit.note_data +1:
 							1:
-								key.get_node("key").frame = 0
+								key.get_node("Receptor").self_modulate = Color(1,1,1,1)
 							2:
-								key2.get_node("key").frame = 0
+								key2.get_node("Receptor").self_modulate = Color(1,1,1,1)
 							3:
-								key3.get_node("key").frame = 0
+								key3.get_node("Receptor").self_modulate = Color(1,1,1,1)
 							4:
-								key4.get_node("key").frame = 0
+								key4.get_node("Receptor").self_modulate = Color(1,1,1,1)
 						match hit.note_data +1:
 							1:
-								key2.get_node("key").frame = 1
-								key3.get_node("key").frame = 1
-								key4.get_node("key").frame = 1
+								key2.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
+								key3.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
+								key4.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
 							2:
-								key.get_node("key").frame = 1
-								key3.get_node("key").frame = 1
-								key4.get_node("key").frame = 1
+								key.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
+								key3.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
+								key4.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
 							3:
-								key2.get_node("key").frame = 1
-								key.get_node("key").frame = 1
-								key4.get_node("key").frame = 1
+								key2.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
+								key.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
+								key4.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
 							4:
-								key2.get_node("key").frame = 1
-								key3.get_node("key").frame = 1
-								key.get_node("key").frame = 1
+								key2.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
+								key3.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
+								key.get_node("Receptor").self_modulate = Color(0.5,0.5,0.5,1)
 					
 				
 				

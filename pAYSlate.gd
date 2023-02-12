@@ -32,8 +32,8 @@ func _ready():
 		inst = load(str("res://mods/songs/" + song + "/" + CoolUtil.findsong("res://mods/songs/"+song, false)))
 		bg = load("res://mods/songs/" + song + "/" + CoolUtil.getdaimagethingy("res://mods/songs/" + song, song))
 		backgroundnode = get_node("Backgrounds")
-		if ResourceLoader.exists("res://assets/songs/"+song+ "/modchart.tscn"):
-			var modchart = load("res://assets/songs/"+song+ "/modchart.tscn").instantiate()
+		if ResourceLoader.exists("res://mods/songs/"+song+ "/modchart.tscn"):
+			var modchart = load("res://mods/songs/"+song+ "/modchart.tscn").instantiate()
 			get_node("/root/").add_child(modchart)
 		backgroundnode.texture = bg
 		#bg scaling that ima add later hopefully

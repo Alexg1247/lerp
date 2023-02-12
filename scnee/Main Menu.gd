@@ -9,6 +9,14 @@ var currentmoddedsong = 0
 
 var randcolor = Color(randi(), randi(),randi(),1)
 
+var colourarray:Array = [
+	Color(0.07,0,0.22,1),
+	Color(0.09,0.09,0.17,1),
+	Color(0.14,0,0.1,1),
+	Color(0.13,0.02,0.01,1),
+	Color(0.21,0,0.02,1)
+]
+
 var lerped = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -66,8 +74,7 @@ func _process(delta):
 	Conductor.position += delta * 1000
 	if Conductor.cur_beat >= 4:
 		var tween = get_tree().create_tween()
-		var thiccthighs = randf_range(0,0.6)
-		tween.tween_property($Control/ColorRect, "color", Color(thiccthighs, thiccthighs,randf_range(0,0.6),1), delta * 10000).set_trans(Tween.TRANS_SINE)
+		tween.tween_property($Control/ColorRect, "color", colourarray[randi_range(0,colourarray.size() - 1)], delta * 10000).set_trans(Tween.TRANS_SINE)
 		#print("thicc thighs")
 		tween.play()
 		Conductor.position = 0

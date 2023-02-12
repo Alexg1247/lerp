@@ -42,10 +42,10 @@ text = "There was a fatal error. I think?"
 
 [node name="Label2" type="Label" parent="."]
 texture_filter = 3
-offset_left = 57.0
-offset_top = 40.0
-offset_right = 348.906
-offset_bottom = 95.295
+offset_left = 51.0
+offset_top = 84.0
+offset_right = 342.906
+offset_bottom = 139.295
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("3_dtn0j")
@@ -53,8 +53,9 @@ theme_override_font_sizes/font_size = 24
 text = "idfk sometihng happenend"
 
 [node name="Uwu" type="Sprite2D" parent="."]
-position = Vector2(176, 92)
-scale = Vector2(0.456, 0.456)
+texture_filter = 3
+position = Vector2(171, 58)
+scale = Vector2(0.482421, 0.482421)
 texture = ExtResource("4_waoj1")
 
 [node name="Button" type="Button" parent="."]

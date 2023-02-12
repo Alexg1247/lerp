@@ -2,23 +2,23 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi3sj821ry7o4"
-path="res://.godot/imported/hello.png-e75a3c47b5f4e35630e9d232084a9628.ctex"
+uid="uid://diolc51w5cr"
+path="res://.godot/imported/Receptor_hit.png-05a0c8d2aff3725aea4bb17cbcf96d70.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/songs/hello/hello.png"
-dest_files=["res://.godot/imported/hello.png-e75a3c47b5f4e35630e9d232084a9628.ctex"]
+source_file="res://assets/images/gameplay/Receptor_hit.png"
+dest_files=["res://.godot/imported/Receptor_hit.png-05a0c8d2aff3725aea4bb17cbcf96d70.ctex"]
 
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

@@ -1,10 +1,61 @@
-[gd_scene load_steps=6 format=3 uid="uid://cxda6lm74j14w"]
+[gd_scene load_steps=14 format=3 uid="uid://cxda6lm74j14w"]
 
 [ext_resource type="Script" path="res://scnee/Main Menu.gd" id="1_vp2ck"]
 [ext_resource type="LabelSettings" uid="uid://darl5r556djxr" path="res://assets/fonts/font_styles/titlescreen idk.tres" id="2_apkys"]
 [ext_resource type="Texture2D" uid="uid://cdspg65cfqf2q" path="res://assets/uwu.png" id="3_n3ogb"]
 [ext_resource type="Texture2D" uid="uid://d2aiiw1sfjrln" path="res://assets/images/vignette.png" id="4_tc2qy"]
 [ext_resource type="PackedScene" uid="uid://0ab2x5hcw6ui" path="res://scnee/Optchin Menu.tscn" id="5_pblyy"]
+
+[sub_resource type="Curve" id="Curve_mc0yv"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_46h0j"]
+curve = SubResource("Curve_mc0yv")
+
+[sub_resource type="Curve" id="Curve_lti2c"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 98.1818), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_l5e4u"]
+curve = SubResource("Curve_lti2c")
+
+[sub_resource type="Curve" id="Curve_e1pgf"]
+min_value = -1.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.418182), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_5vwsd"]
+curve = SubResource("Curve_e1pgf")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_chxj0"]
+lifetime_randomness = 0.65
+emission_shape = 1
+emission_sphere_radius = 1.0
+particle_flag_disable_z = true
+spread = 180.0
+gravity = Vector3(0, 98, 0)
+initial_velocity_max = 314.6
+angular_velocity_min = -720.0
+angular_velocity_max = 536.93
+angular_velocity_curve = SubResource("CurveTexture_l5e4u")
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.1
+linear_accel_max = 6.74
+angle_min = -333.4
+angle_max = 720.0
+angle_curve = SubResource("CurveTexture_46h0j")
+scale_min = 11.24
+scale_max = 46.16
+hue_variation_min = -0.7
+hue_variation_max = 0.13
+hue_variation_curve = SubResource("CurveTexture_5vwsd")
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_v5bib"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -20,6 +71,14 @@ z_index = -8
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Control"]
+self_modulate = Color(1, 1, 1, 0.227451)
+position = Vector2(570, 238)
+amount = 45
+process_material = SubResource("ParticleProcessMaterial_chxj0")
+texture = SubResource("PlaceholderTexture2D_v5bib")
+lifetime = 4.24
 
 [node name="Vignette" type="Sprite2D" parent="Control"]
 self_modulate = Color(1, 1, 1, 0.333333)
@@ -42,7 +101,7 @@ offset_left = 10.0
 offset_top = 558.0
 offset_right = 320.0
 offset_bottom = 640.0
-text = "lerp(): v1.0beta 3
+text = "lerp(): v1.0beta 4
 Made By: Alexg1247"
 label_settings = ExtResource("2_apkys")
 vertical_alignment = 2

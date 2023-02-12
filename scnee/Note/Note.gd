@@ -32,18 +32,18 @@ func _ready():
 		0:
 			strum.position.x = 388
 			direction = 0
+			$default.rotate(deg_to_rad(-90))
 			pass
 		1:
 			strum.position.x = 488
-			$default.rotate(deg_to_rad(-90))
+			$default.rotate(deg_to_rad(180))
 			direction = 1
 		2:
 			strum.position.x = 588
-			$default.rotate(deg_to_rad(90))
 			direction = 2
 		3:
 			strum.position.x = 688
-			$default.rotate(deg_to_rad(180))
+			$default.rotate(deg_to_rad(90))
 			direction = 3
 	#scale = Vector2(0.5, 0.5)
 	#if Globals.save.grab("guants") == Globals.save.grab("custom_note_color_per_song"):

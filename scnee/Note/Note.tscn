@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://e15j05iiwj3u"]
+[gd_scene load_steps=5 format=3 uid="uid://e15j05iiwj3u"]
 
 [ext_resource type="Script" path="res://scnee/Note/Note.gd" id="1_fcm3o"]
 [ext_resource type="Texture2D" uid="uid://dk25tydcojb1m" path="res://assets/images/gameplay/arrow that u hit.png" id="2_sduqu"]
+[ext_resource type="Texture2D" uid="uid://diolc51w5cr" path="res://assets/images/gameplay/Receptor_hit.png" id="3_e8tap"]
 
 [sub_resource type="Gradient" id="Gradient_72lcg"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 0, 0, 1)
@@ -14,7 +15,7 @@ z_index = -1
 y_sort_enabled = true
 scale = Vector2(1, 0.938462)
 points = PackedVector2Array(0, 0, 0, 0)
-width = 15.0
+width = 20.0
 default_color = Color(1, 0, 0, 1)
 gradient = SubResource("Gradient_72lcg")
 joint_mode = 2
@@ -24,7 +25,13 @@ sharp_limit = 9.023
 round_precision = 9
 antialiased = true
 
-[node name="default" type="Sprite2D" parent="."]
+[node name="default old" type="Sprite2D" parent="."]
+visible = false
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_sduqu")
 hframes = 2
+
+[node name="default" type="Sprite2D" parent="."]
+position = Vector2(4.76837e-07, 0)
+scale = Vector2(0.193686, 0.193686)
+texture = ExtResource("3_e8tap")

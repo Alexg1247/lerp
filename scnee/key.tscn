@@ -1,12 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://b2n1aptkvrgpc"]
 
 [ext_resource type="Script" path="res://scnee/key.gd" id="1_f0oex"]
-[ext_resource type="Texture2D" uid="uid://dk25tydcojb1m" path="res://assets/images/gameplay/arrow that u hit.png" id="2_v88t7"]
+[ext_resource type="Texture2D" uid="uid://diolc51w5cr" path="res://assets/images/gameplay/Receptor_hit.png" id="3_l61vt"]
 
 [node name="key" type="Node2D"]
 script = ExtResource("1_f0oex")
 
-[node name="key" type="Sprite2D" parent="."]
-texture = ExtResource("2_v88t7")
-hframes = 2
-frame = 1
+[node name="Receptor" type="Sprite2D" parent="."]
+self_modulate = Color(0.490196, 0.490196, 0.490196, 1)
+position = Vector2(-9.53674e-07, 0)
+scale = Vector2(0.357106, 0.363992)
+texture = ExtResource("3_l61vt")
