@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpdr2o50231xx"
-path="res://.godot/imported/doomsday.png-da52da8269d54e1a533f8e3b00e0f975.ctex"
+uid="uid://caladaivs0cor"
+path="res://.godot/imported/fatality.jpg-c82ae6787af066f4ef692fd181c7bf7b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/songs/doomsday/doomsday.png"
-dest_files=["res://.godot/imported/doomsday.png-da52da8269d54e1a533f8e3b00e0f975.ctex"]
+source_file="res://assets/songs/fatality/fatality.jpg"
+dest_files=["res://.godot/imported/fatality.jpg-c82ae6787af066f4ef692fd181c7bf7b.ctex"]
 
 [params]
 

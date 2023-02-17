@@ -12,7 +12,7 @@ max_value = 360.0
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CurveTexture" id="CurveTexture_46h0j"]
+[sub_resource type="CurveTexture" id="CurveTexture_qbtb2"]
 curve = SubResource("Curve_mc0yv")
 
 [sub_resource type="Curve" id="Curve_lti2c"]
@@ -21,7 +21,7 @@ max_value = 360.0
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 98.1818), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CurveTexture" id="CurveTexture_l5e4u"]
+[sub_resource type="CurveTexture" id="CurveTexture_li71y"]
 curve = SubResource("Curve_lti2c")
 
 [sub_resource type="Curve" id="Curve_e1pgf"]
@@ -29,7 +29,7 @@ min_value = -1.0
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.418182), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CurveTexture" id="CurveTexture_5vwsd"]
+[sub_resource type="CurveTexture" id="CurveTexture_3m5l8"]
 curve = SubResource("Curve_e1pgf")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_chxj0"]
@@ -42,18 +42,18 @@ gravity = Vector3(0, 98, 0)
 initial_velocity_max = 314.6
 angular_velocity_min = -720.0
 angular_velocity_max = 536.93
-angular_velocity_curve = SubResource("CurveTexture_l5e4u")
+angular_velocity_curve = SubResource("CurveTexture_li71y")
 orbit_velocity_min = 0.0
 orbit_velocity_max = 0.1
 linear_accel_max = 6.74
 angle_min = -333.4
 angle_max = 720.0
-angle_curve = SubResource("CurveTexture_46h0j")
+angle_curve = SubResource("CurveTexture_qbtb2")
 scale_min = 11.24
 scale_max = 46.16
 hue_variation_min = -0.7
 hue_variation_max = 0.13
-hue_variation_curve = SubResource("CurveTexture_5vwsd")
+hue_variation_curve = SubResource("CurveTexture_3m5l8")
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_v5bib"]
 
@@ -132,6 +132,16 @@ offset_bottom = 640.0
 theme_override_font_sizes/font_size = 27
 text = "Info"
 
+[node name="Info2" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 15.0
+offset_top = 543.0
+offset_right = 163.0
+offset_bottom = 590.0
+theme_override_font_sizes/font_size = 27
+text = "uwu"
+
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 0
 offset_left = 695.0
@@ -192,4 +202,6 @@ text = "Back"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Info" to="." method="_on_info_pressed"]
+[connection signal="pressed" from="Info2" to="." method="_on_info_pressed"]
+[connection signal="pressed" from="Info2" to="." method="_on_info_2_pressed"]
 [connection signal="pressed" from="Optchin Menu/Button2" to="." method="_on_button_pressed"]

@@ -1,13 +1,20 @@
 extends Node2D
 
+class_name Playstate
+
 #the song that you are playing
 var song = Globals.currentsong
 
 #the notes
 var noteDataArray = []
 
+var totalPlayed = 0
+
 #template note
 var template_note:Node2D 
+
+#accruacy UwU that doesnt work lmaoooo
+var accuracy:float = 0.0
 
 #idk
 var template_notes:Dictionary = {}
@@ -21,67 +28,56 @@ var template_notes:Dictionary = {}
 
 func _ready(): 
 	#variables iguess
+	
 	var inst
 	var bg
 	var backgroundnode
 	var f
+	
+	Globals.uwu = false
+	
+	if Globals.currentsong == "uwu-song":
+		Globals.uwu = true
+	print(Globals.uwu)
+
+	var path
 	#checks if your song is modded
 	if Globals.ismodded:
-		#this loads all the shit to play: the chart, bg, inst and also them modchart
-		f = FileAccess.open("res://mods/songs/"+song+ "/" + song + ".json", FileAccess.READ)
-		inst = load(str("res://mods/songs/" + song + "/" + CoolUtil.findsong("res://mods/songs/"+song, false)))
-		bg = load("res://mods/songs/" + song + "/" + CoolUtil.getdaimagethingy("res://mods/songs/" + song, song))
-		backgroundnode = get_node("Backgrounds")
-		if ResourceLoader.exists("res://mods/songs/"+song+ "/modchart.tscn"):
-			var modchart = load("res://mods/songs/"+song+ "/modchart.tscn").instantiate()
-			get_node("/root/").add_child(modchart)
-		backgroundnode.texture = bg
-		#bg scaling that ima add later hopefully
-		match song:
-			"fatality":
-				backgroundnode.scale = Vector2(2,2)
-			"cys good":
-				backgroundnode.scale = Vector2(1, 1)
-			"toggogl downwall":
-				backgroundnode.scale = Vector2(1.24,1.24)
-				#backgroundnode.position.y -= 30
-			"lost my mind":
-				backgroundnode.scale = Vector2(0.75, 0.75)
-			"phantasm":
-				backgroundnode.scale = Vector2(0.75, 0.75)
-			"triple-trouble-brodo":
-				backgroundnode.scale = Vector2(1.1, 1.1)
-			"life jacket":
-				backgroundnode.scale = Vector2(1.7,1.7)
+		path = "res://mods/songs/"
 	else:
-		#this does all the shit from above but like for not modded songs
-		f = FileAccess.open("res://assets/songs/"+song+ "/" + song + ".json", FileAccess.READ)
-		inst = load(str("res://assets/songs/" + song + "/" + CoolUtil.findsong("res://assets/songs/"+song, false)))
-		bg = load("res://assets/songs/" + song + "/" + CoolUtil.getdaimagethingy("res://assets/songs/" + song, song))
-		backgroundnode = get_node("Backgrounds")
-		backgroundnode.texture = bg
-		if ResourceLoader.exists("res://assets/songs/"+song+ "/modchart.tscn"):
-			var modchart = load("res://assets/songs/"+song+ "/modchart.tscn").instantiate()
-			get_node("/root/").add_child(modchart)
-		match song:
-			"fatality":
-				backgroundnode.scale = Vector2(2,2)
-			"cys good":
-				backgroundnode.scale = Vector2(1, 1)
-			"toggogl downwall":
-				backgroundnode.scale = Vector2(1.24,1.24)
-				#backgroundnode.position.y -= 30
-			"lost my mind":
-				backgroundnode.scale = Vector2(0.75, 0.75)
-			"phantasm":
-				backgroundnode.scale = Vector2(0.75, 0.75)
-			"triple-trouble-brodo":
-				backgroundnode.scale = Vector2(1.1, 1.1)
+		path = "res://assets/songs/"
+	f = FileAccess.open(path+Globals.currentsong+ "/" + song + ".json", FileAccess.READ)
+	inst = load(str(path + Globals.currentsong + "/" + CoolUtil.findsong(path+Globals.currentsong, false)))
+	print(str(CoolUtil.findsong(path+Globals.currentsong, false)))
+	bg = load(path + Globals.currentsong + "/" + CoolUtil.getdaimagethingy(path + Globals.currentsong, Globals.currentsong))
+	backgroundnode = get_node("Backgrounds")
+	backgroundnode.texture = bg
+	if ResourceLoader.exists(path+song+ "/modchart.tscn"):
+		var modchart = load(path+song+ "/modchart.tscn").instantiate()
+		get_node("/root/").add_child(modchart)
+	match song:
+		"fatality":
+			backgroundnode.scale = Vector2(2,2)
+		"cys good":
+			backgroundnode.scale = Vector2(1, 1)
+		"toggogl downwall":
+			backgroundnode.scale = Vector2(1.24,1.24)
+			#backgroundnode.position.y -= 30
+		"lost my mind":
+			backgroundnode.scale = Vector2(0.75, 0.75)
+		"phantasm":
+			backgroundnode.scale = Vector2(0.75, 0.75)
+		"triple-trouble-brodo":
+			backgroundnode.scale = Vector2(1.1, 1.1)
+		"life jacket":
+			backgroundnode.scale = Vector2(1.7,1.7)
 	#configure audio
+	print(CoolUtil.findsong(path+song, false))
 	AudioHandler.get_node("Songs/Inst").stream = inst
 	AudioHandler.get_node("Songs/Inst").volume_db = clamp(linear_to_db(Globals.volume / 2), -100, 99999)
 	AudioHandler.get_node("Songs/Inst").connect("finished", songfinished)
 	
+	#Globals.connect("player_note_hit", updateacc)
 	#keybinds UwU
 	var content:String = "{}"
 	var chartData:Dictionary = {}
@@ -110,6 +106,10 @@ func _ready():
 	Conductor.connect("beat_hit", beat_hit)
 	template_notes["default"] = preload("res://scnee/Note/Note.tscn").instantiate()
 	#note shit i guess
+	
+	if Globals.uwu:
+		backgroundnode.queue_free()
+	
 	for section in chartData["notes"]:
 		for note in section["sectionNotes"]:
 			if note[1] != -1:
@@ -236,6 +236,5 @@ func _process(delta):
 	elif Conductor.cur_beat >= -3.0 + counter: counter += 1
 	
 	$Camera.zoom = lerp($Camera.zoom, Vector2(1, 1), delta * 9)
-	
-	
+
 	

@@ -8,5 +8,6 @@ var options = {
 	"sdkl": false,
 	"botplay": false,
 	"volume": 0.5,
-	"just dont": false
+	"just dont": false,
+	"uwu": false
 }

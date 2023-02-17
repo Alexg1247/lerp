@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://8yfid70yhq6v"
+path="res://.godot/imported/fatality-old.mp3-ebf72b6566a6ffc85a74dae931ded424.mp3str"
+
+[deps]
+
+source_file="res://assets/songs but better/fatality-old.mp3"
+dest_files=["res://.godot/imported/fatality-old.mp3-ebf72b6566a6ffc85a74dae931ded424.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

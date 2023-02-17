@@ -34,18 +34,6 @@ tracks/1/keys = {
 "update": 1,
 "values": [0]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../bf:playing")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
 
 [sub_resource type="Animation" id="Animation_6ymtb"]
 resource_name = "1"
@@ -72,18 +60,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../bf:playing")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_c1sp6"]
@@ -112,18 +88,6 @@ tracks/1/keys = {
 "update": 1,
 "values": [0]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../bf:playing")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
 
 [sub_resource type="Animation" id="Animation_55krc"]
 resource_name = "3"
@@ -150,18 +114,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../bf:playing")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_1ojni"]
@@ -193,14 +145,14 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../bf:playing")
+tracks/2/path = NodePath("../bf:sprite_frames")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true]
+"values": [ExtResource("5_h7u8s")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rx3wj"]
@@ -846,18 +798,16 @@ visible = false
 texture_filter = 3
 position = Vector2(811, 360)
 scale = Vector2(6.64286, 6.64286)
-frames = ExtResource("3_j8cf6")
+sprite_frames = ExtResource("3_j8cf6")
 animation = &"0"
-playing = true
 
 [node name="pixelexe" type="AnimatedSprite2D" parent="."]
 visible = false
 texture_filter = 3
 position = Vector2(351, 303)
 scale = Vector2(6.83719, 6.83719)
-frames = ExtResource("4_e1b1u")
+sprite_frames = ExtResource("4_e1b1u")
 animation = &"Sonic_EXE_Pixel Sonic_EXE_Pixel NOTE LEFT"
-playing = true
 
 [node name="bf_anim" type="AnimationPlayer" parent="."]
 root_node = NodePath("../pixelbf_anim")
@@ -886,16 +836,14 @@ libraries = {
 [node name="bf" type="AnimatedSprite2D" parent="."]
 position = Vector2(903, 576)
 scale = Vector2(1.14962, 1.14962)
-frames = ExtResource("5_h7u8s")
+sprite_frames = ExtResource("5_h7u8s")
 animation = &"BF idle dance"
-playing = true
 
 [node name="sock" type="AnimatedSprite2D" parent="."]
 position = Vector2(238, 564)
 scale = Vector2(0.95983, 0.95983)
-frames = ExtResource("5_t070f")
+sprite_frames = ExtResource("5_t070f")
 animation = &"normal_idle"
-playing = true
 
 [node name="Label" type="Label" parent="."]
 visible = false

@@ -10,6 +10,8 @@ var misses = 0
 
 var volume = 0.5
 
+var accuracy:float = 0.0
+
 var fun = false
 
 var mobile = false
@@ -20,7 +22,6 @@ var totalwindows = 0
 var songlist = [
 	"fatality",
 	"phantasm",
-	"doomsday",
 	"toggogl downwall",
 	"too slow encore",
 	"i am god",
@@ -28,7 +29,6 @@ var songlist = [
 	"lost my mind",
 	"rush b",
 	"triple-trouble-lyrics",
-	"triple-trouble-brodo",
 	"cys good",
 	"endless encore",
 	"dojo brawl",
@@ -36,8 +36,7 @@ var songlist = [
 	"redux guns",
 	"too slow",
 	"you cant run",
-	"sussus moogus",
-	"hello"
+	"sussus moogus"
 ]
 
 var moddedsonglist = DirAccess.get_directories_at("res://mods/songs/")
@@ -52,6 +51,10 @@ var comboname = "FC"
 
 var currentsong = ""
 
+var totalPlayed = 0
+
+var uwu = false
+
 signal player_note_hit(note, dir, type)
 signal enemy_note_hit(note, dir, type)
 
@@ -63,3 +66,7 @@ var credits = [
 	"leather128",
 	"raf"
 ]
+
+var notecolour = Color(1, 0, 0, 1)
+
+var d = true

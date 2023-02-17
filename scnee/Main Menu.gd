@@ -20,6 +20,7 @@ var colourarray:Array = [
 var lerped = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Globals.notecolour = Color(1, 0, 0, 1)
 	Globals.misses = 0
 	Globals.notes_hit = 0
 	Conductor.cur_beat = 0
@@ -38,6 +39,8 @@ func _ready():
 			$Options/CheckButton.button_pressed = true
 		"Windows":
 			print("L\nL\nL\nL\nL\nL\nL\nL\nL\nL\nL\nL\nL\nL\nL\nL\n")
+		"X11":
+			print("you are cool")
 	for String in songlist:
 		if Globals.save.grab("just dont"):
 			addsong(Marshalls.utf8_to_base64(String), "Default Songs")
@@ -99,3 +102,8 @@ func _open_options() -> void:
 
 func _on_info_pressed():
 	pass # Replace with function body.
+
+func _on_info_2_pressed():
+	if !Globals.save.grab("uwu") and Globals.d:#uwu i love leather <3 /j
+		add_child(load("res://scnee/errorwindow.tscn").instantiate())
+		Globals.d = false

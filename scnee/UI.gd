@@ -35,6 +35,7 @@ func _process(delta):
 		$Giid.text = "Notes Hit: " + str(Globals.notes_hit)
 		$Miss.text = "Misses: " + str(Globals.misses)
 		$"Label TO Show if ur good or not".text = Globals.comboname
+		$acc.text = "Accuracy: " + str(Globals.accuracy) + "%"
 
 	if Globals.misses == 0:
 		if Globals.fun:

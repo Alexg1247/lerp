@@ -2,23 +2,23 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0ob0kksttv47"
-path="res://.godot/imported/triple-trouble-brodo.png-ec3ad643898421541e1cc3dfca777353.ctex"
+uid="uid://b00p3v8dbxh8h"
+path="res://.godot/imported/uwu-song.jpg-4d0b839b35e30c65682f71bcc210c2c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/songs/triple-trouble-brodo/triple-trouble-brodo.png"
-dest_files=["res://.godot/imported/triple-trouble-brodo.png-ec3ad643898421541e1cc3dfca777353.ctex"]
+source_file="res://assets/songs/uwu-song/uwu-song.jpg"
+dest_files=["res://.godot/imported/uwu-song.jpg-4d0b839b35e30c65682f71bcc210c2c6.ctex"]
 
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

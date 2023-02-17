@@ -2,6 +2,8 @@ extends Modchart
 
 func _ready():
 	Globals.fun = true
+	Globals.notecolour = Color(0.02,0.03,0.43,1)
+
 
 func _process(delta):
 	#print(get_viewport().get_mouse_position()) #520 316

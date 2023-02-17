@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://buop8cbcsqqnq"
+path="res://.godot/imported/MS Sans Serif 8pt bold.ttf-a3d38d0b7a8f0534712c6628ba0ef7c4.fontdata"
+
+[deps]
+
+source_file="res://assets/songs/uwu-song/MS Sans Serif 8pt bold.ttf"
+dest_files=["res://.godot/imported/MS Sans Serif 8pt bold.ttf-a3d38d0b7a8f0534712c6628ba0ef7c4.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

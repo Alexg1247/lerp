@@ -19,10 +19,4 @@ func _ready():
 			rotate(deg_to_rad(180))
 			direction = "right"
 	#position.y = -128
-	
-#func _process(delta):
-#	if Input.is_action_pressed("gameplay_" + str(keynumber)):
-#		$AnimatedSprite2D.animation = "hit arrow"
-#	if !Input.is_action_pressed("gameplay_" + str(keynumber)):
-#		$AnimatedSprite2D.animation = "default"
-#
+

@@ -41,6 +41,16 @@ theme_override_font_sizes/font_size = 4
 text = "Misses: 0"
 label_settings = ExtResource("3_dq2gb")
 
+[node name="acc" type="Label" parent="."]
+offset_left = -18.0
+offset_top = 581.0
+offset_right = 118.0
+offset_bottom = 609.0
+theme_override_fonts/font = ExtResource("5_cuv1c")
+theme_override_font_sizes/font_size = 4
+text = "Accuracy: 100%"
+label_settings = ExtResource("3_dq2gb")
+
 [node name="Label TO Show if ur good or not" type="Label" parent="."]
 offset_left = -35.0
 offset_top = 396.0
@@ -70,10 +80,10 @@ horizontal_alignment = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -579.0
-offset_top = 21.0
-offset_right = -225.0
-offset_bottom = 40.0
+offset_left = -582.0
+offset_top = 44.0
+offset_right = -228.0
+offset_bottom = 63.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4

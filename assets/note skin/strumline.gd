@@ -137,6 +137,7 @@ func _process(delta):
 							#note.note_hit()
 							Globals.notes_hit += 1
 							note.queue_free()
+							Globals.emit_signal("player_note_hit", hit, hit.note_data, hit.name)
 							
 						else:
 							Globals.notes_hit += 1
@@ -161,6 +162,8 @@ func _process(delta):
 				if !hit.is_sustain:
 					Globals.notes_hit += 1
 					hit.queue_free()
+					Globals.totalPlayed += 1
+					Globals.accuracy = max(0, Globals.notes_hit / Globals.totalPlayed * 100)
 				else:
 					Globals.notes_hit += 1
 					hit.being_pressed = true
@@ -183,3 +186,4 @@ func _process(delta):
 					
 							if 'been_hit' in note:
 								note.been_hit = true
+

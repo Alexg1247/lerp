@@ -51,15 +51,10 @@ func _ready():
 	if Globals.save.grab("quants"):
 		$default.modulate = Color(randf(), randf(), randf(),1)
 	
-	if Globals.fun:
-		$default.modulate = Color(0.02,0.03,0.43,1)
-		#print($Line2D.gradient.colors[1])
-		#print($Line2D.gradient.get_colors())
-		$Line2D.gradient.set_colors([Color(1, 1, 1, 1), Color(0.02,0.03,0.43,1)]) 
+	
 		
-	else:
-		$default.modulate = Color(1, 0, 0, 1)
-		$Line2D.gradient.set_colors([Color(1, 1, 1, 1), Color(1, 0, 0, 1)]) 
+	$default.modulate = Globals.notecolour
+	$Line2D.gradient.set_colors([Color(1, 1, 1, 1), Globals.notecolour]) 
 
 func _process(delta):
 	if Globals.save.grab("downscroll"):

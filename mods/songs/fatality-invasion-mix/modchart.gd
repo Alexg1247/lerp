@@ -44,4 +44,3 @@ func beat_hit():
 			$speech.text = "IT SEEMS LIKE YOU WANT MORE FROM ME"
 		584:
 			$speech.text = ""
-		

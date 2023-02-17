@@ -32,7 +32,7 @@ func _process(delta):
 		else:
 			DisplayServer.window_set_title(randomasstext[randi_range(0, randomasstext.size() - 1)])
 	#print(counter)
-	if counter >= 1400 and Globals.totalwindows <= 12 and Conductor.cur_beat >= 64:
+	if counter >= 700 and Globals.totalwindows <= 12 and Conductor.cur_beat >= 64:
 		counter = 0
 		makewindow()
 
@@ -41,4 +41,4 @@ func makewindow():
 	#print("thicc thighs")
 	self.add_child(window2)
 	Globals.totalwindows += 1
-	window2.position = Vector2(DisplayServer.window_get_position(0).x + randi_range(-400, 1000), DisplayServer.window_get_position(0).y - 300 + randi_range(-200, 500))
+	window2.position = Vector2(DisplayServer.window_get_position(0).x + randi_range(-400, 1000), DisplayServer.window_get_position(0).y + 100 + randi_range(-200, 500))
