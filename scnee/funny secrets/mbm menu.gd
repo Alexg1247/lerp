@@ -20,7 +20,8 @@ func _process(delta):
 
 func _on_button_pressed():
 	Globals.currentsong = "uwu-song"
-	add_child(load("res://node_2d.tscn").instantiate())
 	Globals.ismodded = false
+	add_child(load("res://node_2d.tscn").instantiate())
+	
 
 	

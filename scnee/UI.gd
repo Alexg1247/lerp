@@ -25,7 +25,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$Timebar.value = Conductor.position / 1000
+	Globals.percent = int(Conductor.position / 1000)
+	$Timebar.value = Globals.percent
 	$Timebar.max_value = AudioHandler.get_node("Songs/Inst").stream.get_length()
 	if Globals.save.grab("just dont"):
 		$Giid.text = Marshalls.utf8_to_base64("Notes Hit: " + str(Globals.notes_hit))

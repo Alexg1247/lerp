@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=3 uid="uid://rhslp1shtqqe"]
+
+[ext_resource type="Script" path="res://assets/songs/limbo/modchart.gd" id="1_6e2t0"]
+[ext_resource type="Texture2D" uid="uid://d1pgxd4qpy3xn" path="res://icon.svg" id="2_6jvxf"]
+
+[node name="modchart" type="CanvasLayer"]
+script = ExtResource("1_6e2t0")
+
+[node name="1" type="Sprite2D" parent="."]
+modulate = Color(0, 0.729412, 0.0352941, 1)
+position = Vector2(869, 100)
+scale = Vector2(0.550781, 0.550781)
+texture = ExtResource("2_6jvxf")
+
+[node name="2" type="Sprite2D" parent="."]
+position = Vector2(1041, 100)
+scale = Vector2(0.550781, 0.550781)
+texture = ExtResource("2_6jvxf")
+
+[node name="3" type="Sprite2D" parent="."]
+position = Vector2(1041, 230)
+scale = Vector2(0.550781, 0.550781)
+texture = ExtResource("2_6jvxf")
+
+[node name="4" type="Sprite2D" parent="."]
+position = Vector2(1041, 380)
+scale = Vector2(0.550781, 0.550781)
+texture = ExtResource("2_6jvxf")
+
+[node name="5" type="Sprite2D" parent="."]
+position = Vector2(1041, 520)
+scale = Vector2(0.550781, 0.550781)
+texture = ExtResource("2_6jvxf")
+
+[node name="6" type="Sprite2D" parent="."]
+position = Vector2(870, 520)
+scale = Vector2(0.550781, 0.550781)
+texture = ExtResource("2_6jvxf")
+
+[node name="7" type="Sprite2D" parent="."]
+position = Vector2(869, 380)
+scale = Vector2(0.550781, 0.550781)
+texture = ExtResource("2_6jvxf")
+
+[node name="8" type="Sprite2D" parent="."]
+position = Vector2(869, 230)
+scale = Vector2(0.550781, 0.550781)
+texture = ExtResource("2_6jvxf")
+
+[node name="1m" type="Node2D" parent="."]
+position = Vector2(869, 100)
+
+[node name="2m" type="Node2D" parent="."]
+position = Vector2(1041, 100)
+
+[node name="3m" type="Node2D" parent="."]
+position = Vector2(1041, 230)
+
+[node name="4m" type="Node2D" parent="."]
+position = Vector2(1041, 380)
+
+[node name="5m" type="Node2D" parent="."]
+position = Vector2(1041, 520)
+
+[node name="6m" type="Node2D" parent="."]
+position = Vector2(869, 520)
+
+[node name="7m" type="Node2D" parent="."]
+position = Vector2(869, 380)
+
+[node name="8m" type="Node2D" parent="."]
+position = Vector2(869, 230)

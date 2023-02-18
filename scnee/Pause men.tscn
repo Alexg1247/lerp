@@ -22,6 +22,7 @@ visible = false
 script = ExtResource("1_xqytp")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+process_mode = 3
 offset_left = -135.0
 offset_top = -29.0
 offset_right = 1247.0
@@ -66,5 +67,22 @@ theme_override_fonts/font = ExtResource("2_3b3g0")
 theme_override_font_sizes/font_size = 16
 text = "I Give Up"
 
+[node name="skip" type="Button" parent="."]
+offset_left = 290.0
+offset_top = 595.0
+offset_right = 369.0
+offset_bottom = 628.0
+text = "Skip Time"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 11.0
+offset_top = 597.0
+offset_right = 268.0
+offset_bottom = 628.0
+placeholder_text = "Time to skip. (ex: 1.46)"
+clear_button_enabled = true
+caret_blink = true
+
 [connection signal="pressed" from="Button" to="." method="resume"]
 [connection signal="pressed" from="Button2" to="." method="leave"]
+[connection signal="pressed" from="skip" to="." method="_on_skip_pressed"]

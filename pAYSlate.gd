@@ -39,7 +39,7 @@ func _ready():
 	if Globals.currentsong == "uwu-song":
 		Globals.uwu = true
 	print(Globals.uwu)
-
+	
 	var path
 	#checks if your song is modded
 	if Globals.ismodded:
@@ -47,9 +47,13 @@ func _ready():
 	else:
 		path = "res://assets/songs/"
 	f = FileAccess.open(path+Globals.currentsong+ "/" + song + ".json", FileAccess.READ)
-	inst = load(str(path + Globals.currentsong + "/" + CoolUtil.findsong(path+Globals.currentsong, false)))
+	if Globals.uwu:
+		inst = load("res://assets/songs/uwu-song/uwu-song.mp3")
+	else:
+		inst = load(str(path + Globals.currentsong + "/" + CoolUtil.findsong(path+Globals.currentsong, false)))
+	
 	print(str(CoolUtil.findsong(path+Globals.currentsong, false)))
-	bg = load(path + Globals.currentsong + "/" + CoolUtil.getdaimagethingy(path + Globals.currentsong, Globals.currentsong))
+	#bg = load(path + Globals.currentsong + "/" + CoolUtil.getdaimagethingy(path + Globals.currentsong, Globals.currentsong))
 	backgroundnode = get_node("Backgrounds")
 	backgroundnode.texture = bg
 	if ResourceLoader.exists(path+song+ "/modchart.tscn"):
@@ -112,6 +116,7 @@ func _ready():
 	
 	for section in chartData["notes"]:
 		for note in section["sectionNotes"]:
+
 			if note[1] != -1:
 				if len(note) == 3:
 					note.push_back(0)
@@ -175,9 +180,9 @@ func songfinished():
 func  _physics_process(delta):
 	var index = 0
 	for note in noteDataArray:
+		
 		if float(note[0]) > Conductor.position + (2500):
 			break
-		
 		var is_player_note = true
 		var should_spawn = true
 			
@@ -223,7 +228,6 @@ var counter:int
 
 func _process(delta):
 	Conductor.position += delta * 1000
-	
 	if Conductor.position >= 0 and not AudioHandler.get_node("Songs/Inst").playing:
 		AudioHandler.get_node("Songs/Inst").play()
 		Conductor.position = 0
@@ -234,7 +238,7 @@ func _process(delta):
 	if Conductor.cur_beat >= 0: counter = 4
 		# increment counter every beat basically (used to be -4.0 + counter but that no work ig so ae)
 	elif Conductor.cur_beat >= -3.0 + counter: counter += 1
-	
 	$Camera.zoom = lerp($Camera.zoom, Vector2(1, 1), delta * 9)
+
 
 	

@@ -19,6 +19,7 @@ shadow_offset = Vector2(2, 2)
 script = ExtResource("1_wrkq1")
 
 [node name="STRUM2" parent="." instance=ExtResource("1_jhsif")]
+visible = true
 position = Vector2(0, 100)
 
 [node name="Giid" type="Label" parent="."]

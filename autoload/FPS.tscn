@@ -16,6 +16,14 @@ text = "0fps
 0mb vram"
 label_settings = ExtResource("2_8yjmc")
 
+[node name="debug" type="Label" parent="."]
+visible = false
+offset_top = 44.0
+offset_right = 120.0
+offset_bottom = 70.0
+text = "debug text"
+label_settings = ExtResource("2_8yjmc")
+
 [node name="Volume" type="Control" parent="."]
 clip_contents = true
 layout_mode = 3

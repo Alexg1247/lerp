@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scnee/TemplateSong.gd" id="1_sk408"]
 [ext_resource type="LabelSettings" uid="uid://dedj33517fi0m" path="res://new_label_settings.tres" id="2_ryfnw"]
-[ext_resource type="FontFile" uid="uid://buop8cbcsqqnq" path="res://assets/songs/fatality/MS Sans Serif 8pt bold.ttf" id="3_sbfll"]
+[ext_resource type="FontFile" uid="uid://buop8cbcsqqnq" path="res://assets/songs/uwu-song/MS Sans Serif 8pt bold.ttf" id="3_sbfll"]
 
 [node name="TemplateSong" type="Control"]
 layout_mode = 3

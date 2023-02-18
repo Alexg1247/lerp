@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dbstfyhlp4rrg" path="res://assets/images/[paushe vubton pushed.png" id="5_y4ww8"]
 
 [node name="Normal Notes" type="Node2D"]
+visible = false
 script = ExtResource("1_s31l0")
 
 [node name="strumline" parent="." instance=ExtResource("2_qrf2k")]

@@ -19,6 +19,8 @@ var ismodded = false
 
 var totalwindows = 0
 
+var skippingtime = false
+
 var songlist = [
 	"fatality",
 	"phantasm",
@@ -36,8 +38,11 @@ var songlist = [
 	"redux guns",
 	"too slow",
 	"you cant run",
-	"sussus moogus"
+	"sussus moogus",
+	"limbo" #remove this one later
 ]
+
+var percent = 0
 
 var moddedsonglist = DirAccess.get_directories_at("res://mods/songs/")
 

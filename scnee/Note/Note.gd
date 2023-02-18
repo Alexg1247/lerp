@@ -60,11 +60,13 @@ func _process(delta):
 	if Globals.save.grab("downscroll"):
 		if position.y >= 500:
 			queue_free()
-			Globals.misses += 1
+			if !Globals.skippingtime:
+				Globals.misses += 1
 	else:
 		if position.y <= -500:
 			queue_free()
-			Globals.misses += 1
+			if !Globals.skippingtime:
+				Globals.misses += 1
 	if strum == null:
 		if is_player:
 			strum = player_strums.get_child(note_data)
